@@ -1,0 +1,112 @@
+:root {
+  --p: #000;
+  --red: #ea736d;
+  --blue: #039be5;
+  --yell: #fbdc4d;
+  --btn-bg: #fbdc4d;
+  --btn-bg-h: #ffd200;
+  --btn-bg-a: #e1bc10;
+  --btn-transp: #464646;
+  --btn-transp-h: #797979;
+  --btn-transp-a: #181818;
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "M PLUS 1p", sans-serif;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+a,
+a:hover {
+  text-decoration: none;
+  display: inline-block;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+svg {
+  max-width: 100%;
+}
+button,
+input {
+  outline: none;
+}
+button {
+  display: inline-block;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  background-color: transparent;
+}
+/*--Контейнер--*/
+.container {
+  width: 100%;
+  max-width: 320px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  //Для большого смартфона
+  @media (min-width: 576px) {
+    max-width: 540px;
+  }
+  //Для планшета
+  @media (min-width: 768px) {
+    max-width: 738px;
+    padding: 0 30px;
+  }
+  //Для большого планшета
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+    padding: 0;
+  }
+}
+/*--Универсальные круглые иконки контактов--*/
+.icon-git {
+  width: 50px;
+  height: 50px;
+  line-height: 1;
+  color: var(--p);
+  transition: all 0.3s ease-in;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+.icon-tele {
+  background-color: #039be5;
+}
+.icon-vk {
+  background-color: #4d76a1;
+}
+.icon-fb {
+  background-color: #3b5998;
+}
+/*--/Универсальные круглые иконки контактов--*/

@@ -1,0 +1,369 @@
+.global__wrapper {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.header {
+  padding: 60px 0 240px;
+  background-image: url("../img/main-page/stripes.jpg");
+  background-size: auto;
+  background-position: center;
+  background-repeat: repeat-y;
+}
+.container.container--enlarge {
+  max-width: 100%;
+  //Для планшета
+  @media (min-width: 768px) {
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    max-width: 1400px;
+  }
+}
+.header-top-nav__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  //Для большого смартфона
+  @media (min-width: 576px) {
+  }
+  //Для планшета
+  @media (min-width: 768px) {
+  }
+  //Для большого планшета
+  @media (min-width: 992px) {
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    margin-bottom: 147px;
+  }
+}
+.logo {
+  margin-right: 15px;
+  position: relative;
+  display: inline-block;
+  font-size: 42px;
+  font-weight: 900;
+  z-index: 1;
+  a {
+    color: var(--p);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    left: -5px;
+    right: -5px;
+    height: 10px;
+    background-color: #fbdc4d;
+    z-index: -1;
+  }
+}
+.nav-menu_desktop {
+  display: none;
+  //Для десктопа
+  @media (min-width: 1200px) {
+    display: block;
+  }
+}
+.nav__list {
+  display: flex;
+  align-items: center;
+}
+.nav__item {
+  margin-right: 79px;
+  font-size: 20px;
+  font-weight: 700;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.nav__link {
+  position: relative;
+  color: var(--p);
+  z-index: 1;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    bottom: 3px;
+    left: -3px;
+    right: -3px;
+    height: 5px;
+    background-color: #fbdc4d;
+    transition: 0.2s ease-in;
+    z-index: -1;
+  }
+  &:hover::after {
+    width: 106%;
+  }
+  &:focus {
+    outline: none;
+    padding: 0 3px;
+    border: 3px dotted var(--red);
+    &:focus::after {
+      width: 0;
+    }
+  }
+  &:active {
+    outline: none;
+    padding: 0;
+    border: none;
+  }
+}
+.nav__link.nav__link--active::after {
+  content: "";
+  position: absolute;
+  width: 106%;
+  bottom: 3px;
+  left: -3px;
+  right: -3px;
+  height: 5px;
+  background-color: #fbdc4d;
+  z-index: -1;
+}
+.nav-icons__row {
+  display: flex;
+  align-items: baseline;
+}
+.nav-icon {
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  line-height: 1;
+  color: #000;
+  margin-right: 20px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.linkedin-h-a {
+  transition: color 0.3s ease-in;
+  &:hover {
+    color: #0077b5;
+  }
+}
+.git-h-a {
+  transition: color 0.3s ease-in;
+  &:hover {
+    color: #6cc644;
+  }
+}
+.vk-h-a {
+  transition: color 0.3s ease-in;
+  &:hover {
+    color: #45668e;
+  }
+}
+.header-content {
+  display: flex;
+  margin-bottom: -128px;
+}
+.header-text__col {
+  width: 50%;
+  z-index: 1;
+  //Для планшета
+  @media (min-width: 768px) {
+    width: calc(~"50% - 15px");
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    width: 50%;
+  }
+}
+.header-content__title {
+  font-size: 90px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 15px;
+  span {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 13px;
+      left: 3px;
+      right: 3px;
+      height: 12px;
+      background-color: #fbdc4d;
+      z-index: -1;
+    }
+  }
+}
+.header-content__desc {
+  margin-bottom: 32px;
+  padding-right: 6px;
+  color: #393f47;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  text-shadow: 0 3px 42px #ffffff;
+}
+.header-btn__row {
+  display: block;
+  // justify-content: space-between;
+}
+.btn {
+  display: inline-block;
+  margin-right: 14px;
+  padding: 17px 38px;
+  background-color: var(--yell);
+  height: 64px;
+  border-radius: 32px;
+  border: 4px solid var(--yell);
+  color: #000;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+  z-index: 1;
+  cursor: pointer;
+  &:last-child {
+    margin-right: 0;
+  }
+  &:hover {
+    border-color: var(--btn-bg-h);
+    background-color: var(--btn-bg-h);
+  }
+  &:active {
+    border-color: var(--btn-bg-a);
+    background-color: var(--btn-bg-a);
+  }
+}
+.btn.btn-white {
+  border-color: var(--btn-transp);
+  color: var(--btn-transp);
+  background-color: transparent;
+  &:hover {
+    border-color: var(--btn-transp-h);
+    color: var(--btn-transp-h);
+  }
+  &:active {
+    border-color: var(--btn-transp-a);
+    color: var(--btn-transp-a);
+  }
+}
+.header-img__col {
+  padding-left: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: relative;
+  width: 50%;
+  z-index: 2;
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -130px;
+    right: -124px;
+    width: 474px;
+    height: 410px;
+    background-image: linear-gradient(
+      to top,
+      rgba(244, 248, 249, 0.5) 0%,
+      rgba(244, 248, 249, 0) 100%
+    );
+    z-index: -1;
+  }
+}
+/*--Фоновое изобранение--*/
+.header-bg__row {
+  z-index: -2;
+  margin-bottom: -20px;
+}
+/*--/Фоновое изобранение--*/
+/*--Контейнер для контента нижней части header'а--*/
+.header-bottom-content__row {
+  display: flex;
+  justify-content: space-between;
+}
+/*--/Контейнер для контента нижней части header'а--*/
+/*--Колонка "Навыки" нижней части header'а--*/
+.header-col__skills {
+  width: 60%;
+}
+/*--Заголовоки для контента нижней части header'а--*/
+.header-title__skills {
+  margin-bottom: 31px;
+  text-shadow: 0 3px 42px #fff;
+  font-size: 40px;
+  font-weight: 800;
+}
+/*--/Заголовоки для контента нижней части header'а--*/
+/*--Список навыков для нижней части header'а--*/
+.header-list__skills {
+  margin-bottom: 45px;
+  text-shadow: 0 3px 42px #fff;
+  font-size: 24px;
+  font-weight: 400;
+}
+.list-item__skills {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  line-height: 1;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: -1px;
+    height: 2px;
+    width: 23px;
+    background-color: #000;
+  }
+}
+/*--Список навыков для нижней части header'а--*/
+.btn.btn--pp {
+  padding: 17px 36px;
+}
+/*--/Колонка "Навыки" нижней части header'а--*/
+/*--Колонка "Контакты" для нижней части header'а--*/
+.header-col__contacts {
+  width: 31.5%;
+}
+.header-icons__row {
+  display: flex;
+  margin-bottom: 18px;
+}
+.icon-item {
+  margin-right: 31px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: all 0.3s ease-in;
+  &:hover {
+    display: flex;
+    transform: scale(1.05);
+  }
+}
+.icon-link > svg {
+  color: #fff;
+  width: 30px;
+  height: 30px;
+}
+.header-contact__email a {
+  text-shadow: 0 3px 42px #ffffff;
+  color: #000;
+  font-size: 24px;
+  font-weight: 400;
+  text-decoration: underline;
+  &:hover {
+    color: var(--blue);
+  }
+  &:active {
+    color: var(--red);
+  }
+}
+/*--/Колонка "Контакты" для нижней части header'а--*/
