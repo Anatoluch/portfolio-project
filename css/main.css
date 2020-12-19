@@ -31,6 +31,18 @@ a:hover {
   text-decoration: none;
   display: inline-block;
 }
+.text-link {
+  border-bottom: 1px solid var(--p);
+  line-height: 1.2;
+}
+.text-link:hover {
+  color: var(--blue);
+  border-bottom: 1px solid var(--blue);
+}
+.text-link:active {
+  color: var(--red);
+  border-bottom: 1px solid var(--red);
+}
 ul {
   margin: 0;
   padding: 0;
@@ -44,6 +56,25 @@ h5,
 h6,
 p {
   margin: 0;
+}
+p::-moz-selection,
+li::-moz-selection,
+h1::-moz-selection,
+h2::-moz-selection,
+h3::-moz-selection,
+span::-moz-selection {
+  background: var(--yell);
+}
+p::selection,
+li::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+span::selection {
+  background: var(--yell);
+}
+.section-title {
+  font-size: 38px;
 }
 img {
   max-width: 100%;
@@ -63,6 +94,49 @@ button {
   padding: 0;
   cursor: pointer;
   background-color: transparent;
+}
+.btn {
+  display: inline-block;
+  height: 64px;
+  padding-left: 38px;
+  padding-right: 38px;
+  background-color: var(--yell);
+  -webkit-border-radius: 32px;
+     -moz-border-radius: 32px;
+          border-radius: 32px;
+  border: 4px solid var(--yell);
+  color: #000;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 56px;
+  text-align: center;
+  z-index: 1;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+.btn:hover {
+  border-color: var(--btn-bg-h);
+  background-color: var(--btn-bg-h);
+}
+.btn:active {
+  border-color: var(--btn-bg-a);
+  background-color: var(--btn-bg-a);
+}
+.btn.btn--white {
+  border-color: var(--btn-transp);
+  color: var(--btn-transp);
+  background-color: transparent;
+}
+.btn.btn--white:hover {
+  border-color: var(--btn-transp-h);
+  color: var(--btn-transp-h);
+}
+.btn.btn--white:active {
+  border-color: var(--btn-transp-a);
+  color: var(--btn-transp-a);
 }
 /*--Контейнер--*/
 .container {
@@ -94,6 +168,63 @@ button {
     padding: 0;
   }
 }
+/*---Универсальная панель иконок контактов---*/
+.contacts-icons-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.icon-item {
+  margin-right: 31px;
+}
+.icon-item:last-child {
+  margin-right: 0;
+}
+.icon-link {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50px;
+  height: 50px;
+  -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+          border-radius: 50%;
+  -webkit-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+.icon-link:hover {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: scale(1.05);
+     -moz-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+       -o-transform: scale(1.05);
+          transform: scale(1.05);
+}
+.icon-link > svg {
+  color: #fff;
+  width: 30px;
+  height: 30px;
+}
 /*--Универсальные круглые иконки контактов--*/
 .icon-git {
   width: 50px;
@@ -122,6 +253,7 @@ button {
   background-color: #3b5998;
 }
 /*--/Универсальные круглые иконки контактов--*/
+/*---/Универсальная панель иконок контактов---*/
 .header {
   max-width: 1600px;
   margin: 0 auto;
@@ -140,7 +272,7 @@ button {
     max-width: 1400px;
   }
 }
-.header-top-nav__row {
+.header-nav-row {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -158,7 +290,7 @@ button {
           align-items: center;
 }
 @media (min-width: 1200px) {
-  .header-top-nav__row {
+  .header-nav-row {
     margin-bottom: 147px;
   }
 }
@@ -183,40 +315,45 @@ button {
   background-color: #fbdc4d;
   z-index: -1;
 }
-.nav-menu_desktop {
+.nav-menu-desktop {
   display: none;
 }
 @media (min-width: 1200px) {
-  .nav-menu_desktop {
+  .nav-menu-desktop {
     display: block;
   }
 }
-.nav__list {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.nav-list {
+  display: none;
 }
-.nav__item {
+@media (min-width: 1200px) {
+  .nav-list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.nav-item {
   margin-right: 79px;
   font-size: 20px;
   font-weight: 700;
 }
-.nav__item:last-child {
+.nav-item:last-child {
   margin-right: 0;
 }
-.nav__link {
+.nav-link {
   position: relative;
   color: var(--p);
   z-index: 1;
 }
-.nav__link::after {
+.nav-link::after {
   content: "";
   position: absolute;
   width: 0;
@@ -231,23 +368,23 @@ button {
   transition: 0.2s ease-in;
   z-index: -1;
 }
-.nav__link:hover::after {
+.nav-link:hover::after {
   width: 106%;
 }
-.nav__link:focus {
+.nav-link:focus {
   outline: none;
   padding: 0 3px;
   border: 3px dotted var(--red);
 }
-.nav__link:focus:focus::after {
+.nav-link:focus:focus::after {
   width: 0;
 }
-.nav__link:active {
+.nav-link:active {
   outline: none;
   padding: 0;
   border: none;
 }
-.nav__link.nav__link--active::after {
+.nav-link.nav-link--active::after {
   content: "";
   position: absolute;
   width: 106%;
@@ -258,7 +395,7 @@ button {
   background-color: #fbdc4d;
   z-index: -1;
 }
-.nav-icons__row {
+.nav-icons-row {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -317,34 +454,34 @@ button {
   display: flex;
   margin-bottom: -128px;
 }
-.header-text__col {
+.header-text-col {
   width: 50%;
   z-index: 1;
 }
 @media (min-width: 768px) {
-  .header-text__col {
+  .header-text-col {
     width: -webkit-calc(50% - 15px);
     width: -moz-calc(50% - 15px);
     width: calc(50% - 15px);
   }
 }
 @media (min-width: 1200px) {
-  .header-text__col {
+  .header-text-col {
     width: 50%;
   }
 }
-.header-content__title {
+.header-title {
   font-size: 90px;
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 15px;
 }
-.header-content__title span {
+.header-title span {
   position: relative;
   display: inline-block;
   z-index: 1;
 }
-.header-content__title span::after {
+.header-title span::after {
   content: "";
   display: block;
   position: absolute;
@@ -355,7 +492,7 @@ button {
   background-color: #fbdc4d;
   z-index: -1;
 }
-.header-content__desc {
+.header-desc {
   margin-bottom: 32px;
   padding-right: 6px;
   color: #393f47;
@@ -364,51 +501,16 @@ button {
   line-height: 36px;
   text-shadow: 0 3px 42px #ffffff;
 }
-.header-btn__row {
+.header-btn-row {
   display: block;
 }
-.btn {
-  display: inline-block;
+.header-btn-row a {
   margin-right: 14px;
-  padding: 17px 38px;
-  background-color: var(--yell);
-  height: 64px;
-  -webkit-border-radius: 32px;
-     -moz-border-radius: 32px;
-          border-radius: 32px;
-  border: 4px solid var(--yell);
-  color: #000;
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 1;
-  z-index: 1;
-  cursor: pointer;
 }
-.btn:last-child {
+.header-btn-row a:last-child {
   margin-right: 0;
 }
-.btn:hover {
-  border-color: var(--btn-bg-h);
-  background-color: var(--btn-bg-h);
-}
-.btn:active {
-  border-color: var(--btn-bg-a);
-  background-color: var(--btn-bg-a);
-}
-.btn.btn-white {
-  border-color: var(--btn-transp);
-  color: var(--btn-transp);
-  background-color: transparent;
-}
-.btn.btn-white:hover {
-  border-color: var(--btn-transp-h);
-  color: var(--btn-transp-h);
-}
-.btn.btn-white:active {
-  border-color: var(--btn-transp-a);
-  color: var(--btn-transp-a);
-}
-.header-img__col {
+.header-img-col {
   padding-left: 10px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -429,7 +531,7 @@ button {
   width: 50%;
   z-index: 2;
 }
-.header-img__col:before {
+.header-img-col:before {
   content: "";
   display: block;
   position: absolute;
@@ -445,13 +547,13 @@ button {
   z-index: -1;
 }
 /*--Фоновое изобранение--*/
-.header-bg__row {
+.header-bg-row {
   z-index: -2;
   margin-bottom: -20px;
 }
 /*--/Фоновое изобранение--*/
 /*--Контейнер для контента нижней части header'а--*/
-.header-bottom-content__row {
+.skills-container {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -465,11 +567,11 @@ button {
 }
 /*--/Контейнер для контента нижней части header'а--*/
 /*--Колонка "Навыки" нижней части header'а--*/
-.header-col__skills {
+.skills-col {
   width: 60%;
 }
 /*--Заголовоки для контента нижней части header'а--*/
-.header-title__skills {
+.skills-title {
   margin-bottom: 31px;
   text-shadow: 0 3px 42px #fff;
   font-size: 40px;
@@ -477,19 +579,19 @@ button {
 }
 /*--/Заголовоки для контента нижней части header'а--*/
 /*--Список навыков для нижней части header'а--*/
-.header-list__skills {
+.skills-list {
   margin-bottom: 45px;
   text-shadow: 0 3px 42px #fff;
   font-size: 24px;
   font-weight: 400;
 }
-.list-item__skills {
+.skills-list__item {
   position: relative;
   padding-left: 30px;
   margin-bottom: 15px;
   line-height: 1;
 }
-.list-item__skills::before {
+.skills-list__item::before {
   content: "";
   position: absolute;
   top: 12px;
@@ -499,83 +601,19 @@ button {
   background-color: #000;
 }
 /*--Список навыков для нижней части header'а--*/
-.btn.btn--pp {
-  padding: 17px 36px;
-}
 /*--/Колонка "Навыки" нижней части header'а--*/
 /*--Колонка "Контакты" для нижней части header'а--*/
-.header-col__contacts {
+.header-col-contacts {
   width: 31.5%;
 }
-.header-icons__row {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 18px;
+.header-col-contacts .contacts-icons-row {
+  margin-bottom: 22px;
 }
-.icon-item {
-  margin-right: 31px;
-}
-.icon-item:last-child {
-  margin-right: 0;
-}
-.icon-link {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-     -moz-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 50px;
-  height: 50px;
-  -webkit-border-radius: 50%;
-     -moz-border-radius: 50%;
-          border-radius: 50%;
-  -webkit-transition: all 0.3s ease-in;
-  -o-transition: all 0.3s ease-in;
-  -moz-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
-}
-.icon-link:hover {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-transform: scale(1.05);
-     -moz-transform: scale(1.05);
-      -ms-transform: scale(1.05);
-       -o-transform: scale(1.05);
-          transform: scale(1.05);
-}
-.icon-link > svg {
-  color: #fff;
-  width: 30px;
-  height: 30px;
-}
-.header-contact__email a {
+.header-contact-email a {
   text-shadow: 0 3px 42px #ffffff;
   color: #000;
   font-size: 24px;
   font-weight: 400;
-  text-decoration: underline;
-}
-.header-contact__email a:hover {
-  color: var(--blue);
-}
-.header-contact__email a:active {
-  color: var(--red);
 }
 /*--/Колонка "Контакты" для нижней части header'а--*/
 /*# sourceMappingURL=main.css.map */

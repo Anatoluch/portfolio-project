@@ -30,6 +30,18 @@ a:hover {
   text-decoration: none;
   display: inline-block;
 }
+.text-link {
+  border-bottom: 1px solid var(--p);
+  line-height: 1.2;
+  &:hover {
+    color: var(--blue);
+    border-bottom: 1px solid var(--blue);
+  }
+  &:active {
+    color: var(--red);
+    border-bottom: 1px solid var(--red);
+  }
+}
 ul {
   margin: 0;
   padding: 0;
@@ -43,6 +55,17 @@ h5,
 h6,
 p {
   margin: 0;
+}
+p::selection,
+li::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+span::selection {
+  background: var(--yell);
+}
+.section-title {
+  font-size: 38px;
 }
 img {
   max-width: 100%;
@@ -62,6 +85,44 @@ button {
   padding: 0;
   cursor: pointer;
   background-color: transparent;
+}
+.btn {
+  display: inline-block;
+  height: 64px;
+  padding-left: 38px;
+  padding-right: 38px;
+  background-color: var(--yell);
+  border-radius: 32px;
+  border: 4px solid var(--yell);
+  color: #000;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 56px;
+  text-align: center;
+  z-index: 1;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  &:hover {
+    border-color: var(--btn-bg-h);
+    background-color: var(--btn-bg-h);
+  }
+  &:active {
+    border-color: var(--btn-bg-a);
+    background-color: var(--btn-bg-a);
+  }
+}
+.btn.btn--white {
+  border-color: var(--btn-transp);
+  color: var(--btn-transp);
+  background-color: transparent;
+  &:hover {
+    border-color: var(--btn-transp-h);
+    color: var(--btn-transp-h);
+  }
+  &:active {
+    border-color: var(--btn-transp-a);
+    color: var(--btn-transp-a);
+  }
 }
 /*--Контейнер--*/
 .container {
@@ -89,6 +150,34 @@ button {
     padding: 0;
   }
 }
+/*---Универсальная панель иконок контактов---*/
+.contacts-icons-row {
+  display: flex;
+}
+.icon-item {
+  margin-right: 31px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: all 0.3s ease-in;
+  &:hover {
+    display: flex;
+    transform: scale(1.05);
+  }
+}
+.icon-link > svg {
+  color: #fff;
+  width: 30px;
+  height: 30px;
+}
 /*--Универсальные круглые иконки контактов--*/
 .icon-git {
   width: 50px;
@@ -110,3 +199,4 @@ button {
   background-color: #3b5998;
 }
 /*--/Универсальные круглые иконки контактов--*/
+/*---/Универсальная панель иконок контактов---*/

@@ -17,7 +17,7 @@
     max-width: 1400px;
   }
 }
-.header-top-nav__row {
+.header-nav-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -57,18 +57,22 @@
     z-index: -1;
   }
 }
-.nav-menu_desktop {
+.nav-menu-desktop {
   display: none;
   //Для десктопа
   @media (min-width: 1200px) {
     display: block;
   }
 }
-.nav__list {
-  display: flex;
-  align-items: center;
+.nav-list {
+  display: none;
+  //Для десктопа
+  @media (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+  }
 }
-.nav__item {
+.nav-item {
   margin-right: 79px;
   font-size: 20px;
   font-weight: 700;
@@ -76,7 +80,7 @@
     margin-right: 0;
   }
 }
-.nav__link {
+.nav-link {
   position: relative;
   color: var(--p);
   z-index: 1;
@@ -109,7 +113,7 @@
     border: none;
   }
 }
-.nav__link.nav__link--active::after {
+.nav-link.nav-link--active::after {
   content: "";
   position: absolute;
   width: 106%;
@@ -120,7 +124,7 @@
   background-color: #fbdc4d;
   z-index: -1;
 }
-.nav-icons__row {
+.nav-icons-row {
   display: flex;
   align-items: baseline;
 }
@@ -158,7 +162,7 @@
   display: flex;
   margin-bottom: -128px;
 }
-.header-text__col {
+.header-text-col {
   width: 50%;
   z-index: 1;
   //Для планшета
@@ -170,7 +174,7 @@
     width: 50%;
   }
 }
-.header-content__title {
+.header-title {
   font-size: 90px;
   font-weight: 800;
   line-height: 1.2;
@@ -192,7 +196,7 @@
     }
   }
 }
-.header-content__desc {
+.header-desc {
   margin-bottom: 32px;
   padding-right: 6px;
   color: #393f47;
@@ -201,50 +205,16 @@
   line-height: 36px;
   text-shadow: 0 3px 42px #ffffff;
 }
-.header-btn__row {
+.header-btn-row {
   display: block;
-  // justify-content: space-between;
-}
-.btn {
-  display: inline-block;
-  margin-right: 14px;
-  padding: 17px 38px;
-  background-color: var(--yell);
-  height: 64px;
-  border-radius: 32px;
-  border: 4px solid var(--yell);
-  color: #000;
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 1;
-  z-index: 1;
-  cursor: pointer;
-  &:last-child {
-    margin-right: 0;
-  }
-  &:hover {
-    border-color: var(--btn-bg-h);
-    background-color: var(--btn-bg-h);
-  }
-  &:active {
-    border-color: var(--btn-bg-a);
-    background-color: var(--btn-bg-a);
+  a {
+    margin-right: 14px;
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
-.btn.btn-white {
-  border-color: var(--btn-transp);
-  color: var(--btn-transp);
-  background-color: transparent;
-  &:hover {
-    border-color: var(--btn-transp-h);
-    color: var(--btn-transp-h);
-  }
-  &:active {
-    border-color: var(--btn-transp-a);
-    color: var(--btn-transp-a);
-  }
-}
-.header-img__col {
+.header-img-col {
   padding-left: 10px;
   display: flex;
   justify-content: flex-end;
@@ -269,23 +239,23 @@
   }
 }
 /*--Фоновое изобранение--*/
-.header-bg__row {
+.header-bg-row {
   z-index: -2;
   margin-bottom: -20px;
 }
 /*--/Фоновое изобранение--*/
 /*--Контейнер для контента нижней части header'а--*/
-.header-bottom-content__row {
+.skills-container {
   display: flex;
   justify-content: space-between;
 }
 /*--/Контейнер для контента нижней части header'а--*/
 /*--Колонка "Навыки" нижней части header'а--*/
-.header-col__skills {
+.skills-col {
   width: 60%;
 }
 /*--Заголовоки для контента нижней части header'а--*/
-.header-title__skills {
+.skills-title {
   margin-bottom: 31px;
   text-shadow: 0 3px 42px #fff;
   font-size: 40px;
@@ -293,13 +263,13 @@
 }
 /*--/Заголовоки для контента нижней части header'а--*/
 /*--Список навыков для нижней части header'а--*/
-.header-list__skills {
+.skills-list {
   margin-bottom: 45px;
   text-shadow: 0 3px 42px #fff;
   font-size: 24px;
   font-weight: 400;
 }
-.list-item__skills {
+.skills-list__item {
   position: relative;
   padding-left: 30px;
   margin-bottom: 15px;
@@ -315,53 +285,18 @@
   }
 }
 /*--Список навыков для нижней части header'а--*/
-.btn.btn--pp {
-  padding: 17px 36px;
-}
 /*--/Колонка "Навыки" нижней части header'а--*/
 /*--Колонка "Контакты" для нижней части header'а--*/
-.header-col__contacts {
+.header-col-contacts {
   width: 31.5%;
 }
-.header-icons__row {
-  display: flex;
-  margin-bottom: 18px;
+.header-col-contacts .contacts-icons-row {
+  margin-bottom: 22px;
 }
-.icon-item {
-  margin-right: 31px;
-  &:last-child {
-    margin-right: 0;
-  }
-}
-.icon-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  transition: all 0.3s ease-in;
-  &:hover {
-    display: flex;
-    transform: scale(1.05);
-  }
-}
-.icon-link > svg {
-  color: #fff;
-  width: 30px;
-  height: 30px;
-}
-.header-contact__email a {
+.header-contact-email a {
   text-shadow: 0 3px 42px #ffffff;
   color: #000;
   font-size: 24px;
   font-weight: 400;
-  text-decoration: underline;
-  &:hover {
-    color: var(--blue);
-  }
-  &:active {
-    color: var(--red);
-  }
 }
 /*--/Колонка "Контакты" для нижней части header'а--*/
