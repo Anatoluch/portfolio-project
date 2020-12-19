@@ -38,23 +38,11 @@
 }
 .logo {
   margin-right: 15px;
-  position: relative;
   display: inline-block;
   font-size: 42px;
   font-weight: 900;
-  z-index: 1;
   a {
     color: var(--p);
-  }
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 10px;
-    left: -5px;
-    right: -5px;
-    height: 10px;
-    background-color: #fbdc4d;
-    z-index: -1;
   }
 }
 .nav-menu-desktop {
@@ -93,7 +81,7 @@
     right: -3px;
     height: 5px;
     background-color: #fbdc4d;
-    transition: 0.2s ease-in;
+    transition: 0.3s ease-in;
     z-index: -1;
   }
   &:hover::after {
@@ -180,19 +168,12 @@
   line-height: 1.2;
   margin-bottom: 15px;
   span {
-    position: relative;
     display: inline-block;
+    position: relative;
     z-index: 1;
     &::after {
-      content: "";
-      display: block;
-      position: absolute;
       bottom: 13px;
-      left: -5px;
-      right: -5px;
       height: 12px;
-      background-color: #fbdc4d;
-      z-index: -1;
     }
   }
 }

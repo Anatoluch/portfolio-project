@@ -95,6 +95,21 @@ button {
   cursor: pointer;
   background-color: transparent;
 }
+.bottom-line {
+  position: relative;
+  z-index: 1;
+}
+.bottom-line::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  left: -5px;
+  right: -5px;
+  height: 10px;
+  background-color: #fbdc4d;
+  z-index: -1;
+}
 .btn {
   display: inline-block;
   height: 64px;
@@ -296,24 +311,12 @@ button {
 }
 .logo {
   margin-right: 15px;
-  position: relative;
   display: inline-block;
   font-size: 42px;
   font-weight: 900;
-  z-index: 1;
 }
 .logo a {
   color: var(--p);
-}
-.logo::after {
-  content: "";
-  position: absolute;
-  bottom: 10px;
-  left: -5px;
-  right: -5px;
-  height: 10px;
-  background-color: #fbdc4d;
-  z-index: -1;
 }
 .nav-menu-desktop {
   display: none;
@@ -362,10 +365,10 @@ button {
   right: -3px;
   height: 5px;
   background-color: #fbdc4d;
-  -webkit-transition: 0.2s ease-in;
-  -o-transition: 0.2s ease-in;
-  -moz-transition: 0.2s ease-in;
-  transition: 0.2s ease-in;
+  -webkit-transition: 0.3s ease-in;
+  -o-transition: 0.3s ease-in;
+  -moz-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
   z-index: -1;
 }
 .nav-link:hover::after {
@@ -477,20 +480,13 @@ button {
   margin-bottom: 15px;
 }
 .header-title span {
-  position: relative;
   display: inline-block;
+  position: relative;
   z-index: 1;
 }
 .header-title span::after {
-  content: "";
-  display: block;
-  position: absolute;
   bottom: 13px;
-  left: -5px;
-  right: -5px;
   height: 12px;
-  background-color: #fbdc4d;
-  z-index: -1;
 }
 .header-desc {
   margin-bottom: 32px;

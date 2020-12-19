@@ -86,6 +86,21 @@ button {
   cursor: pointer;
   background-color: transparent;
 }
+.bottom-line {
+  position: relative;
+  z-index: 1;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    left: -5px;
+    right: -5px;
+    height: 10px;
+    background-color: #fbdc4d;
+    z-index: -1;
+  }
+}
 .btn {
   display: inline-block;
   height: 64px;
