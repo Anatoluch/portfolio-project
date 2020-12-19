@@ -122,12 +122,9 @@ button {
   background-color: #3b5998;
 }
 /*--/Универсальные круглые иконки контактов--*/
-.global__wrapper {
-  width: 100%;
+.header {
   max-width: 1600px;
   margin: 0 auto;
-}
-.header {
   padding: 60px 0 240px;
   background-image: url("../img/main-page/stripes.jpg");
   -moz-background-size: auto;
@@ -303,6 +300,7 @@ button {
   color: #6cc644;
 }
 .vk-h-a {
+  width: 35px;
   -webkit-transition: color 0.3s ease-in;
   -o-transition: color 0.3s ease-in;
   -moz-transition: color 0.3s ease-in;
@@ -351,8 +349,8 @@ button {
   display: block;
   position: absolute;
   bottom: 13px;
-  left: 3px;
-  right: 3px;
+  left: -5px;
+  right: -5px;
   height: 12px;
   background-color: #fbdc4d;
   z-index: -1;
@@ -435,10 +433,10 @@ button {
   content: "";
   display: block;
   position: absolute;
-  bottom: -130px;
-  right: -124px;
-  width: 474px;
-  height: 410px;
+  bottom: -30.45%;
+  right: -25%;
+  width: 100%;
+  height: 100%;
   background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(244, 248, 249, 0.5)), to(rgba(244, 248, 249, 0)));
   background-image: -webkit-linear-gradient(bottom, rgba(244, 248, 249, 0.5) 0%, rgba(244, 248, 249, 0) 100%);
   background-image: -moz-linear-gradient(bottom, rgba(244, 248, 249, 0.5) 0%, rgba(244, 248, 249, 0) 100%);
