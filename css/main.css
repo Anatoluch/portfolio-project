@@ -73,9 +73,21 @@ h3::selection,
 span::selection {
   background: var(--yell);
 }
+/*--Заголовок для секции--*/
 .section-title {
-  font-size: 38px;
+  display: inline-block;
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1.2;
 }
+/*--/Заголовок для секции--*/
+/*--Заголовоки для блока--*/
+.title-3 {
+  text-shadow: 0 3px 42px #fff;
+  font-size: 40px;
+  font-weight: 800;
+}
+/*--/Заголовоки для блока--*/
 img {
   max-width: 100%;
   height: auto;
@@ -184,7 +196,7 @@ button {
   }
 }
 /*---Универсальная панель иконок контактов---*/
-.contacts-icons-row {
+.social-ic-row {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -272,7 +284,7 @@ button {
 .header {
   max-width: 1600px;
   margin: 0 auto;
-  padding: 60px 0 240px;
+  padding: 60px 0 238px;
   background-image: url("../img/main-page/stripes.jpg");
   -moz-background-size: auto;
        background-size: auto;
@@ -544,7 +556,7 @@ button {
 }
 /*--Фоновое изобранение--*/
 .header-bg-row {
-  z-index: -2;
+  z-index: -1;
   margin-bottom: -20px;
 }
 /*--/Фоновое изобранение--*/
@@ -561,18 +573,15 @@ button {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.skills-container h3 {
+  margin-bottom: 31px;
+}
 /*--/Контейнер для контента нижней части header'а--*/
 /*--Колонка "Навыки" нижней части header'а--*/
 .skills-col {
   width: 60%;
 }
 /*--Заголовоки для контента нижней части header'а--*/
-.skills-title {
-  margin-bottom: 31px;
-  text-shadow: 0 3px 42px #fff;
-  font-size: 40px;
-  font-weight: 800;
-}
 /*--/Заголовоки для контента нижней части header'а--*/
 /*--Список навыков для нижней части header'а--*/
 .skills-list {
@@ -605,11 +614,25 @@ button {
 .header-col-contacts .contacts-icons-row {
   margin-bottom: 22px;
 }
-.header-contact-email a {
+.header-contact-link a {
   text-shadow: 0 3px 42px #ffffff;
   color: #000;
   font-size: 24px;
   font-weight: 400;
 }
 /*--/Колонка "Контакты" для нижней части header'а--*/
+.portfolio-section {
+  padding: 106px 0;
+  background-color: #f4f8f9;
+}
+.portfolio-section h2 {
+  position: relative;
+  z-index: 1;
+}
+.portfolio-section h2::after {
+  bottom: 8px;
+  left: -5px;
+  right: 0;
+  height: 12px;
+}
 /*# sourceMappingURL=main.css.map */
