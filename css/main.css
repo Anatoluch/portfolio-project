@@ -279,11 +279,11 @@ button {
   transition: all 0.3s ease-in;
 }
 .icon-git:hover {
-  -webkit-transform: scale(1.25) rotate(-15deg) translatey(-10%);
-     -moz-transform: scale(1.25) rotate(-15deg) translatey(-10%);
-      -ms-transform: scale(1.25) rotate(-15deg) translatey(-10%);
-       -o-transform: scale(1.25) rotate(-15deg) translatey(-10%);
-          transform: scale(1.25) rotate(-15deg) translatey(-10%);
+  -webkit-transform: scale(1.25) translatey(-10%);
+     -moz-transform: scale(1.25) translatey(-10%);
+      -ms-transform: scale(1.25) translatey(-10%);
+       -o-transform: scale(1.25) translatey(-10%);
+          transform: scale(1.25) translatey(-10%);
   -webkit-border-radius: 50%;
      -moz-border-radius: 50%;
           border-radius: 50%;
@@ -292,17 +292,17 @@ button {
           box-shadow: 0px 15px 7px rgba(0, 0, 0, 0.7);
 }
 .icon-git .git {
-  -webkit-transition: all 1s ease-out;
-  -o-transition: all 1s ease-out;
-  -moz-transition: all 1s ease-out;
-  transition: all 1s ease-out;
+  -webkit-transition: all 0.6s ease-in-out 0.7s;
+  -o-transition: all 0.6s ease-in-out 0.7s;
+  -moz-transition: all 0.6s ease-in-out 0.7s;
+  transition: all 0.6s ease-in-out 0.7s;
 }
 .icon-git .git:hover {
-  -webkit-transform: scale(1.25) translatey(-3%) rotate(15deg);
-     -moz-transform: scale(1.25) translatey(-3%) rotate(15deg);
-      -ms-transform: scale(1.25) translatey(-3%) rotate(15deg);
-       -o-transform: scale(1.25) translatey(-3%) rotate(15deg);
-          transform: scale(1.25) translatey(-3%) rotate(15deg);
+  -webkit-transform: scale(1.25) translatey(-3%) rotate(360deg);
+     -moz-transform: scale(1.25) translatey(-3%) rotate(360deg);
+      -ms-transform: scale(1.25) translatey(-3%) rotate(360deg);
+       -o-transform: scale(1.25) translatey(-3%) rotate(360deg);
+          transform: scale(1.25) translatey(-3%) rotate(360deg);
   -webkit-filter: drop-shadow(0 2px 2px #3a3a3a);
           filter: drop-shadow(0 2px 2px #3a3a3a);
   z-index: 2;
@@ -311,57 +311,57 @@ button {
   background-color: #039be5;
 }
 .icon-tele .fly {
-  -webkit-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.2s linear 0.25s;
+  -o-transition: all 0.2s linear 0.25s;
+  -moz-transition: all 0.2s linear 0.25s;
+  transition: all 0.2s linear 0.25s;
 }
 .icon-tele .fly:hover {
-  -webkit-transform: scale(1.25) translate(25%, -35%);
-     -moz-transform: scale(1.25) translate(25%, -35%);
-      -ms-transform: scale(1.25) translate(25%, -35%);
-       -o-transform: scale(1.25) translate(25%, -35%);
-          transform: scale(1.25) translate(25%, -35%);
-  -webkit-filter: drop-shadow(0 2px 2px #304355);
-          filter: drop-shadow(0 2px 2px #304355);
+  -webkit-transform: scale(1.25) translate(27%, -40%);
+     -moz-transform: scale(1.25) translate(27%, -40%);
+      -ms-transform: scale(1.25) translate(27%, -40%);
+       -o-transform: scale(1.25) translate(27%, -40%);
+          transform: scale(1.25) translate(27%, -40%);
+  -webkit-filter: drop-shadow(0 2px 2px #1c2c3f);
+          filter: drop-shadow(0 2px 2px #1c2c3f);
   z-index: 2;
 }
 .icon-vk {
   background-color: #4d76a1;
 }
 .icon-vk .vk {
-  -webkit-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out 0.25s;
+  -o-transition: all 0.3s ease-out 0.25s;
+  -moz-transition: all 0.3s ease-out 0.25s;
+  transition: all 0.3s ease-out 0.25s;
 }
 .icon-vk .vk:hover {
-  -webkit-transform: scale(1.5) translatey(-5%) rotate(-15deg);
-     -moz-transform: scale(1.5) translatey(-5%) rotate(-15deg);
-      -ms-transform: scale(1.5) translatey(-5%) rotate(-15deg);
-       -o-transform: scale(1.5) translatey(-5%) rotate(-15deg);
-          transform: scale(1.5) translatey(-5%) rotate(-15deg);
-  -webkit-filter: drop-shadow(0 3px 3px #1e2b38);
-          filter: drop-shadow(0 3px 3px #1e2b38);
+  -webkit-transform: scale(1.45) translatey(-5%) rotate(-15deg);
+     -moz-transform: scale(1.45) translatey(-5%) rotate(-15deg);
+      -ms-transform: scale(1.45) translatey(-5%) rotate(-15deg);
+       -o-transform: scale(1.45) translatey(-5%) rotate(-15deg);
+          transform: scale(1.45) translatey(-5%) rotate(-15deg);
+  -webkit-filter: drop-shadow(0 4px 1px #1c2c3f);
+          filter: drop-shadow(0 4px 1px #1c2c3f);
   z-index: 2;
 }
 .icon-fb {
   background-color: #3b5998;
 }
 .icon-fb .fb {
-  -webkit-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out 0.25s;
+  -o-transition: all 0.3s ease-out 0.25s;
+  -moz-transition: all 0.3s ease-out 0.25s;
+  transition: all 0.3s ease-out 0.25s;
 }
 .icon-fb .fb:hover {
-  -webkit-transform: scale(1.5) translatey(-1%) rotate(-15deg);
-     -moz-transform: scale(1.5) translatey(-1%) rotate(-15deg);
-      -ms-transform: scale(1.5) translatey(-1%) rotate(-15deg);
-       -o-transform: scale(1.5) translatey(-1%) rotate(-15deg);
-          transform: scale(1.5) translatey(-1%) rotate(-15deg);
-  -webkit-filter: drop-shadow(0 3px 3px #131b24);
-          filter: drop-shadow(0 3px 3px #131b24);
+  -webkit-transform: scale(1.45) translatey(-1%) rotate(-15deg);
+     -moz-transform: scale(1.45) translatey(-1%) rotate(-15deg);
+      -ms-transform: scale(1.45) translatey(-1%) rotate(-15deg);
+       -o-transform: scale(1.45) translatey(-1%) rotate(-15deg);
+          transform: scale(1.45) translatey(-1%) rotate(-15deg);
+  -webkit-filter: drop-shadow(0 3px 1px #162230);
+          filter: drop-shadow(0 3px 1px #162230);
   z-index: 2;
 }
 /*--/Универсальные круглые иконки контактов--*/
