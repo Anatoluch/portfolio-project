@@ -45,13 +45,6 @@
     color: var(--p);
   }
 }
-.nav-menu-desktop {
-  display: none;
-  //Для десктопа
-  @media (min-width: 1200px) {
-    display: block;
-  }
-}
 .nav-list {
   display: none;
   //Для десктопа
@@ -113,8 +106,15 @@
   z-index: -1;
 }
 .nav-icons-row {
-  display: flex;
-  align-items: baseline;
+  display: none;
+  //Для планшета
+  @media (min-width: 768px) {
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
+  }
 }
 .nav-icon {
   width: 30px;
