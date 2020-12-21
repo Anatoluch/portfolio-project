@@ -831,10 +831,10 @@ button {
           align-items: center;
   opacity: 0;
   background-color: rgba(251, 222, 76, 0.85);
-  -webkit-transition: all 0.9s ease-in;
-  -o-transition: all 0.9s ease-in;
-  -moz-transition: all 0.9s ease-in;
-  transition: all 0.9s ease-in;
+  -webkit-transition: all 0.4s ease-in 0.3s;
+  -o-transition: all 0.4s ease-in 0.3s;
+  -moz-transition: all 0.4s ease-in 0.3s;
+  transition: all 0.4s ease-in 0.3s;
 }
 .img-link:hover,
 .img-link:active {
@@ -858,12 +858,14 @@ button {
   line-height: 1;
   font-weight: 800;
   outline: none;
-  -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out 0.5s;
+  -o-transition: all 0.2s ease-in-out 0.5s;
+  -moz-transition: all 0.2s ease-in-out 0.5s;
+  transition: all 0.2s ease-in-out 0.5s;
 }
 .img-link span:hover {
+  opacity: 1;
   -webkit-transform: scale(1.15);
      -moz-transform: scale(1.15);
       -ms-transform: scale(1.15);
