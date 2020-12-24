@@ -24,6 +24,7 @@
   width: 100%;
   padding-left: 98px;
   min-height: 175px;
+  cursor: pointer;
   &::after {
     content: "";
     width: 4px;
@@ -32,6 +33,13 @@
     top: 94px;
     left: 32px;
     bottom: 0;
+  }
+  &:hover {
+    h4 {
+      &::after {
+        background-color: #ea736d;
+      }
+    }
   }
   @media (min-width: 768px) {
     width: 50%;
