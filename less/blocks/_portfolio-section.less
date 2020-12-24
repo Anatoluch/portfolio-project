@@ -1,8 +1,10 @@
 .portfolio-section {
+  max-width: 1600px;
+  margin: 0 auto;
   padding: 106px 0 64px;
   background-color: #f4f8f9;
   h2 {
-    margin-bottom: 60px;
+    margin-bottom: 61px;
     position: relative;
     z-index: 1;
     &::after {
@@ -15,7 +17,7 @@
 }
 .portfolio-filter {
   display: flex;
-  margin-bottom: 51px;
+  margin-bottom: 50px;
 }
 .filter-link {
   margin-right: 80px;
@@ -43,13 +45,16 @@
   justify-content: space-between;
 }
 .portfolio-card {
-  margin-bottom: 48px;
+  margin-bottom: 39px;
   max-width: 360px;
   &:first-of-type,
   &:nth-of-type(2) {
     max-width: 556px;
-    .card-title {
+    .card-title-link {
       font-size: 32px;
+    }
+    .card-desc {
+      padding-top: 26px;
     }
     .card-desc p {
       font-size: 22px;
@@ -81,13 +86,13 @@
   align-items: center;
   opacity: 0;
   background-color: rgba(251, 222, 76, 0.85);
-  transition: all 0.4s ease-in 0.3s;
+  transition: all 0.5s ease-in;
   &:hover,
   &:active {
     display: flex;
     opacity: 1;
   }
-  span {
+  .btn-overlay span {
     display: inline-block;
     padding: 12px 24px;
     border-radius: 26px;
@@ -98,10 +103,8 @@
     line-height: 1;
     font-weight: 800;
     outline: none;
-    opacity: 0;
-    transition: all 0.2s ease-in-out 0.5s;
+    transition: all 0.2s ease-in-out;
     &:hover {
-      opacity: 1;
       transform: scale(1.15);
       box-shadow: 0px 15px 7px rgba(0, 0, 0, 0.35);
       border-color: #ea736d;
@@ -117,19 +120,32 @@
   }
 }
 .card-desc {
-  padding-top: 26px;
+  padding-top: 24px;
+  padding-bottom: 10px;
   p {
     margin-bottom: 15px;
     font-size: 20px;
     line-height: 1.2;
   }
 }
+.card-title {
+  display: inline-block;
+  margin-bottom: 10px;
+  &:hover {
+    margin-bottom: 9px;
+  }
+}
 .card-title-link {
   color: var(--p);
-}
-.card-title {
-  margin-bottom: 10px;
   font-size: 26px;
   font-weight: 700;
   line-height: 1.2;
+  &:hover {
+    color: var(--red);
+    border-bottom: 1px solid var(--red);
+  }
+  &:active {
+    color: var(--red);
+    border-bottom: 1px solid var(--red);
+  }
 }

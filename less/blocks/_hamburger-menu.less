@@ -3,7 +3,7 @@
   height: 40px;
   display: flex;
   align-items: center;
-  z-index:9;
+  z-index: 9;
   span {
     position: relative;
     display: inline-block;
@@ -36,17 +36,20 @@
   }
 }
 .toggle-menu.active {
-   span {
-      background-color: transparent;
-      &::before {
-       transform: rotate(45deg);    
-       top: 0;
-         // top: -13px;
-       }
-       &::after {
-         // bottom: -13px;
-         bottom: 0;
-        transform: rotate(-45deg);
-       }
-   }
+  // position: fixed; //костыль для устранения конфликта для html и body с overflow-x: hidden; и bodyEl position: fixed;
+  // right: 15px; //костыль для устранения конфликта для html и body с overflow-x: hidden; и bodyEl position: fixed;
+  z-index: 9;
+  span {
+    background-color: transparent;
+    &::before {
+      transform: rotate(45deg);
+      top: 0;
+      // top: -13px;
+    }
+    &::after {
+      // bottom: -13px;
+      bottom: 0;
+      transform: rotate(-45deg);
+    }
+  }
 }

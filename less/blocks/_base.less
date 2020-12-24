@@ -17,18 +17,35 @@
 html {
   scroll-behavior: smooth;
 }
-html,
 body {
   margin: 0;
   padding: 0;
   font-family: "M PLUS 1p", sans-serif;
   font-weight: 400;
+  font-size: 16px;
   overflow-x: hidden;
-  -webkit-font-smoothing: subpixel-antialiased !important;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
 }
+body.noscroll {
+  position: fixed;
+}
+/*--Затемняющий слой вокруг плашки мобильного меню--*/
+#overlay {
+  font-size: 0;
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(44, 52, 73, 0.75);
+  z-index: 6;
+  display: none;
+}
+#overlay.active {
+  display: block;
+}
+/*--/Затемняющий слой вокруг плашки мобильного меню--*/
 a,
 a:hover {
   text-decoration: none;
@@ -45,6 +62,9 @@ a:hover {
     color: var(--red);
     border-bottom: 1px solid var(--red);
   }
+}
+.none {
+  display: none;
 }
 ul {
   margin: 0;
@@ -161,13 +181,12 @@ button {
 /*--Контейнер--*/
 .container {
   width: 100%;
-  max-width: 320px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
   //Для большого смартфона
   @media (min-width: 576px) {
-    max-width: 540px;
+    max-width: 600px;
   }
   //Для планшета
   @media (min-width: 768px) {
@@ -229,7 +248,7 @@ button {
     box-shadow: 0px 15px 7px rgba(0, 0, 0, 0.7);
   }
   .git {
-    transition: all 0.6s ease-in-out 0.7s;
+    transition: all 0.5s ease-in-out 0.5s;
     &:hover {
       transform: scale(1.25) translatey(-3%) rotate(360deg);
       filter: drop-shadow(0 2px 2px #3a3a3a);
@@ -240,7 +259,7 @@ button {
 .icon-tele {
   background-color: #039be5;
   .fly {
-    transition: all 0.2s linear 0.25s;
+    transition: all 0.1s linear 0.3s;
     &:hover {
       transform: scale(1.25) translate(27%, -40%);
       filter: drop-shadow(0 2px 2px #1c2c3f);
@@ -251,7 +270,7 @@ button {
 .icon-vk {
   background-color: #4d76a1;
   .vk {
-    transition: all 0.3s ease-out 0.25s;
+    transition: all 0.3s ease-out 0.5s;
     &:hover {
       transform: scale(1.45) translatey(-5%) rotate(-15deg);
       filter: drop-shadow(0 4px 1px #1c2c3f);
