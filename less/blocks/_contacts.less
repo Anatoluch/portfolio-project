@@ -130,6 +130,15 @@
   font-weight: 700;
   outline: none;
   caret-color: #ea736d;
+  &::placeholder {
+    color: #bcbcbc;
+    font-size: 20px;
+    font-weight: 700;
+    pointer-events: none;
+  }
+  &:focus {
+    border-color: #ea736d;
+  }
 }
 .form-textarea {
   width: 100%;
@@ -145,6 +154,15 @@
   font-weight: 700;
   resize: none;
   outline: none;
+  &::placeholder {
+    color: #bcbcbc;
+    font-size: 20px;
+    font-weight: 700;
+    pointer-events: none;
+  }
+  &:focus {
+    border-color: #ea736d;
+  }
 }
 .fake-placeholder {
   position: absolute;

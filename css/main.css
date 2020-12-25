@@ -1473,6 +1473,45 @@ button {
   outline: none;
   caret-color: #ea736d;
 }
+.form-input::-webkit-input-placeholder {
+  color: #bcbcbc;
+  font-size: 20px;
+  font-weight: 700;
+  pointer-events: none;
+}
+.form-input:-moz-placeholder {
+  color: #bcbcbc;
+  font-size: 20px;
+  font-weight: 700;
+  pointer-events: none;
+}
+.form-input::-moz-placeholder {
+  color: #bcbcbc;
+  font-size: 20px;
+  font-weight: 700;
+  pointer-events: none;
+}
+.form-input:-ms-input-placeholder {
+  color: #bcbcbc;
+  font-size: 20px;
+  font-weight: 700;
+  pointer-events: none;
+}
+.form-input::-ms-input-placeholder {
+  color: #bcbcbc;
+  font-size: 20px;
+  font-weight: 700;
+  pointer-events: none;
+}
+.form-input::placeholder {
+  color: #bcbcbc;
+  font-size: 20px;
+  font-weight: 700;
+  pointer-events: none;
+}
+.form-input:focus {
+  border-color: #ea736d;
+}
 .form-textarea {
   width: 100%;
   height: 117px;
@@ -1489,6 +1528,45 @@ button {
   font-weight: 700;
   resize: none;
   outline: none;
+}
+.form-textarea::-webkit-input-placeholder {
+  color: #bcbcbc;
+  font-size: 20px;
+  font-weight: 700;
+  pointer-events: none;
+}
+.form-textarea:-moz-placeholder {
+  color: #bcbcbc;
+  font-size: 20px;
+  font-weight: 700;
+  pointer-events: none;
+}
+.form-textarea::-moz-placeholder {
+  color: #bcbcbc;
+  font-size: 20px;
+  font-weight: 700;
+  pointer-events: none;
+}
+.form-textarea:-ms-input-placeholder {
+  color: #bcbcbc;
+  font-size: 20px;
+  font-weight: 700;
+  pointer-events: none;
+}
+.form-textarea::-ms-input-placeholder {
+  color: #bcbcbc;
+  font-size: 20px;
+  font-weight: 700;
+  pointer-events: none;
+}
+.form-textarea::placeholder {
+  color: #bcbcbc;
+  font-size: 20px;
+  font-weight: 700;
+  pointer-events: none;
+}
+.form-textarea:focus {
+  border-color: #ea736d;
 }
 .fake-placeholder {
   position: absolute;
