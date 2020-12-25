@@ -803,7 +803,7 @@ button {
 .header-col-contacts {
   width: 31.5%;
 }
-.header-col-contacts .contacts-icons-row {
+.header-col-contacts ul {
   margin-bottom: 22px;
 }
 .header-contact-link a {
@@ -814,7 +814,6 @@ button {
 }
 /*--/Колонка "Контакты" для нижней части header'а--*/
 .portfolio-section {
-  max-width: 1600px;
   margin: 0 auto;
   padding: 106px 0 64px;
   background-color: #f4f8f9;
@@ -1136,7 +1135,6 @@ button {
           transform: translateX(0);
 }
 .process {
-  max-width: 1600px;
   margin: 0 auto;
   padding: 136px 0 134px;
   background-image: url("../img/main-page/stripes-wp.jpg");
@@ -1330,20 +1328,6 @@ button {
   background-position: center;
   background-repeat: repeat-y;
 }
-@media (min-width: 1200px) {
-  .contacts::before {
-    content: "";
-    display: block;
-    width: 50%;
-    height: 50%;
-    position: absolute;
-    top: 28.5%;
-    left: -7.6%;
-    background-image: url("../img/main-page/contacts-bg.png");
-    background-repeat: no-repeat;
-    z-index: 0;
-  }
-}
 .contacts .contacts-header {
   margin-bottom: 67px;
   text-align: center;
@@ -1366,6 +1350,20 @@ button {
       -ms-flex-pack: justify;
           justify-content: space-between;
   z-index: 1;
+}
+@media (min-width: 1200px) {
+  .contacts-row::before {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 28.5%;
+    left: -121px;
+    background-image: url("../img/main-page/contacts-bg.png");
+    background-repeat: no-repeat;
+    z-index: 0;
+  }
 }
 .contacts-col {
   padding-top: 21px;
@@ -1567,15 +1565,6 @@ button {
 }
 .form-textarea:focus {
   border-color: #ea736d;
-}
-.fake-placeholder {
-  position: absolute;
-  top: 0;
-  left: 5px;
-  color: #bcbcbc;
-  font-size: 20px;
-  font-weight: 700;
-  pointer-events: none;
 }
 .footer-link {
   border-bottom: 1px solid #bcbcbc;
