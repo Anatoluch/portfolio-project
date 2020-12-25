@@ -1599,4 +1599,11 @@ button {
 .footer-desc a {
   color: #b0b0b0;
 }
+.footer-desc a:hover,
+.footer-desc a:active {
+  color: #fff;
+}
+.footer-desc a:focus {
+  outline: none;
+}
 /*# sourceMappingURL=main.css.map */
