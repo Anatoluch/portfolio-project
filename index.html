@@ -9,8 +9,8 @@
 </head>
 <body>
    <!--Верхнее меню для мобилок-->
-   <div id="overlay none"></div>
-   <div class="mobile-menu none">
+   <div id="overlay"></div>
+   <div class="mobile-menu">
    </div>
    <!--/Верхнее меню для мобилок-->
    <header class="header">
@@ -132,146 +132,143 @@
       <section class="portfolio-section">
          <div class="container">
             <h2 class="section-title bottom-line" id="portfolio-cards">Портфолио</h2>
-            <div class="portfolio-wrapper">
                <div class="portfolio-filter">
-                  <a class="filter-link filter-link--active" href="#">Все работы</a>
-                  <a class="filter-link" href="#">Bootstrap</a>
-                  <a class="filter-link" href="#">Joomla!</a>
-                  <a class="filter-link" href="#">Frontend</a>
+                  <button class="filter-link control-active" data-filter="all">Все работы</button>
+                  <button class="filter-link" data-filter=".frontend">Frontend</button>
+                  <button class="filter-link" data-filter=".joomla">Joomla!</button>
+                  <button class="filter-link" data-filter=".boots">Bootstrap</button>
                </div>
-               <div class="portfolio-content">
+         </div>
+               <div class="portfolio-content" id="portfolio-projects">
                   <!--Карточка портфолио 1-->
-                  <div class="portfolio-card">
-                      <div class="card-img">
-                        <img src="./img/main-page/portfolio/card-1.jpg" alt="Форест травел">
-                        <a class="img-link" href="https://forest-travel-by-valerian.netlify.app" target="_blank">
-                           <div class="btn-overlay"><span>Смотреть проект</span></div>
-                        </a>
-                     </div>
-                     <div class="card-desc">
-                        <div class="card-title">
-                           <a class="card-title-link" href="https://forest-travel-by-valerian.netlify.app" target="_blank" title="Перейти на этот сайт?">Верстка “Форест тревел”</a>
+                  <div class="portfolio-card portfolio-card--big mix frontend">
+                        <div class="card-img">
+                           <img src="./img/main-page/portfolio/card-1.jpg" alt="Форест травел">
+                           <a class="img-link" href="https://forest-travel-by-valerian.netlify.app" target="_blank">
+                              <div class="btn-overlay"><span>Смотреть проект</span></div>
+                           </a>
                         </div>
-                        <p>Верстка многостраничного сайта</p>
-                     </div>
+                        <div class="card-desc">
+                           <div class="card-title">
+                              <a class="card-title-link" href="https://forest-travel-by-valerian.netlify.app" target="_blank" title="Перейти на этот сайт?">Верстка “Форест тревел”</a>
+                           </div>
+                           <p>Верстка многостраничного сайта</p>
+                        </div>
                   </div>
                   <!--/Карточка портфолио 1-->
                   <!--Карточка портфолио 2-->
-                  <div class="portfolio-card">
-                     <div class="card-img">
-                        <img src="./img/main-page/portfolio/card-2.jpg" alt="">
-                        <a class="img-link" href="https://unit-project-full.netlify.app" target="_blank">
-                           <div class="btn-overlay"><span>Смотреть проект</span></div>
-                        </a>
-                     </div>
-                     <div class="card-desc">
-                        <div class="card-title">
-                           <a class="card-title-link" href="https://unit-project-full.netlify.app" target="_blank" title="Перейти на этот сайт?">Проект “Юнит”</a>
+                  <div class="portfolio-card portfolio-card--big mix frontend">
+                        <div class="card-img">
+                           <img src="./img/main-page/portfolio/card-2.jpg" alt="">
+                           <a class="img-link" href="https://unit-project-full.netlify.app" target="_blank">
+                              <div class="btn-overlay"><span>Смотреть проект</span></div>
+                           </a>
                         </div>
-                        <p>Верстка многостраничного сайта</p>
-                     </div>
+                        <div class="card-desc">
+                           <div class="card-title">
+                              <a class="card-title-link" href="https://unit-project-full.netlify.app" target="_blank" title="Перейти на этот сайт?">Проект “Юнит”</a>
+                           </div>
+                            <p>Верстка многостраничного сайта</p>
+                        </div>
                   </div>
                   <!--/Карточка портфолио 2-->
                   <!--Карточка портфолио 3-->
-                  <div class="portfolio-card">
-                     <div class="card-img">
-                        <img src="./img/main-page/portfolio/card-4.jpg" alt="">
-                        <a class="img-link" href="https://crimean-hunter.ru/" target="_blank">
-                           <div class="btn-overlay"><span>Смотреть проект</span></div>
-                        </a>
-                     </div>
-                     <div class="card-desc">
-                        <div class="card-title">
-                           <a class="card-title-link" href="https://crimean-hunter.ru/" target="_blank" title="Перейти на этот сайт?">Блог “Крымский охотник”</a>
+                  <div class="portfolio-card mix joomla">
+                        <div class="card-img">
+                           <img src="./img/main-page/portfolio/card-4.jpg" alt="">
+                           <a class="img-link" href="https://crimean-hunter.ru/" target="_blank">
+                              <div class="btn-overlay"><span>Смотреть проект</span></div>
+                           </a>
                         </div>
-                        <p>Верстка многостраничного блога</p>
-                     </div>
+                        <div class="card-desc">
+                           <div class="card-title">
+                              <a class="card-title-link" href="https://crimean-hunter.ru/" target="_blank" title="Перейти на этот сайт?">Блог “Крымский охотник”</a>
+                           </div>
+                           <p>Верстка многостраничного блога</p>
+                        </div>
                   </div>
                   <!--/Карточка портфолио 3-->
                   <!--Карточка портфолио 4-->
-                  <div class="portfolio-card">
-                     <div class="card-img">
-                        <img src="./img/main-page/portfolio/card-5.jpg" alt="">
-                        <a class="img-link" href="https://melnitsa-cafe.ru/" target="_blank">
-                           <div class="btn-overlay"><span>Смотреть проект</span></div>
-                        </a>
-                     </div>
-                     <div class="card-desc">
-                        <div class="card-title">
-                           <a class="card-title-link" href="https://melnitsa-cafe.ru/" target="_blank" title="Перейти на этот сайт?">Сайт кафе “Мельница”</a>
+                  <div class="portfolio-card mix joomla">
+                        <div class="card-img">
+                           <img src="./img/main-page/portfolio/card-5.jpg" alt="">
+                           <a class="img-link" href="https://melnitsa-cafe.ru/" target="_blank">
+                              <div class="btn-overlay"><span>Смотреть проект</span></div>
+                           </a>
                         </div>
-                        <p>Верстка многостраничного сайта</p>
-                     </div>
+                        <div class="card-desc">
+                           <div class="card-title">
+                              <a class="card-title-link" href="https://melnitsa-cafe.ru/" target="_blank" title="Перейти на этот сайт?">Сайт кафе “Мельница”</a>
+                           </div>
+                           <p>Верстка многостраничного сайта</p>
+                        </div>
                   </div>
                   <!--/Карточка портфолио 4-->
                   <!--Карточка портфолио 5-->
-                  <div class="portfolio-card">
-                     <div class="card-img">
-                        <img src="./img/main-page/portfolio/card-3.jpg" alt="">
-                        <a class="img-link" href="https://portfolio-by-valerian.netlify.app" target="_blank">
-                           <div class="btn-overlay"><span>Смотреть проект</span></div>
-                        </a>
-                     </div>
-                     <div class="card-desc">
-                        <div class="card-title">
-                           <a class="card-title-link" href="https://portfolio-by-valerian.netlify.app" target="_blank" title="Перейти на этот сайт?">Сайт “Портфолио”</a>
+                  <div class="portfolio-card mix frontend">
+                        <div class="card-img">
+                           <img src="./img/main-page/portfolio/card-3.jpg" alt="">
+                           <a class="img-link" href="https://portfolio-by-valerian.netlify.app" target="_blank">
+                              <div class="btn-overlay"><span>Смотреть проект</span></div>
+                           </a>
                         </div>
-                        <p>Верстка многостраничного сайта</p>
-                     </div>
+                        <div class="card-desc">
+                           <div class="card-title">
+                              <a class="card-title-link" href="https://portfolio-by-valerian.netlify.app" target="_blank" title="Перейти на этот сайт?">Сайт “Портфолио”</a>
+                           </div>
+                           <p>Верстка многостраничного сайта</p>
+                        </div>
                   </div>
                   <!--/Карточка портфолио 5-->
                   <!--Карточка портфолио 6-->
-                  <div class="portfolio-card">
-                     <div class="card-img">
-                        <img src="./img/main-page/portfolio/card-6.jpg" alt="">
-                        <a class="img-link" href="https://product-card-by-valerian.netlify.app/" target="_blank">
-                           <div class="btn-overlay"><span>Смотреть проект</span></div>
-                        </a>
-                     </div>
-                     <div class="card-desc">
-                        <div class="card-title">
-                           <a class="card-title-link" href="https://product-card-by-valerian.netlify.app" target="_blank" title="Перейти на веб версию карточки?">Карточка товара</a>
+                  <div class="portfolio-card mix frontend">
+                        <div class="card-img">
+                           <img src="./img/main-page/portfolio/card-6.jpg" alt="">
+                           <a class="img-link" href="https://product-card-by-valerian.netlify.app/" target="_blank">
+                              <div class="btn-overlay"><span>Смотреть проект</span></div>
+                           </a>
                         </div>
-                        <p>Верстка карточки товара</p>
-                     </div>
+                        <div class="card-desc">
+                           <div class="card-title">
+                              <a class="card-title-link" href="https://product-card-by-valerian.netlify.app" target="_blank" title="Перейти на веб версию карточки?">Карточка товара</a>
+                           </div>
+                           <p>Верстка карточки товара</p>
+                        </div>
                   </div>
                   <!--/Карточка портфолио 6-->
                   <!--Карточка портфолио 7-->
-                  <div class="portfolio-card">
-                     <div class="card-img">
-                        <img src="./img/main-page/portfolio/card-7.jpg" alt="">
-                        <a class="img-link" href="https://book-card-by-valerian.netlify.app" target="_blank">
-                           <div class="btn-overlay"><span>Смотреть проект</span></div>
-                        </a>
-                     </div>
-                     <div class="card-desc">
-                        <div class="card-title">
-                           <a class="card-title-link" href="https://book-card-by-valerian.netlify.app" target="_blank" title="Перейти на веб версию карточки?">Карточка товара</a>
+                  <div class="portfolio-card mix frontend">
+                        <div class="card-img">
+                           <img src="./img/main-page/portfolio/card-7.jpg" alt="">
+                           <a class="img-link" href="https://book-card-by-valerian.netlify.app" target="_blank">
+                              <div class="btn-overlay"><span>Смотреть проект</span></div>
+                           </a>
                         </div>
-                        <p>Верстка карточки товара</p>
-                     </div>
+                        <div class="card-desc">
+                           <div class="card-title">
+                              <a class="card-title-link" href="https://book-card-by-valerian.netlify.app" target="_blank" title="Перейти на веб версию карточки?">Карточка товара</a>
+                           </div>
+                           <p>Верстка карточки товара</p>
+                        </div>
                   </div>
                   <!--/Карточка портфолио 7-->
                   <!--Карточка портфолио 8-->
-                  <div class="portfolio-card">
-                     <div class="card-img">
-                        <img src="./img/main-page/portfolio/card-8.jpg" alt="">
-                        <a class="img-link" href="https://by-valerian.netlify.app/#totop" target="_blank">
-                           <div class="btn-overlay"><span>Смотреть проект</span></div>
-                        </a>
-                     </div>
-                     <div class="card-desc">
-                        <div class="card-title">
-                           <a class="card-title-link" href="https://by-valerian.netlify.app/#totop" target="_blank" title="Перейти на этот сайт?">Страница сайта</a>
+                  <div class="portfolio-card mix boots">
+                        <div class="card-img">
+                           <img src="./img/main-page/portfolio/card-8.jpg" alt="">
+                           <a class="img-link" href="https://by-valerian.netlify.app/#totop" target="_blank">
+                              <div class="btn-overlay"><span>Смотреть проект</span></div>
+                           </a>
                         </div>
-                        <p>Верстка страницы сайта.</p>
-                     </div>
+                        <div class="card-desc">
+                           <div class="card-title">
+                              <a class="card-title-link" href="https://by-valerian.netlify.app/#totop" target="_blank" title="Перейти на этот сайт?">Страница сайта</a>
+                           </div>
+                           <p>Верстка страницы сайта.</p>
+                        </div>
                   </div>
                   <!--/Карточка портфолио 8-->
                </div>
-               
-            </div>
-         </div>
       </section>
       <!--/Раздел "Портфолио"-->
       <!--Раздел "Как я работаю"-->
@@ -445,6 +442,8 @@
          </div>
       </div>
    </footer>
+   <script src="libs/jquery/jquery-3.5.1.min.js"></script>
+   <script src="libs/mixitup3/mixitup.min.js"></script>
    <script src="js/main.js"></script>
 </body>
 </html>

@@ -17,6 +17,7 @@
 }
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 body {
   margin: 0;
@@ -851,13 +852,15 @@ button {
 .filter-link:active {
   color: var(--red);
 }
-.filter-link.filter-link--active {
+.control-active {
   color: var(--p);
 }
-.filter-link.filter-link--active:hover {
+.control-active:hover {
   color: var(--red);
 }
 .portfolio-content {
+  margin: 0 auto;
+  max-width: 1170px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -866,30 +869,25 @@ button {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-     -moz-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  overflow: hidden;
 }
 .portfolio-card {
   margin-bottom: 39px;
   max-width: 360px;
 }
-.portfolio-card:first-of-type,
-.portfolio-card:nth-of-type(2) {
+.portfolio-card--big {
   max-width: 556px;
 }
-.portfolio-card:first-of-type .card-title-link,
-.portfolio-card:nth-of-type(2) .card-title-link {
+.portfolio-card--big .card-title-link {
   font-size: 32px;
 }
-.portfolio-card:first-of-type .card-desc,
-.portfolio-card:nth-of-type(2) .card-desc {
+.portfolio-card--big .card-desc {
   padding-top: 26px;
 }
-.portfolio-card:first-of-type .card-desc p,
-.portfolio-card:nth-of-type(2) .card-desc p {
+.portfolio-card--big .card-desc p {
   font-size: 22px;
 }
 .card-img {
@@ -1081,6 +1079,8 @@ button {
   }
 }
 .toggle-menu.active {
+  position: fixed;
+  right: 15px;
   z-index: 9;
 }
 .toggle-menu.active span {

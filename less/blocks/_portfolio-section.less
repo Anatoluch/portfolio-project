@@ -32,32 +32,34 @@
     color: var(--red);
   }
 }
-.filter-link.filter-link--active {
+.control-active {
   color: var(--p);
   &:hover {
     color: var(--red);
   }
 }
 .portfolio-content {
+  margin: 0 auto;
+  max-width: 1170px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
+  overflow: hidden;
 }
 .portfolio-card {
   margin-bottom: 39px;
   max-width: 360px;
-  &:first-of-type,
-  &:nth-of-type(2) {
-    max-width: 556px;
-    .card-title-link {
-      font-size: 32px;
-    }
-    .card-desc {
-      padding-top: 26px;
-    }
-    .card-desc p {
-      font-size: 22px;
-    }
+}
+.portfolio-card--big {
+  max-width: 556px;
+  .card-title-link {
+    font-size: 32px;
+  }
+  .card-desc {
+    padding-top: 26px;
+  }
+  .card-desc p {
+    font-size: 22px;
   }
 }
 .card-img {
