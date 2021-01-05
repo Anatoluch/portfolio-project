@@ -874,13 +874,26 @@ button {
 /*--Фоновое изобранение--*/
 .header-bg-row {
   max-width: 1600px;
-  min-width: 320px;
   z-index: -1;
   margin-bottom: -20px;
+  -webkit-transform: scale(1.78);
+     -moz-transform: scale(1.78);
+      -ms-transform: scale(1.78);
+       -o-transform: scale(1.78);
+          transform: scale(1.78);
 }
 .header-bg-row img {
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (min-width: 768px) {
+  .header-bg-row {
+    -webkit-transform: scale(1);
+       -moz-transform: scale(1);
+        -ms-transform: scale(1);
+         -o-transform: scale(1);
+            transform: scale(1);
+  }
 }
 /*--/Фоновое изобранение--*/
 /*--Контейнер для контента нижней части header'а--*/
