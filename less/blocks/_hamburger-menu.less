@@ -1,4 +1,6 @@
 .toggle-menu {
+  margin-right: 16px; //Костыль для PP 320px
+  margin-top: 4px; //Костыль для PP 320px
   width: 40px;
   height: 40px;
   display: flex;
@@ -29,6 +31,8 @@
   }
   //Для планшета
   @media (min-width: 768px) {
+    margin-right: 16px; //Костыль для PP 320px
+    margin-top: 4px; //Костыль для PP 320px
   }
   //Для десктопа
   @media (min-width: 1200px) {
@@ -36,8 +40,11 @@
   }
 }
 .toggle-menu.active {
+  margin-right: 10px;
+  margin-top: 0;
   position: fixed; //костыль для устранения конфликта для html и body с overflow-x: hidden; и bodyEl position: fixed;
   right: 15px; //костыль для устранения конфликта для html и body с overflow-x: hidden; и bodyEl position: fixed;
+  top: 25px; //костыль для устранения конфликта для html и body с overflow-x: hidden; и bodyEl position: fixed;
   z-index: 9;
   span {
     background-color: transparent;

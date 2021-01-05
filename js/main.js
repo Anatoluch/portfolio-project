@@ -1,7 +1,20 @@
 $(document).ready(function () {
-   const toggleMenu = document.querySelector('.toggle-menu');//Иконка меню "Гамбургер"
+// Подключение точек пагинации справа page-nav
+$('#page-nav').onePageNav({
+   currentClass: 'active-nav',
+   changeHash: false,
+   scrollSpeed: 750,
+   scrollThreshold: 0.5,
+   filter: '',
+   easing: 'swing',
+   begin: function () {},
+   end: function () {},
+   scrollChange: function ($currentListItem) {}
+});
+//Иконка мобильного меню "Гамбургер"
+const toggleMenu = document.querySelector('.toggle-menu');//Иконка меню "Гамбургер"
 const mobMenu = document.querySelector('.mobile-menu');// Плашка под мобильное меню
-const overlay = document.querySelector('#overlay');// overlae
+const overlay = document.querySelector('#overlay');// overlay
 const bodyEl = document.body;
 
 //Сценарий события клик по "гамбургеру" (появление/исчезание моб. меню, оверлея)
@@ -49,5 +62,75 @@ overlay.addEventListener('click', function(){
             }
          });
       }
+      //Скрипт для fake-placeholder'а формы обратной связи
+      const formItems = document.querySelectorAll('.form-input');
+      for(let item of formItems){
+         const thisParent = item.closest('.form-item-row');
+         const thisPlaceholder = thisParent.querySelector('.fake-placeholder');
+         //Текстовое поле (input) в фокусе
+         item.addEventListener('focus', function(){
+            thisPlaceholder.classList.add('active-field');
+         });
+         //Текстовое поле теряет фокус
+         item.addEventListener('blur', function(){
+            if(item.value.length > 0){
+               thisPlaceholder.classList.add('active-field');
+            }
+            else{
+               thisPlaceholder.classList.remove('active-field');
+            }
+         })
+      }
+      //Валидация формы обратной связи
+      $('.contact-form').validate({
+         rules: {
+            email: {
+               required:true,
+               email:true
+            },
+            subject: {
+               required: false
+            },
+            message: {
+               required: true
+            }
+         },
+         messages: {
+            email: {
+               required: 'Обязательно укажите Ваш email',
+               email: 'Введен некорректный адрес электронной почты!'
+            },
+            subject: {
+               required: 'Тема сообщения не указана!'
+            },
+            message: {
+               required: 'А где, собственно, текст Вашего сообщения?!'
+            }
+         },
+         submitHandler: function (form) {
+            ajaxFormSubmit();
+         }
+      })
+   //Отправка данных формы обратной связи
+   	// Функция AJAX запрса на сервер
 
+	function ajaxFormSubmit() {
+
+		let string = $(".contact-form").serialize(); // Соханяем данные введенные в форму в строку.
+
+		//Формируем ajax запрос
+		$.ajax({
+			type: "POST", // Тип запроса - POST
+			url: "php/mail.php", // Куда отправляем запрос
+			data: string, // Какие даные отправляем, в данном случае отправляем переменную string
+
+			// Функция если все прошло успешно
+			success: function (html) {
+				$(".contact-form").slideUp(800);
+				$('#answer').html(html);
+			}
+		});
+		// Чтобы по Submit больше ничего не выполнялось - делаем возврат false чтобы прервать цепчку срабатывания остальных функций
+		return false;
+	}
 })

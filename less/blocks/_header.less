@@ -1,7 +1,7 @@
 .header {
   max-width: 1600px;
   margin: 0 auto;
-  padding: 10px 0 120px;
+  padding: 21px 0 120px;
   background-image: url("../img/main-page/stripes.jpg");
   background-size: auto;
   background-position: center;
@@ -22,13 +22,17 @@
 }
 .container.container--enlarge {
   max-width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 18px;
+  padding-right: 18px;
   //Для планшета
   @media (min-width: 768px) {
+    padding-left: 32px;
+    padding-right: 32px;
   }
   //Для десктопа
   @media (min-width: 1200px) {
+    padding-left: 15px;
+    padding-right: 15px;
     max-width: 1430px;
   }
 }
@@ -36,15 +40,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  //Для большого смартфона
-  @media (min-width: 576px) {
-  }
+  margin-bottom: 26px;
   //Для планшета
   @media (min-width: 768px) {
-  }
-  //Для большого планшета
-  @media (min-width: 992px) {
+    margin-bottom: 66px;
   }
   //Для десктопа
   @media (min-width: 1200px) {
@@ -163,18 +162,20 @@
 }
 .header-content {
   display: block;
-  margin-bottom: -28px;
+  margin-bottom: 33px;
   //Для планшета
   @media (min-width: 768px) {
     display: flex;
     flex-direction: row-reverse;
-    margin-bottom: -128px;
+    margin-bottom: -48px;
   }
   //Для десктопа
   @media (min-width: 1200px) {
+    margin-bottom: -128px;
   }
 }
 .header-img-col {
+  margin-bottom: 51px;
   display: flex;
   justify-content: center;
   position: relative;
@@ -182,7 +183,9 @@
   z-index: 2;
   //Для планшета
   @media (min-width: 768px) {
+    margin-bottom: 0;
     width: 50%;
+    padding-right: 25px;
     justify-content: flex-end;
     align-items: flex-end;
     padding-left: 10px;
@@ -190,6 +193,7 @@
   //Для десктопа
   @media (min-width: 1200px) {
     width: 50%;
+    padding-right: 0;
     padding-left: 10px;
   }
   &:before {
@@ -219,15 +223,24 @@
     }
   }
 }
+/*---Замена изображения в шапке по медиазапросу---*/
+.header-img {
+  @media (min-width: 1200px) {
+    content: url("../img/main-page/header-img.png");
+  }
+}
+/*---/Замена изображения в шапке по медиазапросу---*/
 .header-text-col {
   width: 100%;
   z-index: 1;
   //Для планшета
   @media (min-width: 768px) {
-    width: calc(~"50% - 15px");
+    padding-top: 10px;
+    width: 50%;
   }
   //Для десктопа
   @media (min-width: 1200px) {
+    padding-top: 0;
     width: 50%;
   }
 }
@@ -235,37 +248,70 @@
   font-size: 42px;
   font-weight: 800;
   line-height: 1.2;
-  margin-bottom: 15px;
+  margin-bottom: 24px;
   span {
     display: inline-block;
     position: relative;
     z-index: 1;
     &::after {
-      bottom: 13px;
+      bottom: 3px;
       height: 12px;
+      //Для планшета
+      @media (min-width: 768px) {
+        bottom: 6px;
+      }
+      //Для десктопа
+      @media (min-width: 1200px) {
+        bottom: 13px;
+      }
     }
   }
   //Для планшета
   @media (min-width: 768px) {
+    margin-bottom: 15px;
     font-size: 52px;
   }
   //Для десктопа
   @media (min-width: 1200px) {
     font-size: 90px;
     font-weight: 800;
-    line-height: 1.2;
     margin-bottom: 15px;
   }
 }
-.header-desc {
+.header-desc-mob {
   margin-bottom: 10px;
   font-size: 18px;
+  font-weight: 500;
   color: #393f47;
   line-height: 1.667;
   text-shadow: 0 3px 42px #fff;
+  //Для планшета
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+.header-desc {
+  display: none;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #393f47;
+  line-height: 1.667;
+  text-shadow: 0 3px 42px #fff;
+  //Для планшета
+  @media (min-width: 768px) {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #393f47;
+    line-height: 1.667;
+    text-shadow: 0 3px 42px #fff;
+  }
   //Для десктопа
   @media (min-width: 1200px) {
     margin-bottom: 32px;
+    font-weight: 400;
     padding-right: 6px;
     color: #393f47;
     font-size: 24px;
@@ -289,8 +335,22 @@
 }
 /*--Фоновое изобранение--*/
 .header-bg-row {
+  max-width: 1600px;
+  min-width: 320px;
   z-index: -1;
   margin-bottom: -20px;
+  img {
+    object-fit: cover;
+  }
+
+  // transform: scale(1.78);
+  //Для планшета
+  @media (min-width: 768px) {
+    // transform: scale(1);
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+  }
 }
 /*--/Фоновое изобранение--*/
 /*--Контейнер для контента нижней части header'а--*/
