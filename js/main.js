@@ -97,7 +97,7 @@ overlay.addEventListener('click', function(){
          },
          messages: {
             email: {
-               required: 'Обязательно укажите Ваш email',
+               required: 'Обязательно укажите Ваш email!',
                email: 'Введен некорректный адрес электронной почты!'
             },
             subject: {
