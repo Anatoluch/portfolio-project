@@ -148,9 +148,19 @@ span::selection {
 /*--/Заголовок для секции--*/
 /*--Заголовоки для блока--*/
 .title-3 {
-  text-shadow: 0 3px 42px #fff;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 800;
+  text-shadow: 0px 3px 42px #fff;
+}
+@media (min-width: 768px) {
+  .title-3 {
+    font-size: 32px;
+  }
+}
+@media (min-width: 1200px) {
+  .title-3 {
+    font-size: 40px;
+  }
 }
 /*--/Заголовоки для блока--*/
 img {
@@ -225,6 +235,14 @@ button {
   border-color: var(--btn-bg-a);
   background-color: var(--btn-bg-a);
 }
+.btn.btn--mob {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .btn.btn--mob {
+    display: inline-block;
+  }
+}
 .btn.btn--white {
   border-color: var(--btn-transp);
   color: var(--btn-transp);
@@ -287,10 +305,15 @@ button {
   display: flex;
 }
 .icon-item {
-  margin-right: 31px;
+  margin-right: 30px;
 }
 .icon-item:last-child {
   margin-right: 0;
+}
+@media (min-width: 768px) {
+  .icon-item {
+    margin-right: 31px;
+  }
 }
 .icon-link {
   display: -webkit-box;
@@ -875,24 +898,26 @@ button {
 .header-bg-row {
   max-width: 1600px;
   z-index: -1;
-  margin-bottom: -20px;
+  margin-bottom: 75px;
   -webkit-transform: scale(1.78);
      -moz-transform: scale(1.78);
       -ms-transform: scale(1.78);
        -o-transform: scale(1.78);
           transform: scale(1.78);
 }
-.header-bg-row img {
-  -o-object-fit: cover;
-     object-fit: cover;
-}
 @media (min-width: 768px) {
   .header-bg-row {
+    margin-bottom: 8px;
     -webkit-transform: scale(1);
        -moz-transform: scale(1);
         -ms-transform: scale(1);
          -o-transform: scale(1);
             transform: scale(1);
+  }
+}
+@media (min-width: 1200px) {
+  .header-bg-row {
+    margin-bottom: -20px;
   }
 }
 /*--/Фоновое изобранение--*/
@@ -903,58 +928,170 @@ button {
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-     -moz-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media (min-width: 768px) {
+  .skills-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+       -moz-box-orient: horizontal;
+       -moz-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+       -moz-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 .skills-container h3 {
-  margin-bottom: 31px;
+  margin-bottom: 24px;
+}
+@media (min-width: 1200px) {
+  .skills-container h3 {
+    margin-bottom: 31px;
+  }
 }
 /*--/Контейнер для контента нижней части header'а--*/
 /*--Колонка "Навыки" нижней части header'а--*/
 .skills-col {
-  width: 60%;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .skills-col {
+    width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .skills-col {
+    width: 60%;
+  }
 }
 /*--Заголовоки для контента нижней части header'а--*/
 /*--/Заголовоки для контента нижней части header'а--*/
 /*--Список навыков для нижней части header'а--*/
 .skills-list {
-  margin-bottom: 45px;
-  text-shadow: 0 3px 42px #fff;
-  font-size: 24px;
+  margin-bottom: 35px;
+  font-size: 18px;
   font-weight: 400;
+  text-shadow: 0 3px 42px #fff;
+}
+@media (min-width: 768px) {
+  .skills-list {
+    margin-bottom: 45px;
+  }
+}
+@media (min-width: 1200px) {
+  .skills-list {
+    margin-bottom: 45px;
+    font-size: 24px;
+    font-weight: 400;
+  }
 }
 .skills-list__item {
   position: relative;
-  padding-left: 30px;
-  margin-bottom: 15px;
-  line-height: 1;
+  padding-right: 10px;
+  margin-bottom: 16px;
+  line-height: 1.2;
 }
-.skills-list__item::before {
-  content: "";
-  position: absolute;
-  top: 12px;
-  left: -1px;
-  height: 2px;
-  width: 23px;
-  background-color: #000;
+.skills-list__item:first-letter {
+  text-transform: uppercase;
+}
+@media (min-width: 1200px) {
+  .skills-list__item {
+    margin-bottom: 15px;
+    padding-right: 0;
+    padding-left: 30px;
+    line-height: 1;
+  }
+  .skills-list__item:first-letter {
+    text-transform: none;
+  }
+  .skills-list__item::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: -1px;
+    height: 2px;
+    width: 23px;
+    background-color: #000;
+  }
 }
 /*--Список навыков для нижней части header'а--*/
 /*--/Колонка "Навыки" нижней части header'а--*/
 /*--Колонка "Контакты" для нижней части header'а--*/
 .header-col-contacts {
-  width: 31.5%;
+  width: 100%;
+}
+.header-col-contacts h3 {
+  position: relative;
+  left: -2px;
+  margin-bottom: 18px;
+}
+@media (min-width: 768px) {
+  .header-col-contacts h3 {
+    position: static;
+  }
+}
+@media (min-width: 1200px) {
+  .header-col-contacts h3 {
+    margin-bottom: 32px;
+  }
+}
+@media (min-width: 768px) {
+  .header-col-contacts {
+    width: 48%;
+  }
+}
+@media (min-width: 1200px) {
+  .header-col-contacts {
+    width: 31.5%;
+  }
 }
 .header-col-contacts ul {
-  margin-bottom: 22px;
+  margin-bottom: 11px;
+}
+@media (min-width: 768px) {
+  .header-col-contacts ul {
+    margin-bottom: 18px;
+  }
+}
+@media (min-width: 1200px) {
+  .header-col-contacts ul {
+    margin-bottom: 22px;
+  }
 }
 .header-contact-link a {
-  text-shadow: 0 3px 42px #ffffff;
+  font-size: 18px;
   color: #000;
-  font-size: 24px;
-  font-weight: 400;
+  line-height: 1.2;
+  text-shadow: 0 3px 42px #fff;
+}
+@media (min-width: 768px) {
+  .header-contact-link a {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .header-contact-link a {
+    text-shadow: 0 3px 42px #fff;
+    color: #000;
+    font-size: 24px;
+    font-weight: 400;
+  }
 }
 /*--/Колонка "Контакты" для нижней части header'а--*/
 .portfolio-section {

@@ -134,9 +134,17 @@ span::selection {
 /*--/Заголовок для секции--*/
 /*--Заголовоки для блока--*/
 .title-3 {
-  text-shadow: 0 3px 42px #fff;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 800;
+  text-shadow: 0px 3px 42px #fff;
+  //Для планшета
+  @media (min-width: 768px) {
+    font-size: 32px;
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    font-size: 40px;
+  }
 }
 /*--/Заголовоки для блока--*/
 img {
@@ -205,6 +213,13 @@ button {
     background-color: var(--btn-bg-a);
   }
 }
+.btn.btn--mob {
+  display: none;
+  //Для десктопа
+  @media (min-width: 1200px) {
+    display: inline-block;
+  }
+}
 .btn.btn--white {
   border-color: var(--btn-transp);
   color: var(--btn-transp);
@@ -257,10 +272,14 @@ button {
   display: flex;
 }
 .icon-item {
-  margin-right: 31px;
+  margin-right: 30px;
   &:last-child {
     margin-right: 0;
   }
+    //Для планшета
+    @media (min-width: 768px) {
+      margin-right: 31px;
+    }
 }
 .icon-link {
   display: flex;
