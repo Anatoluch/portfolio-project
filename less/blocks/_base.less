@@ -127,9 +127,21 @@ span::selection {
 /*--Заголовок для секции--*/
 .section-title {
   display: inline-block;
-  font-size: 64px;
+  position: relative;
+  left: -3px;
+  font-size: 42px;
   font-weight: 800;
   line-height: 1.2;
+  //Для планшета
+  @media (min-width: 768px) {
+    font-size: 52px;
+    left: -4px;
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    font-size: 64px;
+    position: static;
+  }
 }
 /*--/Заголовок для секции--*/
 /*--Заголовоки для блока--*/
@@ -276,10 +288,10 @@ button {
   &:last-child {
     margin-right: 0;
   }
-    //Для планшета
-    @media (min-width: 768px) {
-      margin-right: 31px;
-    }
+  //Для планшета
+  @media (min-width: 768px) {
+    margin-right: 31px;
+  }
 }
 .icon-link {
   display: flex;

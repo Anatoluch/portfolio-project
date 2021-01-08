@@ -1,29 +1,78 @@
 .portfolio-section {
   margin: 0 auto;
-  padding: 106px 0 64px;
+  padding: 52px 0 96px;
   background-color: #f4f8f9;
+  //Для планшета
+  @media (min-width: 768px) {
+    padding: 69px 0 78px;
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    padding: 106px 0 64px;
+  }
   h2 {
-    margin-bottom: 61px;
+    margin-bottom: 46px;
     position: relative;
     z-index: 1;
+    //Для планшета
+    @media (min-width: 768px) {
+      margin-bottom: 52px;
+    }
+    //Для десктопа
+    @media (min-width: 1200px) {
+      margin-bottom: 61px;
+    }
     &::after {
-      bottom: 8px;
-      left: -5px;
-      right: 0;
+      bottom: 4px;
+      left: -3px;
+      right: -3px;
       height: 12px;
+      //Для планшета
+      @media (min-width: 768px) {
+        bottom: 6px;
+        left: -5px;
+        right: 0;
+      }
+      //Для десктопа
+      @media (min-width: 1200px) {
+        bottom: 8px;
+      }
     }
   }
 }
 .portfolio-filter {
-  display: flex;
+  display: none;
   margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  //Для планшета
+  @media (min-width: 768px) {
+    padding: 0 26px;
+    max-width: 768px;
+    display: flex;
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    padding: 0;
+    max-width: 1140px;
+  }
 }
 .filter-link {
-  margin-right: 80px;
-  font-weight: 800;
-  font-size: 28px;
-  color: rgb(143, 165, 174);
-  line-height: 1.2;
+  //Для планшета
+  @media (min-width: 768px) {
+    display: flex;
+    margin-right: 46px;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.1px;
+    color: rgb(143, 165, 174);
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    margin-right: 64px;
+    font-size: 28px;
+  }
   &:last-child {
     margin-right: 0;
   }
@@ -39,27 +88,109 @@
   }
 }
 .portfolio-content {
-  margin: 0 auto;
+  margin: 0 auto -4px;
   max-width: 1170px;
+  padding: 0 15px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   overflow: hidden;
+  //Для планшета
+  @media (min-width: 768px) {
+    margin: 0 auto 28px;
+    padding: 0 30px;
+    height: auto;
+    max-height: 700px;
+    justify-content: space-between;
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    max-height: unset;
+    padding: 0;
+    margin: 0 auto;
+    justify-content: space-around;
+  }
 }
 .portfolio-card {
-  margin-bottom: 39px;
+  margin-bottom: 22px;
   max-width: 360px;
+  //Для планшета
+  @media (min-width: 768px) {
+    margin-bottom: 19px;
+    max-width: 338px;
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    margin-bottom: 39px;
+    max-width: 360px;
+  }
+  //Это правило осталяет первые 5 карточек для мобильной версии (для планшета это правило не работает, так как для него ниже прописано отдельное правило), остальные скрывает
+  &:nth-of-type(n + 6) {
+    display: none;
+    @media (min-width: 768px) {
+      display: block;
+    }
+    //Отображаем скрытые карточки на десктопе
+    //Для десктопа
+    @media (min-width: 1200px) {
+      display: block;
+    }
+  }
+  // //Это правило осталяет первые 4 карточки для планшетной версии (мобильной версии не косается, для нее написано выше), остальные скрывает
+  // &:nth-of-type(n + 5) {
+  //   //Для планшета
+  //   @media (min-width: 768px) {
+  //     display: none;
+  //   }
+  //   //Отображаем скрытые карточки на десктопе
+  //   //Для десктопа
+  //   @media (min-width: 1200px) {
+  //     display: block;
+  //   }
+  // }
 }
 .portfolio-card--big {
-  max-width: 556px;
+  max-width: 360px;
+  //Для планшета
+  @media (min-width: 768px) {
+    max-width: 338px;
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    max-width: 556px;
+  }
   .card-title-link {
-    font-size: 32px;
+    font-size: 22px;
+    //Для планшета
+    @media (min-width: 768px) {
+      font-size: 24px;
+    }
+    //Для десктопа
+    @media (min-width: 1200px) {
+      font-size: 32px;
+    }
   }
   .card-desc {
-    padding-top: 26px;
+    padding-top: 21px;
+    //Для планшета
+    @media (min-width: 768px) {
+      padding-top: 20px;
+    }
+    //Для десктопа
+    @media (min-width: 1200px) {
+      padding-top: 26px;
+    }
   }
   .card-desc p {
-    font-size: 22px;
+    font-size: 16px;
+    //Для планшета
+    @media (min-width: 768px) {
+      font-size: 18px;
+    }
+    //Для десктопа
+    @media (min-width: 1200px) {
+      font-size: 22px;
+    }
   }
 }
 .card-img {
@@ -75,6 +206,88 @@
     }
   }
 }
+/*---Замена изображений карточек портфолио по медиазапросу---*/
+.img-card-1 {
+  //Для планшета
+  @media (min-width: 768px) {
+    content: url("../img/main-page/portfolio/card-1-tab.jpg");
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    content: url("../img/main-page/portfolio/card-1.jpg");
+  }
+}
+.img-card-2 {
+  //Для планшета
+  @media (min-width: 768px) {
+    content: url("../img/main-page/portfolio/card-2-tab.jpg");
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    content: url("../img/main-page/portfolio/card-2.jpg");
+  }
+}
+.img-card-3 {
+  //Для планшета
+  @media (min-width: 768px) {
+    content: url("../img/main-page/portfolio/card-4-tab.jpg");
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    content: url("../img/main-page/portfolio/card-4.jpg");
+  }
+}
+.img-card-4 {
+  //Для планшета
+  @media (min-width: 768px) {
+    content: url("../img/main-page/portfolio/card-5-tab.jpg");
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    content: url("../img/main-page/portfolio/card-5.jpg");
+  }
+}
+.img-card-5 {
+  //Для планшета
+  @media (min-width: 768px) {
+    content: url("../img/main-page/portfolio/card-3-tab.jpg");
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    content: url("../img/main-page/portfolio/card-3.jpg");
+  }
+}
+.img-card-6 {
+  //Для планшета
+  @media (min-width: 768px) {
+    content: url("../img/main-page/portfolio/card-6-tab.jpg");
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    content: url("../img/main-page/portfolio/card-6.jpg");
+  }
+}
+.img-card-7 {
+  //Для планшета
+  @media (min-width: 768px) {
+    content: url("../img/main-page/portfolio/card-7-tab.jpg");
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    content: url("../img/main-page/portfolio/card-7.jpg");
+  }
+}
+.img-card-8 {
+  //Для планшета
+  @media (min-width: 768px) {
+    content: url("../img/main-page/portfolio/card-8-tab.jpg");
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    content: url("../img/main-page/portfolio/card-8.jpg");
+  }
+}
+/*---/Замена изображений карточек портфолио по медиазапросу---*/
 .img-link {
   position: absolute;
   left: 0;
@@ -121,26 +334,62 @@
   }
 }
 .card-desc {
-  padding-top: 24px;
+  padding-top: 21px;
   padding-bottom: 10px;
+  //Для планшета
+  @media (min-width: 768px) {
+    padding-top: 20px;
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    padding-top: 24px;
+  }
   p {
     margin-bottom: 15px;
-    font-size: 20px;
+    font-size: 16px;
+    font-weight: 300;
     line-height: 1.2;
+    //Для планшета
+    @media (min-width: 768px) {
+      font-size: 18px;
+    }
+    //Для десктопа
+    @media (min-width: 1200px) {
+      margin-bottom: 15px;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 1.2;
+    }
   }
 }
 .card-title {
   display: inline-block;
   margin-bottom: 10px;
+  //Для планшета
+  @media (min-width: 768px) {
+    margin-bottom: 12px;
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    margin-bottom: 10px;
+  }
   &:hover {
     margin-bottom: 9px;
   }
 }
 .card-title-link {
   color: var(--p);
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 700;
   line-height: 1.2;
+  //Для планшета
+  @media (min-width: 768px) {
+    font-size: 24px;
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    font-size: 26px;
+  }
   &:hover {
     color: var(--red);
     border-bottom: 1px solid var(--red);
@@ -149,4 +398,14 @@
     color: var(--red);
     border-bottom: 1px solid var(--red);
   }
+}
+.portfolio-link {
+  //Для десктопа
+  @media (min-width: 1200px) {
+    display: none;
+  }
+}
+.portfolio-link a {
+  font-size: 20px;
+  color: var(--blue);
 }

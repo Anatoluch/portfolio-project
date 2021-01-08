@@ -1,11 +1,15 @@
 .header {
   max-width: 1600px;
   margin: 0 auto;
-  padding: 21px 0 120px;
+  padding: 21px 0 99px;
   background-image: url("../img/main-page/stripes.jpg");
   background-size: auto;
   background-position: center;
   background-repeat: repeat-y;
+  //Для планшета
+  @media (min-width: 768px) {
+    padding: 21px 0 39px;
+  }
   //Для десктопа
   @media (min-width: 1200px) {
     max-width: 1600px;
@@ -239,6 +243,8 @@
   }
 }
 .header-title {
+  position: relative;
+  left: -2px;
   font-size: 42px;
   font-weight: 800;
   line-height: 1.2;
@@ -267,6 +273,7 @@
   }
   //Для десктопа
   @media (min-width: 1200px) {
+    position: static;
     font-size: 90px;
     font-weight: 800;
     margin-bottom: 15px;
