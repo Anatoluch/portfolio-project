@@ -223,7 +223,7 @@
 }
 /*---Замена изображения в шапке по медиазапросу---*/
 .header-img {
-  @media (min-width: 1200px) {
+  @media (min-width: 1024px) {
     content: url("../img/main-page/header-img.png");
   }
 }
@@ -236,8 +236,8 @@
     padding-top: 10px;
     width: 50%;
   }
-  //Для десктопа
-  @media (min-width: 1200px) {
+  //Для Ipad Pro
+  @media (min-width: 1024px) {
     padding-top: 0;
     width: 50%;
   }
@@ -260,8 +260,8 @@
       @media (min-width: 768px) {
         bottom: 6px;
       }
-      //Для десктопа
-      @media (min-width: 1200px) {
+      //Для Ipad Pro и десктопа
+      @media (min-width: 1024px) {
         bottom: 13px;
       }
     }
@@ -270,6 +270,13 @@
   @media (min-width: 768px) {
     margin-bottom: 15px;
     font-size: 52px;
+  }
+  //Для Ipad Pro
+  @media (min-width: 1024px) {
+    position: static;
+    font-size: 72px;
+    font-weight: 800;
+    margin-bottom: 15px;
   }
   //Для десктопа
   @media (min-width: 1200px) {
@@ -309,10 +316,17 @@
     line-height: 1.667;
     text-shadow: 0 3px 42px #fff;
   }
+  //Для Ipad Pro
+  @media (min-width: 1024px) {
+    margin-bottom: 32px;
+    padding-right: 6px;
+    color: #393f47;
+    font-size: 22px;
+    font-weight: 500;
+  }
   //Для десктопа
   @media (min-width: 1200px) {
     margin-bottom: 32px;
-    font-weight: 400;
     padding-right: 6px;
     color: #393f47;
     font-size: 24px;
@@ -329,8 +343,8 @@
       margin-right: 0;
     }
   }
-  //Для десктопа
-  @media (min-width: 1200px) {
+  //Для Ipad Pro и десктопа
+  @media (min-width: 1024px) {
     display: block;
   }
 }

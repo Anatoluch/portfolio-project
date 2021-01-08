@@ -48,8 +48,12 @@
   //Для планшета
   @media (min-width: 768px) {
     padding: 0 26px;
-    max-width: 768px;
+    max-width: 1140px;
     display: flex;
+  }
+  //Для большого планшета
+  @media (min-width: 992px) {
+    padding: 0 30px;
   }
   //Для десктопа
   @media (min-width: 1200px) {
@@ -103,12 +107,15 @@
     max-height: 700px;
     justify-content: space-between;
   }
+  //Для большого планшета
+  @media (min-width: 820px) {
+    justify-content: space-around;
+  }
   //Для десктопа
   @media (min-width: 1200px) {
     max-height: unset;
     padding: 0;
     margin: 0 auto;
-    justify-content: space-around;
   }
 }
 .portfolio-card {
