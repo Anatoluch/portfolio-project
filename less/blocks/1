@@ -14,3 +14,14 @@
   @media (min-width: 1200px) {
 
   }
+
+
+
+  //Для планшета
+  @media (min-width: 768px) {
+
+  }
+    //Для десктопа
+  @media (min-width: 1200px) {
+
+  }
