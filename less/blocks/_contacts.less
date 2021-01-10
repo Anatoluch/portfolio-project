@@ -1,30 +1,65 @@
 .contacts {
   margin: 0 auto;
   position: relative;
-  padding: 136px 0 149px;
+  padding: 50px 0 60px;
   background-color: #f4f8f9;
-  background-image: url("../img/main-page/stripes-contacts.jpg");
-  background-size: auto;
-  background-position: center;
-  background-repeat: repeat-y;
+  //Для планшета
+  @media (min-width: 768px) {
+    padding: 78px 0 85px;
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    padding: 136px 0 148px;
+    background-image: url("../img/main-page/stripes-contacts.jpg");
+    background-size: auto;
+    background-position: center;
+    background-repeat: repeat-y;
+  }
   .contacts-header {
-    margin-bottom: 67px;
+    margin-bottom: 44px;
+    position: relative;
+    left: 3px;
     text-align: center;
+    //Для планшета
+    @media (min-width: 768px) {
+      margin-bottom: 61px;
+      position: relative;
+      left: 20px;
+    }
+    //Для десктопа
+    @media (min-width: 1200px) {
+      margin-bottom: 67px;
+      position: static;
+    }
     h2 {
       &::after {
-        bottom: 6px;
+        bottom: 2px;
         left: -3px;
         right: -3px;
         height: 12px;
+        //Для планшета
+        @media (min-width: 768px) {
+          bottom: 5px;
+        }
+        //Для десктопа
+        @media (min-width: 1200px) {
+          bottom: 6px;
+        }
       }
     }
   }
 }
 .contacts-row {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   z-index: 1;
+  //Для планшета
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
   &::before {
+    //Для десктопа
     @media (min-width: 1200px) {
       content: "";
       display: block;
@@ -40,83 +75,171 @@
   }
 }
 .contacts-col {
-  padding-top: 21px;
-  width: 45%;
+  margin-bottom: 42px;
+  width: 100%;
   z-index: 1;
+  //Для планшета
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+    width: 45%;
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    padding-top: 21px;
+  }
   p {
-    font-size: 20px;
-    line-height: 1.6;
+    font-size: 16px;
+    line-height: 1.625;
+    letter-spacing: -0.1px;
+    //Для планшета
+    @media (min-width: 768px) {
+      font-size: 18px;
+      line-height: 1.556;
+      letter-spacing: 0;
+    }
+    //Для десктопа
+    @media (min-width: 1200px) {
+      font-size: 20px;
+      line-height: 1.6;
+    }
   }
 }
 .contacts-desc {
-  margin-bottom: 43px;
+  margin-bottom: 23px;
+  //Для планшета
+  @media (min-width: 768px) {
+    margin-bottom: 33px;
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    margin-bottom: 43px;
+  }
 }
 .contacts-list {
-  margin-bottom: 48px;
+  margin-bottom: 36px;
+  //Для десктопа
+  @media (min-width: 1200px) {
+    margin-bottom: 48px;
+  }
 }
 .contacts-list-item {
-  margin-bottom: 26px;
+  margin-bottom: 15px;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
+  //Для десктопа
+  @media (min-width: 1200px) {
+    margin-bottom: 26px;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
   &:last-of-type {
     margin-bottom: 0;
   }
 }
 .contacts-item-def {
-  width: 60%;
-  font-size: 20px;
+  margin-bottom: 5px;
+  width: 100%;
+  font-size: 18px;
   font-weight: 700;
   line-height: 1.2;
+  //Для планшета
+  @media (min-width: 768px) {
+    width: 60%;
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    margin-bottom: 0;
+    font-size: 20px;
+  }
 }
 .contacts-item-desc {
   width: 100%;
   text-align: left;
   a:not(.gray-link) {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
     color: rgb(3, 155, 229);
     line-height: 1.2;
+    //Для десктопа
+    @media (min-width: 1200px) {
+      font-size: 20px;
+    }
   }
   p {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
     color: #96969d;
     line-height: 1.2;
+    //Для десктопа
+    @media (min-width: 1200px) {
+      font-size: 20px;
+    }
   }
 }
 .gray-link {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
   line-height: 1.2;
   color: #96969d;
+  //Для десктопа
+  @media (min-width: 1200px) {
+    font-size: 20px;
+  }
 }
 /*---Форма обратной связи---*/
 .contacts-form-col {
-  width: 46.77%;
-  padding-right: 20px;
+  width: 100%;
   z-index: 1;
+  //Для планшета
+  @media (min-width: 768px) {
+    padding-top: 7px;
+    width: 47.9%;
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    width: 46.77%;
+    padding-top: 0;
+    padding-right: 20px;
+  }
 }
 .contact-form {
   width: 100%;
   height: 100%;
-  padding: 80px 58px 41px;
+  padding: 60px 15px 41px;
   box-shadow: 0 28px 100px #c2dbeb;
   background-color: #fff;
   z-index: 1;
+  //Для планшета
+  @media (min-width: 768px) {
+    padding: 60px 25px 40px;
+    height: unset;
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    padding: 80px 58px 41px;
+    height: 100%;
+  }
 }
 .form-item-row {
   position: relative;
 }
+.form-submit-row {
+  position: relative;
+  display: flex;
+}
 .fake-placeholder {
   position: absolute;
   top: 2px;
-  left: 5px;
   color: #bcbcbc;
   font-size: 20px;
   font-weight: 700;
   pointer-events: none;
   transition: 0.25s ease-in-out;
+  //Для десктопа
+  @media (min-width: 1200px) {
+    left: 5px;
+  }
 }
 /*--Костыль textarea для PP (почему-то не срабатывает корректно last-of-type)--*/
 .fp-msg {
@@ -136,17 +259,33 @@ span.required {
   }
 }
 .email-row {
-  margin-bottom: 63px;
+  margin-bottom: 41px;
+  //Для планшета
+  @media (min-width: 768px) {
+    margin-bottom: 41px;
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    margin-bottom: 63px;
+  }
 }
 .theme-row {
-  margin-bottom: 58px;
+  margin-bottom: 44px;
+  //Для десктопа
+  @media (min-width: 1200px) {
+    margin-bottom: 58px;
+  }
 }
 .textarea-row {
-  margin-bottom: 32px;
+  margin-bottom: 14px;
+  //Для десктопа
+  @media (min-width: 1200px) {
+    margin-bottom: 34px;
+  }
 }
 .form-input {
   width: 100%;
-  padding: 5px;
+  padding: 5px 0;
   border: none;
   border-radius: 1px;
   border-bottom: 2px solid #eaeaea;
@@ -156,6 +295,10 @@ span.required {
   font-weight: 700;
   outline: none;
   caret-color: #ea736d;
+  //Для десктопа
+  @media (min-width: 1200px) {
+    padding: 5px 5px;
+  }
   &:focus {
     border-color: #ea736d;
   }
@@ -168,18 +311,54 @@ span.required {
   }
 }
 input[type="submit"] {
-  padding-left: 37px;
-  padding-right: 37px;
+  width: 100%;
+  height: 54px;
+  font-size: 20px;
+  line-height: 1;
   appearance: none;
   -moz-apperance: none;
   -webkit-appearance: none;
+  //Для планшета Ipad Pro
+  @media (min-width: 1024px) {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    margin: 0;
+    width: unset;
+    max-width: unset;
+    height: 64px;
+    font-size: 22px;
+    padding-left: 37px;
+    padding-right: 37px;
+    line-height: 56px;
+  }
 }
 label.error {
-  font-size: 16px;
+  font-size: 12px;
   color: #ff0000;
-  font-weight: 700;
+  font-weight: 500;
   position: relative;
   top: 5px;
+  letter-spacing: -0.4px;
+  //Для смартфона от 360px
+  @media (min-width: 360px) {
+    font-weight: 700;
+    letter-spacing: 0;
+  }
+  //Для смартфона от 400px
+  @media (min-width: 400px) {
+    font-size: 14px;
+  }
+  //Для планшета
+  @media (min-width: 768px) {
+    font-size: 12px;
+  }
+  //Для планшета Ipad Pro
+  @media (min-width: 1024px) {
+    font-size: 16px;
+  }
 }
 .contact-form__success {
   font-size: 16px;
@@ -187,5 +366,29 @@ label.error {
   text-align: center;
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
-
+.contacts-col .social-ic-row {
+  justify-content: flex-start;
+  //Для смартфона от 360px
+  @media (min-width: 360px) {
+    justify-content: center;
+  }
+  //Для смартфона от 400px
+  @media (min-width: 400px) {
+    font-size: 14px;
+  }
+  //Для планшета
+  @media (min-width: 768px) {
+    justify-content: flex-start;
+  }
+}
+.contacts-col .social-ic-row .icon-item {
+  margin-right: 29px;
+  //Для десктопа
+  @media (min-width: 1200px) {
+    margin-right: 30px;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}
 /*---/Форма обратной связи---*/
