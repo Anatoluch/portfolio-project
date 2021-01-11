@@ -2,6 +2,7 @@
   margin: 0 auto;
   padding-top: 57px;
   background-color: #fff;
+  overflow: hidden;
   //Для планшета
   @media (min-width: 768px) {
     padding-top: 74px;
@@ -159,8 +160,6 @@
   max-width: 1600px;
   max-height: 157px;
   z-index: 1;
-  overflow: hidden;
-  transform: scale(1.76);
   //Для большого смартфона
   @media (min-width: 420px) {
     margin: -10px auto 0;
@@ -170,7 +169,6 @@
   @media (min-width: 768px) {
     margin: -79px auto 0;
     max-height: 302px;
-    transform: scale(1);
   }
   //Для большого планшета
   @media (min-width: 992px) {
@@ -196,5 +194,12 @@
   @media (min-width: 1600px) {
     margin: -176px auto 0;
     max-height: 629px;
+  }
+  img {
+    transform: scale(1.76);
+    //Для планшета
+    @media (min-width: 768px) {
+      transform: scale(1);
+    }
   }
 }

@@ -3011,10 +3011,16 @@ label.error {
   border-bottom: 1px solid #bcbcbc;
   line-height: 1.2;
 }
+@media (min-width: 1200px) {
+  .footer-link {
+    line-height: 1;
+  }
+}
 .projects-portfolio-section {
   margin: 0 auto;
   padding-top: 57px;
   background-color: #fff;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
   .projects-portfolio-section {
@@ -3205,12 +3211,6 @@ label.error {
   max-width: 1600px;
   max-height: 157px;
   z-index: 1;
-  overflow: hidden;
-  -webkit-transform: scale(1.76);
-     -moz-transform: scale(1.76);
-      -ms-transform: scale(1.76);
-       -o-transform: scale(1.76);
-          transform: scale(1.76);
 }
 @media (min-width: 420px) {
   .projects-bg-row {
@@ -3222,11 +3222,6 @@ label.error {
   .projects-bg-row {
     margin: -79px auto 0;
     max-height: 302px;
-    -webkit-transform: scale(1);
-       -moz-transform: scale(1);
-        -ms-transform: scale(1);
-         -o-transform: scale(1);
-            transform: scale(1);
   }
 }
 @media (min-width: 992px) {
@@ -3257,6 +3252,22 @@ label.error {
   .projects-bg-row {
     margin: -176px auto 0;
     max-height: 629px;
+  }
+}
+.projects-bg-row img {
+  -webkit-transform: scale(1.76);
+     -moz-transform: scale(1.76);
+      -ms-transform: scale(1.76);
+       -o-transform: scale(1.76);
+          transform: scale(1.76);
+}
+@media (min-width: 768px) {
+  .projects-bg-row img {
+    -webkit-transform: scale(1);
+       -moz-transform: scale(1);
+        -ms-transform: scale(1);
+         -o-transform: scale(1);
+            transform: scale(1);
   }
 }
 .page-header {
