@@ -3206,6 +3206,11 @@ label.error {
   max-height: 157px;
   z-index: 1;
   overflow: hidden;
+  -webkit-transform: scale(1.76);
+     -moz-transform: scale(1.76);
+      -ms-transform: scale(1.76);
+       -o-transform: scale(1.76);
+          transform: scale(1.76);
 }
 @media (min-width: 420px) {
   .projects-bg-row {
@@ -3217,6 +3222,11 @@ label.error {
   .projects-bg-row {
     margin: -79px auto 0;
     max-height: 302px;
+    -webkit-transform: scale(1);
+       -moz-transform: scale(1);
+        -ms-transform: scale(1);
+         -o-transform: scale(1);
+            transform: scale(1);
   }
 }
 @media (min-width: 992px) {
@@ -3247,22 +3257,6 @@ label.error {
   .projects-bg-row {
     margin: -176px auto 0;
     max-height: 629px;
-  }
-}
-.projects-bg-row img {
-  -webkit-transform: scale(1.76);
-     -moz-transform: scale(1.76);
-      -ms-transform: scale(1.76);
-       -o-transform: scale(1.76);
-          transform: scale(1.76);
-}
-@media (min-width: 768px) {
-  .projects-bg-row img {
-    -webkit-transform: scale(1);
-       -moz-transform: scale(1);
-        -ms-transform: scale(1);
-         -o-transform: scale(1);
-            transform: scale(1);
   }
 }
 .page-header {
