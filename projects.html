@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Мои работы</title>
+   <link rel="stylesheet" href="./fonts/mplus1p/mplus1p.css">
+   <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+   <!---Верхнее меню для мобилок--->
+   <div id="overlay"></div>
+   <div class="mobile-menu">
+      <div class="logo bottom-line">
+         <a href="index.html">ВЦ</a>
+      </div>
+      <ul class="mob-nav">
+         <li class="mob-nav-item">
+            <a class="mob-nav-link" href="index.html#skills">Услуги</a>
+         </li>
+         <li class="mob-nav-item">
+            <a class="mob-nav-link" href="#portfolio-cards">Работы</a>
+         </li>
+         <li class="mob-nav-item">
+            <a class="mob-nav-link" href="contacts.html">Контакты</a>
+         </li>
+      </ul>
+      <!--Плашка социальных иконок-->
+      <ul class="social-ic-row social-ic-row--mob">
+         <li class="icon-item mob-menu-ic">
+            <a class="icon-git" href="https://github.com/Anatoluch" target="_blank">
+               <svg class="git" aria-hidden="true" focusable="false" data-prefix="adata-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+            </a>
+         </li>
+         <li class="icon-item mob-menu-ic">
+            <a class="icon-link icon-tele" href="">
+               <svg class="fly" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="telegram-plane" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z"></path></svg>
+            </a>
+         </li>
+         <li class="icon-item mob-menu-ic">
+            <a class="icon-link icon-vk" href="https://vk.me/valerian1987" target="_blank">
+               <svg class="vk" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="vk" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M545 117.7c3.7-12.5 0-21.7-17.8-21.7h-58.9c-15 0-21.9 7.9-25.6 16.7 0 0-30 73.1-72.4 120.5-13.7 13.7-20 18.1-27.5 18.1-3.7 0-9.4-4.4-9.4-16.9V117.7c0-15-4.2-21.7-16.6-21.7h-92.6c-9.4 0-15 7-15 13.5 0 14.2 21.2 17.5 23.4 57.5v86.8c0 19-3.4 22.5-10.9 22.5-20 0-68.6-73.4-97.4-157.4-5.8-16.3-11.5-22.9-26.6-22.9H38.8c-16.8 0-20.2 7.9-20.2 16.7 0 15.6 20 93.1 93.1 195.5C160.4 378.1 229 416 291.4 416c37.5 0 42.1-8.4 42.1-22.9 0-66.8-3.4-73.1 15.4-73.1 8.7 0 23.7 4.4 58.7 38.1 40 40 46.6 57.9 69 57.9h58.9c16.8 0 25.3-8.4 20.4-25-11.2-34.9-86.9-106.7-90.3-111.5-8.7-11.2-6.2-16.2 0-26.2.1-.1 72-101.3 79.4-135.6z"></path></svg>
+            </a>
+         </li>
+         <li class="icon-item mob-menu-ic">
+            <a class="icon-link icon-fb" href="">
+               <svg class="fb" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg>
+            </a>
+         </li>
+      </ul>
+      <!--/Плашка социальных иконок-->
+      <div class="mob-contact-link">
+         <a class="text-link text-link--mob" href="mailto:gotohunt@bk.ru" target="_blank">gotohunt@bk.ru</a>
+      </div>
+   </div>
+   <!---/Верхнее меню для мобилок--->
+   <header class="page-header">
+      <!--Увеличенный контейнер Top nav menu-->
+      <div class="container container--enlarge">
+         <!-- __Top nav menu__ -->
+         <div class="header-nav-row header-nav-row--page">
+            <div class="logo bottom-line">
+               <a href="index.html">ВЦ</a>
+            </div>
+            <!--Меню для десктопа-->
+            <ul class="nav-list">
+               <li class="nav-item">
+                  <a href="index.html" class="nav-link nav-link--active">Главная</a>
+               </li>
+               <li class="nav-item">
+                  <a href="#portfolio-cards" class="nav-link">Работы</a>
+               </li>
+               <li class="nav-item">
+                  <a href="contacts.html" class="nav-link">Контакты</a>
+               </li>
+            </ul>
+            <div class="nav-icons-row">
+               <a href="#" class="nav-icon linkedin-h-a">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin-in" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg>
+               </a>
+               <a href="https://github.com/Anatoluch" target="_blank" class="nav-icon git-h-a">
+                  <svg aria-hidden="true" focusable="false" data-prefix="adata-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+               </a>
+               <a href="https://vk.com/valerian1987" target="_blank" class="nav-icon vk-h-a">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="vk" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M545 117.7c3.7-12.5 0-21.7-17.8-21.7h-58.9c-15 0-21.9 7.9-25.6 16.7 0 0-30 73.1-72.4 120.5-13.7 13.7-20 18.1-27.5 18.1-3.7 0-9.4-4.4-9.4-16.9V117.7c0-15-4.2-21.7-16.6-21.7h-92.6c-9.4 0-15 7-15 13.5 0 14.2 21.2 17.5 23.4 57.5v86.8c0 19-3.4 22.5-10.9 22.5-20 0-68.6-73.4-97.4-157.4-5.8-16.3-11.5-22.9-26.6-22.9H38.8c-16.8 0-20.2 7.9-20.2 16.7 0 15.6 20 93.1 93.1 195.5C160.4 378.1 229 416 291.4 416c37.5 0 42.1-8.4 42.1-22.9 0-66.8-3.4-73.1 15.4-73.1 8.7 0 23.7 4.4 58.7 38.1 40 40 46.6 57.9 69 57.9h58.9c16.8 0 25.3-8.4 20.4-25-11.2-34.9-86.9-106.7-90.3-111.5-8.7-11.2-6.2-16.2 0-26.2.1-.1 72-101.3 79.4-135.6z"></path></svg>
+               </a>
+            </div>
+            <!--/Меню для десктопа-->
+            <!--Меню "Гамбургер" для планшета и мобилок-->
+            <div class="toggle-menu"><span></span></div>
+            <!--/Меню "Гамбургер" для планшета и мобилок-->
+         </div>
+         <!--__/Top nav menu__-->
+      </div>
+   </header>
+   <main>
+      <!--Раздел "Портфолио"-->
+      <section class="projects-portfolio-section">
+         <div class="container">
+            <div class="projects-title">
+               <h2 class="section-title bottom-line" id="portfolio-cards">Портфолио</h2>
+            </div>
+         </div>
+               <div class="portfolio-filter">
+                  <button class="filter-link control-active" data-filter="all">Все работы</button>
+                  <button class="filter-link" data-filter=".frontend">Frontend</button>
+                  <button class="filter-link" data-filter=".joomla">Joomla!</button>
+                  <button class="filter-link" data-filter=".boots">Bootstrap</button>
+               </div>
+               <div class="portfolio-content portfolio-content--projects" id="portfolio-projects">
+                  <!--Карточка портфолио 1-->
+                  <div class="portfolio-card portfolio-card--big mix frontend">
+                        <div class="card-img">
+                           <img class="img-card-1" src="./img/main-page/portfolio/card-1-mob.jpg" alt="Форест травел">
+                           <a class="img-link" href="https://forest-travel-by-valerian.netlify.app" target="_blank">
+                              <div class="btn-overlay"><span>Смотреть проект</span></div>
+                           </a>
+                        </div>
+                        <div class="card-desc">
+                           <div class="card-title">
+                              <a class="card-title-link" href="https://forest-travel-by-valerian.netlify.app" target="_blank" title="Перейти на этот сайт?">Верстка “Форест тревел”</a>
+                           </div>
+                           <p>Верстка многостраничного сайта</p>
+                        </div>
+                  </div>
+                  <!--/Карточка портфолио 1-->
+                  <!--Карточка портфолио 2-->
+                  <div class="portfolio-card portfolio-card--big mix frontend">
+                        <div class="card-img">
+                           <img class="img-card-2" src="./img/main-page/portfolio/card-2-mob.jpg" alt="">
+                           <a class="img-link" href="https://unit-project-full.netlify.app" target="_blank">
+                              <div class="btn-overlay"><span>Смотреть проект</span></div>
+                           </a>
+                        </div>
+                        <div class="card-desc">
+                           <div class="card-title">
+                              <a class="card-title-link" href="https://unit-project-full.netlify.app" target="_blank" title="Перейти на этот сайт?">Проект “Юнит”</a>
+                           </div>
+                            <p>Верстка многостраничного сайта</p>
+                        </div>
+                  </div>
+                  <!--/Карточка портфолио 2-->
+                  <!--Карточка портфолио 3-->
+                  <div class="portfolio-card mix joomla">
+                        <div class="card-img">
+                           <img class="img-card-3" src="./img/main-page/portfolio/card-4-mob.jpg" alt="">
+                           <a class="img-link" href="https://crimean-hunter.ru/" target="_blank">
+                              <div class="btn-overlay"><span>Смотреть проект</span></div>
+                           </a>
+                        </div>
+                        <div class="card-desc">
+                           <div class="card-title">
+                              <a class="card-title-link" href="https://crimean-hunter.ru/" target="_blank" title="Перейти на этот сайт?">"Крымский охотник"</a>
+                           </div>
+                           <p>Верстка многостраничного блога</p>
+                        </div>
+                  </div>
+                  <!--/Карточка портфолио 3-->
+                  <!--Карточка портфолио 4-->
+                  <div class="portfolio-card mix joomla">
+                        <div class="card-img">
+                           <img class="img-card-4" src="./img/main-page/portfolio/card-5-mob.jpg" alt="">
+                           <a class="img-link" href="https://melnitsa-cafe.ru/" target="_blank">
+                              <div class="btn-overlay"><span>Смотреть проект</span></div>
+                           </a>
+                        </div>
+                        <div class="card-desc">
+                           <div class="card-title">
+                              <a class="card-title-link" href="https://melnitsa-cafe.ru/" target="_blank" title="Перейти на этот сайт?">Сайт кафе “Мельница”</a>
+                           </div>
+                           <p>Верстка многостраничного сайта</p>
+                        </div>
+                  </div>
+                  <!--/Карточка портфолио 4-->
+                  <!--Карточка портфолио 5-->
+                  <div class="portfolio-card mix frontend">
+                        <div class="card-img">
+                           <img class="img-card-5" src="./img/main-page/portfolio/card-3-mob.jpg" alt="">
+                           <a class="img-link" href="https://portfolio-by-valerian.netlify.app" target="_blank">
+                              <div class="btn-overlay"><span>Смотреть проект</span></div>
+                           </a>
+                        </div>
+                        <div class="card-desc">
+                           <div class="card-title">
+                              <a class="card-title-link" href="https://portfolio-by-valerian.netlify.app" target="_blank" title="Перейти на этот сайт?">Сайт “Портфолио”</a>
+                           </div>
+                           <p>Верстка многостраничного сайта</p>
+                        </div>
+                  </div>
+                  <!--/Карточка портфолио 5-->
+                  <!--Карточка портфолио 6-->
+                  <div class="portfolio-card mix frontend">
+                        <div class="card-img">
+                           <img class="img-card-6" src="./img/main-page/portfolio/card-6-mob.jpg" alt="">
+                           <a class="img-link" href="https://product-card-by-valerian.netlify.app/" target="_blank">
+                              <div class="btn-overlay"><span>Смотреть проект</span></div>
+                           </a>
+                        </div>
+                        <div class="card-desc">
+                           <div class="card-title">
+                              <a class="card-title-link" href="https://product-card-by-valerian.netlify.app" target="_blank" title="Перейти на веб версию карточки?">Карточка товара</a>
+                           </div>
+                           <p>Верстка карточки товара</p>
+                        </div>
+                  </div>
+                  <!--/Карточка портфолио 6-->
+                  <!--Карточка портфолио 7-->
+                  <div class="portfolio-card mix frontend">
+                        <div class="card-img">
+                           <img class="img-card-7" src="./img/main-page/portfolio/card-7-mob.jpg" alt="">
+                           <a class="img-link" href="https://book-card-by-valerian.netlify.app" target="_blank">
+                              <div class="btn-overlay"><span>Смотреть проект</span></div>
+                           </a>
+                        </div>
+                        <div class="card-desc">
+                           <div class="card-title">
+                              <a class="card-title-link" href="https://book-card-by-valerian.netlify.app" target="_blank" title="Перейти на веб версию карточки?">Карточка товара</a>
+                           </div>
+                           <p>Верстка карточки товара</p>
+                        </div>
+                  </div>
+                  <!--/Карточка портфолио 7-->
+                  <!--Карточка портфолио 8-->
+                  <div class="portfolio-card mix boots">
+                        <div class="card-img">
+                           <img class="img-card-8" src="./img/main-page/portfolio/card-8-mob.jpg" alt="">
+                           <a class="img-link" href="https://by-valerian.netlify.app/#totop" target="_blank">
+                              <div class="btn-overlay"><span>Смотреть проект</span></div>
+                           </a>
+                        </div>
+                        <div class="card-desc">
+                           <div class="card-title">
+                              <a class="card-title-link" href="https://by-valerian.netlify.app/#totop" target="_blank" title="Перейти на этот сайт?">Страница сайта</a>
+                           </div>
+                           <p>Верстка страницы сайта.</p>
+                        </div>
+                  </div>
+                  <!--/Карточка портфолио 8-->
+               </div>
+         <div class="container">
+            <div class="portfolio-link portfolio-link--projects">
+               <a class="text-link text-link--mob" href="#">Смотреть все работы</a>
+            </div>
+             <!--Блок социальных кнопок и email-->
+            <div class="adv-contact-icons">
+               <div class="projects-adv-text">
+                  <h3>За созданием сайта:</h3>
+                  <p>обращайтесь на <a class="text-link" href="mailto:gotohunt@bk.ru" target="_blank">gotohunt@bk.ru</a></p>
+               </div>
+               <!--/Плашка социальных иконок-->
+               <ul class="social-ic-row">
+            <li class="icon-item">
+               <a class="icon-git" href="https://github.com/Anatoluch" target="_blank">
+                  <svg class="git" aria-hidden="true" focusable="false" data-prefix="adata-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+               </a>
+            </li>
+            <li class="icon-item">
+               <a class="icon-link icon-tele" href="">
+                  <svg class="fly" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="telegram-plane" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z"></path></svg>
+               </a>
+            </li>
+            <li class="icon-item">
+               <a class="icon-link icon-vk" href="https://vk.me/valerian1987" target="_blank">
+                  <svg class="vk" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="vk" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M545 117.7c3.7-12.5 0-21.7-17.8-21.7h-58.9c-15 0-21.9 7.9-25.6 16.7 0 0-30 73.1-72.4 120.5-13.7 13.7-20 18.1-27.5 18.1-3.7 0-9.4-4.4-9.4-16.9V117.7c0-15-4.2-21.7-16.6-21.7h-92.6c-9.4 0-15 7-15 13.5 0 14.2 21.2 17.5 23.4 57.5v86.8c0 19-3.4 22.5-10.9 22.5-20 0-68.6-73.4-97.4-157.4-5.8-16.3-11.5-22.9-26.6-22.9H38.8c-16.8 0-20.2 7.9-20.2 16.7 0 15.6 20 93.1 93.1 195.5C160.4 378.1 229 416 291.4 416c37.5 0 42.1-8.4 42.1-22.9 0-66.8-3.4-73.1 15.4-73.1 8.7 0 23.7 4.4 58.7 38.1 40 40 46.6 57.9 69 57.9h58.9c16.8 0 25.3-8.4 20.4-25-11.2-34.9-86.9-106.7-90.3-111.5-8.7-11.2-6.2-16.2 0-26.2.1-.1 72-101.3 79.4-135.6z"></path></svg>
+               </a>
+            </li>
+            <li class="icon-item">
+               <a class="icon-link icon-fb" href="">
+                  <svg class="fb" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg>
+               </a>
+            </li>
+               </ul>
+               <!--/Плашка социальных иконок-->
+            </div>
+         </div>
+      <!--/Блок социальных кнопок и email-->
+      <!--Фоновое изображение-->
+      <div class="projects-bg-row">
+         <img src="./img/projects/projects-bg.png" alt="">
+         </div>
+         <!--/Фоновое изображение-->
+      </section>
+      <!--/Раздел "Портфолио"-->
+   </main>
+   <script src="libs/jquery/jquery-3.5.1.min.js"></script>
+   <script src="libs/jquery.validate/jquery.validate.js"></script>
+   <script src="libs/mixitup3/mixitup.min.js"></script>
+   <script src="libs/nav.js/nav.js"></script>
+   <script src="js/main.js"></script>
+</body>
+</html>
