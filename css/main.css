@@ -1135,7 +1135,7 @@ button {
 }
 @media (min-width: 768px) {
   .portfolio-section {
-    padding: 69px 0 78px;
+    padding: 98px 0 78px;
   }
 }
 @media (min-width: 1200px) {
@@ -2333,7 +2333,7 @@ button {
 }
 @media (min-width: 1200px) {
   .process-card:last-of-type .process-card__title {
-    margin-bottom: 9px;
+    margin-bottom: 14px;
     padding-right: 3px;
   }
 }
