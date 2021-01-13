@@ -92,14 +92,22 @@
   }
 }
 .portfolio-content {
-  margin: 0 auto -4px;
+  margin: 0 auto 15px;
   padding: 0 15px;
   max-width: 740px;
+  max-height: 1600px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   overflow: hidden;
-  transition: 0.75s;
+  //Для смарта от 360px
+  @media (min-width: 360px) {
+    max-height: 1720px;
+  }
+  //Для смарта от 375px
+  @media (min-width: 375px) {
+    max-height: 1770px;
+  }
   //Для планшета
   @media (min-width: 768px) {
     margin: 0 auto 28px;
@@ -137,7 +145,6 @@
   }
 }
 .show-all {
-  transition: 0.75s;
   margin: 0 auto -4px;
   max-height: 100%;
   //Для планшета
@@ -147,7 +154,15 @@
 }
 .portfolio-card {
   margin-bottom: 22px;
-  max-width: 360px;
+  max-width: 290px;
+  //Для смарта от 360px
+  @media (min-width: 360px) {
+    max-width: 330px;
+  }
+  //Для смарта от 375px
+  @media (min-width: 375px) {
+    max-width: 345px;
+  }
   //Для планшета
   @media (min-width: 768px) {
     margin-bottom: 19px;
@@ -197,7 +212,15 @@
   // }
 }
 .portfolio-card--big {
-  max-width: 360px;
+  max-width: 290px;
+  //Для смарта от 360px
+  @media (min-width: 360px) {
+    max-width: 330px;
+  }
+  //Для смарта от 375px
+  @media (min-width: 375px) {
+    max-width: 345px;
+  }
   //Для планшета
   @media (min-width: 768px) {
     max-width: 338px;
