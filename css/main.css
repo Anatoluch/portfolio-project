@@ -1318,8 +1318,13 @@ button {
   -o-transition: 0.75s;
   -moz-transition: 0.75s;
   transition: 0.75s;
-  margin-bottom: 0 !important;
+  margin: 0 auto -4px;
   max-height: 1600px;
+}
+@media (min-width: 768px) {
+  .show-all {
+    margin: 0 auto 28px;
+  }
 }
 .portfolio-card {
   margin-bottom: 22px;

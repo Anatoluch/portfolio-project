@@ -138,8 +138,12 @@
 }
 .show-all {
   transition: 0.75s;
-  margin-bottom: 0 !important;
+  margin: 0 auto -4px;
   max-height: 1600px;
+  //Для планшета
+  @media (min-width: 768px) {
+    margin: 0 auto 28px;
+  }
 }
 .portfolio-card {
   margin-bottom: 22px;
