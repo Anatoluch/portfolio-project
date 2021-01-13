@@ -219,6 +219,10 @@ button {
   height: 10px;
   background-color: #fbdc4d;
   z-index: -1;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
 }
 .btn {
   display: inline-block;
@@ -407,10 +411,10 @@ button {
           box-shadow: 0px 15px 7px rgba(0, 0, 0, 0.7);
 }
 .icon-git .git {
-  -webkit-transition: all 0.5s ease-in-out 0.5s;
-  -o-transition: all 0.5s ease-in-out 0.5s;
-  -moz-transition: all 0.5s ease-in-out 0.5s;
-  transition: all 0.5s ease-in-out 0.5s;
+  -webkit-transition: all 0.5s ease-in-out 0.1s;
+  -o-transition: all 0.5s ease-in-out 0.1s;
+  -moz-transition: all 0.5s ease-in-out 0.1s;
+  transition: all 0.5s ease-in-out 0.1s;
 }
 .icon-git .git:hover {
   -webkit-transform: scale(1.25) translatey(-3%) rotate(360deg);
@@ -426,10 +430,10 @@ button {
   background-color: #039be5;
 }
 .icon-tele .fly {
-  -webkit-transition: all 0.1s linear 0.3s;
-  -o-transition: all 0.1s linear 0.3s;
-  -moz-transition: all 0.1s linear 0.3s;
-  transition: all 0.1s linear 0.3s;
+  -webkit-transition: all 0.1s linear 0.2s;
+  -o-transition: all 0.1s linear 0.2s;
+  -moz-transition: all 0.1s linear 0.2s;
+  transition: all 0.1s linear 0.2s;
 }
 .icon-tele .fly:hover {
   -webkit-transform: scale(1.25) translate(27%, -40%);
@@ -445,10 +449,10 @@ button {
   background-color: #4d76a1;
 }
 .icon-vk .vk {
-  -webkit-transition: all 0.3s ease-out 0.5s;
-  -o-transition: all 0.3s ease-out 0.5s;
-  -moz-transition: all 0.3s ease-out 0.5s;
-  transition: all 0.3s ease-out 0.5s;
+  -webkit-transition: all 0.3s ease-out 0.15s;
+  -o-transition: all 0.3s ease-out 0.15s;
+  -moz-transition: all 0.3s ease-out 0.15s;
+  transition: all 0.3s ease-out 0.15s;
 }
 .icon-vk .vk:hover {
   -webkit-transform: scale(1.45) translatey(-5%) rotate(-15deg);
@@ -464,10 +468,10 @@ button {
   background-color: #3b5998;
 }
 .icon-fb .fb {
-  -webkit-transition: all 0.3s ease-out 0.25s;
-  -o-transition: all 0.3s ease-out 0.25s;
-  -moz-transition: all 0.3s ease-out 0.25s;
-  transition: all 0.3s ease-out 0.25s;
+  -webkit-transition: all 0.3s ease-out 0.15s;
+  -o-transition: all 0.3s ease-out 0.15s;
+  -moz-transition: all 0.3s ease-out 0.15s;
+  transition: all 0.3s ease-out 0.15s;
 }
 .icon-fb .fb:hover {
   -webkit-transform: scale(1.45) translatey(-1%) rotate(-15deg);
@@ -557,6 +561,9 @@ button {
 }
 .logo a {
   color: var(--p);
+}
+.logo:hover::after {
+  background-color: #ea736d;
 }
 .nav-list {
   display: none;
@@ -1254,6 +1261,10 @@ button {
       -ms-flex-pack: distribute;
           justify-content: space-around;
   overflow: hidden;
+  -webkit-transition: 0.75s;
+  -o-transition: 0.75s;
+  -moz-transition: 0.75s;
+  transition: 0.75s;
 }
 @media (min-width: 768px) {
   .portfolio-content {
@@ -1301,6 +1312,14 @@ button {
     padding: 0;
     margin: 0 auto;
   }
+}
+.show-all {
+  -webkit-transition: 0.75s;
+  -o-transition: 0.75s;
+  -moz-transition: 0.75s;
+  transition: 0.75s;
+  margin-bottom: 0 !important;
+  max-height: 1600px;
 }
 .portfolio-card {
   margin-bottom: 22px;
@@ -2715,6 +2734,9 @@ button {
   .gray-link {
     font-size: 20px;
   }
+}
+.contacts-item-desc a:hover {
+  color: var(--red);
 }
 /*---Форма обратной связи---*/
 .contacts-form-col {

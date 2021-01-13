@@ -40,12 +40,13 @@ overlay.addEventListener('click', function(){
 });
    //-фильтрация проектов
    let containerEl = document.querySelector('#portfolio-projects');
-
+   if(containerEl){
       let mixer = mixitup(containerEl, {
          classNames: {
             block: ""
          }
       });
+   }
       //Корректировка размера карточек в процессе фильтрации (отмена/возврат класса portfolio-card--big)
       const filterToggles = document.querySelectorAll('.portfolio-filter button');
       const portfolioBigCards = document.querySelectorAll('.portfolio-card');
@@ -133,4 +134,11 @@ overlay.addEventListener('click', function(){
 		// Чтобы по Submit больше ничего не выполнялось - делаем возврат false чтобы прервать цепчку срабатывания остальных функций
 		return false;
 	}
+});
+//Появление всех карточек в секции "Портфолио"
+const portfolioLink = document.querySelector('.portfolio-link');
+const portfolioContent = document.querySelector('.portfolio-content');
+
+portfolioLink.addEventListener('click', function(){
+   portfolioContent.classList.toggle('show-all');
 })
