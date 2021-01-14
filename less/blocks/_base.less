@@ -373,3 +373,30 @@ button {
 }
 /*--/Универсальные круглые иконки контактов--*/
 /*---/Универсальная панель иконок контактов---*/
+/*Кнопка наверх*/
+#back2Top {
+  width: 40px;
+  line-height: 40px;
+  overflow: hidden;
+  z-index: 999;
+  display: none;
+  cursor: pointer;
+  -moz-transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+  position: fixed;
+  bottom: 30px;
+  right: 15px;
+  color: var(--red);
+  text-align: center;
+  font-size: 40px;
+  text-decoration: none;
+  &:hover {
+    color: var(--blue);
+  }
+  &:active {
+    color: var(--red);
+  }
+}

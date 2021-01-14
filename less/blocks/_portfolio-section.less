@@ -1,5 +1,6 @@
 .portfolio-section {
   margin: 0 auto;
+  max-width: 1600px;
   padding: 52px 0 96px;
   background-color: #f4f8f9;
   //Для планшета
@@ -100,6 +101,7 @@
   flex-wrap: wrap;
   justify-content: space-around;
   overflow: hidden;
+  transition: 0.38s;
   //Для смарта от 360px
   @media (min-width: 360px) {
     max-height: 1720px;
@@ -145,12 +147,23 @@
   }
 }
 .show-all {
-  margin: 0 auto -4px;
   max-height: 100%;
   //Для планшета
   @media (min-width: 768px) {
     margin: 0 auto 28px;
   }
+}
+.link-1 {
+  display: inline-block;
+}
+.link-1-hide {
+  display: none !important;
+}
+.link-2 {
+  display: none !important;
+}
+.link-2-show {
+  display: inline-block !important;
 }
 .portfolio-card {
   margin-bottom: 22px;

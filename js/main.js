@@ -133,12 +133,35 @@ overlay.addEventListener('click', function(){
 		});
 		// Чтобы по Submit больше ничего не выполнялось - делаем возврат false чтобы прервать цепчку срабатывания остальных функций
 		return false;
-	}
-});
-//Появление всех карточек в секции "Портфолио"
+   }
+   //Появление всех карточек в секции "Портфолио"
 const portfolioLink = document.querySelector('.portfolio-link');
 const portfolioContent = document.querySelector('.portfolio-content');
+const link1 = document.querySelector('.link-1');
+const link2 = document.querySelector('.link-2');
 
+if(portfolioLink){
 portfolioLink.addEventListener('click', function(){
    portfolioContent.classList.toggle('show-all');
+   link1.classList.toggle('link-1-hide');
+   link2.classList.toggle('link-2-show');
 })
+}
+/* Прокручивает страницу вверх при нажатии на кнопку */
+$(window).scroll(function() {
+   var height = $(window).scrollTop();
+   if($(this).width() < 1200){
+      if( $(this).scrollTop() > 300 ){
+          $('#back2Top').fadeIn();
+      }
+      else{
+          $('#back2Top').fadeOut();
+      }
+  }
+});
+   $("#back2Top").click(function(event) {
+       event.preventDefault();
+       $("html, body").animate({ scrollTop: 0 }, "slow");
+       return false;
+   });
+});

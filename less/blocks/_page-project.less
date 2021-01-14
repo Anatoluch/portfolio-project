@@ -1,0 +1,532 @@
+.project-page {
+  margin: 0 auto;
+  max-width: 1600px;
+  padding: 28px 0 64px;
+  overflow: hidden;
+  //Для планшета
+  @media (min-width: 768px) {
+    padding: 35px 0 64px;
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    padding: 64px 0 64px;
+    background-image: url("../img/projects/stripes-projects.jpg");
+    background-size: auto;
+    background-position: center;
+    background-repeat: repeat-y;
+  }
+}
+.project-page-title {
+  text-align: center;
+  margin-bottom: 36px;
+  //Для планшета
+  @media (min-width: 768px) {
+    margin-bottom: 48px;
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    margin-bottom: 49px;
+  }
+}
+.project-page-title h2 {
+  font-size: 30px;
+  line-height: 1.2;
+  //Для планшета
+  @media (min-width: 768px) {
+    font-size: 42px;
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    font-size: 48px;
+  }
+  &::after {
+    bottom: 0px;
+    left: -5px;
+    right: -5px;
+    height: 11px;
+    //Для планшета
+    @media (min-width: 768px) {
+    }
+    //Для десктопа
+    @media (min-width: 1200px) {
+      bottom: 3px;
+      left: -3px;
+      right: -3px;
+      height: 10px;
+    }
+  }
+}
+.section-title.section-title--smaller {
+  font-size: 26px;
+    //Для планшета
+    @media (min-width: 768px) {
+      font-size: 42px;
+    }
+    //Для десктопа
+    @media (min-width: 1200px) {
+      font-size: 48px;
+    }
+}
+.soft-icons {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 68px;
+  //Для планшета
+  @media (min-width: 768px) {
+    margin-bottom: 50px;
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    margin-bottom: 90px;
+  }
+  img {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    //Для планшета
+    @media (min-width: 768px) {
+      margin-bottom: 0;
+    }
+    //Для десктопа
+    @media (min-width: 1200px) {
+    }
+  }
+}
+.project-content {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  margin-bottom: 43px;
+  //Для планшета
+  @media (min-width: 768px) {
+    margin-bottom: 48px;
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    margin-bottom: 87px;
+    flex-direction: row;
+    align-items: unset;
+    justify-content: space-between;
+  }
+}
+.project-desc-col {
+  width: 100%;
+  //Для планшета
+  @media (min-width: 768px) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 500px;
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    display: block;
+    padding-top: 3px;
+    width: 40%;
+  }
+}
+.project-links-row {
+  //Для планшета
+  @media (min-width: 768px) {
+    width: 48%;
+    margin-bottom: 58px;
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    margin-bottom: 0;
+    width: 100%;
+  }
+}
+.project-links-heading {
+  display: inline-block;
+  margin-bottom: 24px;
+  //Для планшета
+  @media (min-width: 768px) {
+    margin-bottom: 24px;
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    margin-bottom: 23px;
+  }
+}
+.project-desc-title {
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.2;
+  //Для планшета
+  @media (min-width: 768px) {
+    font-size: 22px;
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    font-size: 26px;
+  }
+  &::after {
+    bottom: 0px;
+    left: 0px;
+    right: 2px;
+    height: 8px;
+    //Для планшета
+    @media (min-width: 768px) {
+      bottom: 2px;
+      left: 0px;
+      right: 2px;
+      height: 6px;
+    }
+    //Для десктопа
+    @media (min-width: 1200px) {
+      bottom: 2px;
+      left: 0px;
+      right: 2px;
+      height: 6px;
+    }
+  }
+}
+.project-links {
+  padding-left: 39px;
+  margin-bottom: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  //Для планшета
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    margin-bottom: 54px;
+  }
+  a {
+    margin-bottom: 22px;
+    font-size: 18px;
+    color: rgb(42, 134, 179);
+    border-bottom: 1px solid rgb(42, 134, 179);
+    line-height: 1.2;
+    position: relative;
+    &:hover {
+      color: var(--red);
+      border-color: var(--red);
+    }
+    &:last-of-type {
+      margin-bottom: 0;
+      &::before {
+        content: url("../img/projects/icons/github-icom.png");
+        position: absolute;
+        left: -40px;
+      }
+    }
+    &:first-of-type {
+      &::before {
+        content: url("../img/projects/icons/online-demo-icon.png");
+        position: absolute;
+        left: -38px;
+      }
+    }
+  }
+}
+.project-info-row {
+  //Для планшета
+  @media (min-width: 768px) {
+    width: 48%;
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    width: 100%;
+  }
+}
+.project-info-title {
+  display: inline-block;
+  margin-bottom: 15px;
+  //Для планшета
+  @media (min-width: 768px) {
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+  }
+  h3 {
+    &::after {
+      bottom: 0px;
+      left: 0px;
+      right: 2px;
+      height: 8px;
+      //Для планшета
+      @media (min-width: 768px) {
+        bottom: 2px;
+        left: 0px;
+        right: 2px;
+        height: 6px;
+      }
+      //Для десктопа
+      @media (min-width: 1200px) {
+        bottom: 2px;
+        left: 0px;
+        right: 2px;
+        height: 6px;
+      }
+    }
+  }
+}
+.project-info-row p {
+  margin-bottom: 41px;
+  overflow: hidden;
+  height: auto;
+  max-height: 95px;
+  //Для планшета
+  @media (min-width: 768px) {
+    margin-bottom: 55px;
+    letter-spacing: 0.15px;
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    margin-bottom: 55px;
+    max-height: unset;
+    letter-spacing: 0;
+  }
+}
+.project-details-row {
+  //Для планшета
+  @media (min-width: 768px) {
+    width: 42.7%;
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    width: 100%;
+  }
+}
+.project-details-title {
+  display: inline-block;
+  margin-bottom: 22px;
+  //Для планшета
+  @media (min-width: 768px) {
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+  }
+  h3 {
+    &::after {
+      bottom: 0px;
+      left: -2px;
+      right: 0;
+      height: 8px;
+      //Для планшета
+      @media (min-width: 768px) {
+        bottom: 2px;
+        left: 0px;
+        right: 2px;
+        height: 6px;
+      }
+      //Для десктопа
+      @media (min-width: 1200px) {
+        bottom: 2px;
+        left: 0px;
+        right: 2px;
+        height: 6px;
+      }
+    }
+  }
+}
+.project-details {
+}
+.project-details-item {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  //Для планшета
+  @media (min-width: 768px) {
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    flex-direction: row;
+    margin-bottom: 26px;
+  }
+  &:nth-of-type(4) {
+    margin-bottom: 20px;
+    //Для планшета
+    @media (min-width: 768px) {
+    }
+    //Для десктопа
+    @media (min-width: 1200px) {
+      margin-bottom: 37px;
+    }
+  }
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+.project-list-heading {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 800;
+  color: rgb(22, 22, 22);
+  line-height: 1.5;
+  //Для планшета
+  @media (min-width: 768px) {
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    width: 37%;
+  }
+}
+.project-list-desc {
+  width: 100%;
+  font-size: 16px;
+  color: rgb(22, 22, 22);
+  line-height: 1.5;
+  letter-spacing: 0.08px;
+  //Для планшета
+  @media (min-width: 768px) {
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    width: 65%;
+  }
+  a {
+    color: var(--blue);
+    border-bottom: 1px solid var(--blue);
+    line-height: 1;
+    &:hover {
+      color: var(--red);
+      border-color: var(--red);
+    }
+    //Для планшета
+    @media (min-width: 768px) {
+      line-height: 1.2;
+    }
+  }
+}
+.project-screen-col {
+  margin-bottom: 47px;
+  width: 100%;
+  background-color: rgb(3, 155, 229);
+  box-shadow: 20px 20px 100px 0px rgb(196, 219, 233);
+  transform: scale(1.2);
+  //Для смарта от 360px
+  @media (min-width: 360px) {
+    transform: scale(1);
+  }
+  //Для планшета
+  @media (min-width: 768px) {
+    margin-bottom: 33px;
+    width: 92%;
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    margin-bottom: 0;
+    width: 57.5%;
+  }
+}
+.project-info-row {
+  p {
+    font-size: 16px;
+    color: rgb(22, 22, 22);
+    line-height: 1.5;
+  }
+}
+.project-buttons-row {
+  margin: 0 auto 49px;
+  display: flex;
+  justify-content: space-between;
+  //Для планшета
+  @media (min-width: 768px) {
+    margin: 0 auto 79px;
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    margin: 0 auto 95px;
+  }
+}
+.skip-btn {
+  display: inline-block;
+  height: 60px;
+  width: 100%;
+  background-color: rgb(51, 51, 51);
+  color: #fff;
+  font-size: 18px;
+  line-height: 60px;
+  letter-spacing: -0.4px;
+  text-align: center;
+  z-index: 1;
+  //Для планшета
+  @media (min-width: 768px) {
+    height: 60px;
+    padding-right: 50px;
+    width: 47.9%;
+    font-size: 18px;
+    line-height: 60px;
+    letter-spacing: -0.4px;
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    height: 80px;
+    width: 48.6%;
+    font-size: 22px;
+    line-height: 80px;
+    letter-spacing: 0;
+  }
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  &:hover {
+    background-color: #656565;
+  }
+  &:active {
+    background-color: #141414;
+  }
+}
+.skip-btn--mob {
+  display: none;
+  //Для планшета
+  @media (min-width: 768px) {
+    display: inline-block;
+  }
+}
+.project-bg-row {
+  margin: 12px auto 0;
+  max-width: 1600px;
+  max-height: 93px;
+  z-index: 1;
+  //Для большого смартфона
+  @media (min-width: 420px) {
+    margin: -10px auto 0;
+    max-height: 120px;
+  }
+  //Для планшета
+  @media (min-width: 768px) {
+    margin: -79px auto 0;
+    max-height: 236px;
+  }
+  //Для большого планшета
+  @media (min-width: 992px) {
+    margin: -115px auto 0;
+    max-height: 280px;
+  }
+  //Для планшета Ipad Pro
+  @media (min-width: 1024px) {
+    margin: -125px auto 0;
+    max-height: 320px;
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    margin: -150px auto 0;
+    max-height: 420px;
+  }
+  //Для большого десктопа
+  @media (min-width: 1367px) {
+    margin: -165px auto 0;
+    max-height: 500px;
+  }
+  //Для большого десктопа
+  @media (min-width: 1600px) {
+    margin: -176px auto 0;
+    max-height: 565px;
+  }
+  img {
+    transform: scale(1.76);
+    //Для планшета
+    @media (min-width: 768px) {
+      transform: scale(1);
+    }
+  }
+}
