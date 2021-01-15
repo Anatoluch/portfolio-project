@@ -2605,6 +2605,11 @@ button {
     bottom: 6px;
   }
 }
+.footer-down {
+  min-height: -webkit-calc(100vh - 250px);
+  min-height: -moz-calc(100vh - 250px);
+  min-height: calc(100vh - 250px);
+}
 .contacts-row {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3545,6 +3550,7 @@ label.error {
     display: block;
     padding-top: 3px;
     width: 40%;
+    max-height: unset;
   }
 }
 @media (min-width: 768px) {
