@@ -1164,7 +1164,6 @@ button {
 /*--/Колонка "Контакты" для нижней части header'а--*/
 .portfolio-section {
   margin: 0 auto;
-  max-width: 1600px;
   padding: 52px 0 96px;
   background-color: #f4f8f9;
 }
