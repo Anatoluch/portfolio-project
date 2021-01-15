@@ -31,20 +31,18 @@
       margin-bottom: 67px;
       position: static;
     }
-    h2 {
-      &::after {
-        bottom: 2px;
-        left: -3px;
-        right: -3px;
-        height: 12px;
-        //Для планшета
-        @media (min-width: 768px) {
-          bottom: 5px;
-        }
-        //Для десктопа
-        @media (min-width: 1200px) {
-          bottom: 6px;
-        }
+    &::after {
+      bottom: 2px;
+      left: -3px;
+      right: -3px;
+      height: 12px;
+      //Для планшета
+      @media (min-width: 768px) {
+        bottom: 5px;
+      }
+      //Для десктопа
+      @media (min-width: 1200px) {
+        bottom: 6px;
       }
     }
   }

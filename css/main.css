@@ -2589,19 +2589,19 @@ button {
     position: static;
   }
 }
-.contacts .contacts-header h2::after {
+.contacts .contacts-header::after {
   bottom: 2px;
   left: -3px;
   right: -3px;
   height: 12px;
 }
 @media (min-width: 768px) {
-  .contacts .contacts-header h2::after {
+  .contacts .contacts-header::after {
     bottom: 5px;
   }
 }
 @media (min-width: 1200px) {
-  .contacts .contacts-header h2::after {
+  .contacts .contacts-header::after {
     bottom: 6px;
   }
 }
@@ -3411,15 +3411,15 @@ label.error {
     font-size: 48px;
   }
 }
-.project-page-title h2::after {
-  bottom: 0px;
+.project-page-title .section-title span::after {
+  bottom: 4px;
   left: -5px;
   right: -5px;
   height: 11px;
 }
 @media (min-width: 1200px) {
-  .project-page-title h2::after {
-    bottom: 3px;
+  .project-page-title .section-title span::after {
+    bottom: 8px;
     left: -3px;
     right: -3px;
     height: 10px;
