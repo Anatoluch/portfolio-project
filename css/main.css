@@ -692,14 +692,15 @@ button {
 .nav-icon:last-child {
   margin-right: 0;
 }
-.linkedin-h-a {
+.tele-h-a {
   -webkit-transition: color 0.3s ease-in;
   -o-transition: color 0.3s ease-in;
   -moz-transition: color 0.3s ease-in;
   transition: color 0.3s ease-in;
+  width: 28px;
 }
-.linkedin-h-a:hover {
-  color: #0077b5;
+.tele-h-a:hover {
+  color: #039be5;
 }
 .git-h-a {
   -webkit-transition: color 0.3s ease-in;
@@ -1096,6 +1097,60 @@ button {
     height: 2px;
     width: 23px;
     background-color: #000;
+  }
+}
+.skills__btn-row {
+  margin-bottom: 25px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media (min-width: 768px) {
+  .skills__btn-row {
+    margin-bottom: 0;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+       -moz-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+@media (min-width: 1200px) {
+  .skills__btn-row a {
+    margin-right: 14px;
+  }
+}
+.skills__btn-row a:last-of-type {
+  margin-right: 0;
+}
+.resume {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .resume {
+    width: 70%;
+  }
+}
+@media (min-width: 800px) {
+  .resume {
+    width: 60%;
+  }
+}
+@media (min-width: 1024px) {
+  .resume {
+    width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .resume {
+    width: unset;
   }
 }
 /*--Список навыков для нижней части header'а--*/
@@ -3465,14 +3520,84 @@ label.error {
     margin-bottom: 90px;
   }
 }
-.soft-icons img {
+.soft-icons div {
   margin-right: 10px;
   margin-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 @media (min-width: 768px) {
-  .soft-icons img {
+  .soft-icons div {
     margin-bottom: 0;
   }
+}
+.html-icon {
+  height: 26px;
+  line-height: 26px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  background: #ff861b;
+}
+.css-icon {
+  height: 26px;
+  line-height: 26px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  background: #049be6;
+}
+.js-icon {
+  height: 26px;
+  line-height: 26px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 14px;
+  letter-spacing: -0.5px;
+  color: #000;
+  font-weight: 700;
+  text-align: center;
+  background: #ffd202;
+}
+.php-icon {
+  height: 26px;
+  line-height: 26px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 14px;
+  letter-spacing: -0.5px;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  background: #797bb3;
+}
+.jquery-icon {
+  height: 26px;
+  line-height: 26px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 14px;
+  letter-spacing: -0.5px;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  background: #064f85;
+}
+.joomla-icon {
+  height: 26px;
+  line-height: 26px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  background: #1565c0;
 }
 .project-content {
   display: -webkit-box;
@@ -3712,7 +3837,6 @@ label.error {
   margin-bottom: 41px;
   overflow: hidden;
   height: auto;
-  max-height: 95px;
 }
 @media (min-width: 768px) {
   .project-info-row p {
@@ -3723,7 +3847,6 @@ label.error {
 @media (min-width: 1200px) {
   .project-info-row p {
     margin-bottom: 55px;
-    max-height: unset;
     letter-spacing: 0;
   }
 }

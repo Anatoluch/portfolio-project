@@ -140,10 +140,11 @@
     margin-right: 0;
   }
 }
-.linkedin-h-a {
+.tele-h-a {
   transition: color 0.3s ease-in;
+  width: 28px;
   &:hover {
-    color: #0077b5;
+    color: #039be5;
   }
 }
 .git-h-a {
@@ -442,6 +443,44 @@
       width: 23px;
       background-color: #000;
     }
+  }
+}
+.skills__btn-row {
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  //Для планшета
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+    justify-content: flex-start;
+  }
+}
+.skills__btn-row a {
+  //Для десктопа
+  @media (min-width: 1200px) {
+    margin-right: 14px;
+  }
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+.resume {
+  width: 100%;
+  //Для планшета
+  @media (min-width: 768px) {
+    width: 70%;
+  }
+  //Для планшета
+  @media (min-width: 800px) {
+    width: 60%;
+  }
+  //Для планшета
+  @media (min-width: 1024px) {
+    width: 50%;
+  }
+  //Для десктопа
+  @media (min-width: 1200px) {
+    width: unset;
   }
 }
 /*--Список навыков для нижней части header'а--*/
