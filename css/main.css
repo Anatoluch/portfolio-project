@@ -3599,6 +3599,17 @@ label.error {
   text-align: center;
   background: #1565c0;
 }
+.bootstrap-icon {
+  height: 26px;
+  line-height: 26px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  background: #644299;
+}
 .project-content {
   display: -webkit-box;
   display: -webkit-flex;

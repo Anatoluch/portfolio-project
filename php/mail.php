@@ -8,8 +8,9 @@ $c = true;
 // Save Basic Form parametrs
 $project_name = trim($_POST["Портфолио"]);
 $admin_email  = trim($_POST["gotohunt@bk.ru"]);
-$email_from  = trim($_POST["info@valerian-web.ru"]);
-// $form_subject = trim($_POST["form_subject"]);
+$email_from  = trim($_POST["email"]);
+$to      = 'message@valerian-web.ru';
+//$form_subject = trim($_POST["form_subject"]);
 
 // Serialize form fields - that filled-in by User
 foreach ( $_POST as $key => $value ) {
@@ -51,7 +52,7 @@ $headers = "MIME-Version: 1.0" . PHP_EOL .
 'Reply-To: '.$admin_email.'' . PHP_EOL;
 
 // Sending email to admin
-mail($admin_email, $form_subject, $message, $headers );
+mail($to, $form_subject, $message, $headers);
 
 // Saving user data in file
 send_user_data_in_txt_file ($message);
