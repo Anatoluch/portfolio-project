@@ -1658,6 +1658,36 @@ button {
     content: url("../img/main-page/portfolio/card-8.jpg");
   }
 }
+@media (min-width: 768px) {
+  .img-card-9 {
+    content: url("../img/main-page/portfolio/card-9-tab.jpg");
+  }
+}
+@media (min-width: 820px) {
+  .img-card-9 {
+    content: url("../img/main-page/portfolio/card-9.jpg");
+  }
+}
+@media (min-width: 768px) {
+  .img-card-10 {
+    content: url("../img/main-page/portfolio/card-10-tab.jpg");
+  }
+}
+@media (min-width: 820px) {
+  .img-card-10 {
+    content: url("../img/main-page/portfolio/card-10.jpg");
+  }
+}
+@media (min-width: 768px) {
+  .img-card-11 {
+    content: url("../img/main-page/portfolio/card-11-tab.jpg");
+  }
+}
+@media (min-width: 820px) {
+  .img-card-11 {
+    content: url("../img/main-page/portfolio/card-11.jpg");
+  }
+}
 /*---/Замена изображений карточек портфолио по медиазапросу---*/
 .img-link {
   position: absolute;
