@@ -6,6 +6,7 @@
    <title>Контакты</title>
    <link rel="stylesheet" href="./fonts/mplus1p/mplus1p.css">
    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   <script src="https://www.google.com/recaptcha/api.js"></script>
    <link rel="stylesheet" href="./css/main.css">
    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon"/>
 </head>
@@ -125,12 +126,12 @@
                            <a href="#">valerian.tsintsadze</a>
                         </div>
                      </li>
-                     <li class="contacts-list-item">
+                     <!-- <li class="contacts-list-item">
                         <div class="contacts-item-def">Телефон</div>
                         <div class="contacts-item-desc">
                            <a class="gray-link" href="tel:79787300414">+7 (978) 730 04 14</a>
                         </div>
-                     </li>
+                     </li> -->
                      <li class="contacts-list-item">
                         <div class="contacts-item-def">Адрес</div>
                         <div class="contacts-item-desc">
@@ -180,7 +181,8 @@
                         <textarea class="form-input form-textarea" name="message"></textarea>
                      </div>
                      <div class="form-submit-row">
-                        <input type="submit" class="btn" value="Отправить">
+                        <div class="g-recaptcha" data-sitekey="6Lca_DUaAAAAAG5vdGnfhhInsfBK_aj-PSF-DJj8"></div>
+                        <input type="submit" class="btn" value="Отправить" >
                      </div>
                   </form>
                   <div id="answer"></div>
