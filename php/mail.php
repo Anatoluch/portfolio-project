@@ -62,7 +62,7 @@ if (!$_POST["g-recaptcha-response"]) {
     // URL куда отправлять запрос для проверки
     $url = "https://www.google.com/recaptcha/api/siteverify";
     // Ключ для сервера
-    $key = "6Lca_DUaAAAAABoPFMB_2Qg7SQ96Uig9trseawCi";
+    $key = "";
     // Данные для запроса
     $query = array(
         "secret" => $key, // Ключ для сервера
