@@ -524,7 +524,6 @@ button {
 }
 @media (min-width: 1200px) {
   .header {
-    max-width: 1600px;
     margin: 0 auto;
     padding: 60px 0 238px;
     background-image: url("../img/main-page/stripes.jpg");
@@ -1993,6 +1992,7 @@ button {
       -ms-transform: translateX(0);
        -o-transform: translateX(0);
           transform: translateX(0);
+  overflow-y: auto;
 }
 .mob-nav {
   margin-bottom: 45px;
