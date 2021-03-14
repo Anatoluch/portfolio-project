@@ -314,6 +314,11 @@ button {
     padding: 0;
   }
 }
+@media (min-width: 1600px) {
+  .container.container--1600 {
+    max-width: 1430px;
+  }
+}
 /*---Универсальная панель иконок контактов---*/
 .social-ic-row {
   display: -webkit-box;
@@ -2947,15 +2952,6 @@ button {
      -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-@media (min-width: 768px) {
-  .form-submit-row {
-    -webkit-box-align: start;
-    -webkit-align-items: flex-start;
-       -moz-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
 }
 .form-submit-row .g-recaptcha {
   margin-bottom: 20px;
