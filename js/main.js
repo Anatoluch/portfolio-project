@@ -82,36 +82,48 @@ overlay.addEventListener('click', function(){
             }
          })
       }
-      //Валидация формы обратной связи
-      $('.contact-form').validate({
-         rules: {
-            email: {
-               required:true,
-               email:true
-            },
-            subject: {
-               required: false
-            },
-            message: {
-               required: true
-            }
-         },
-         messages: {
-            email: {
-               required: 'Обязательно укажите Ваш email!',
-               email: 'Введен некорректный адрес электронной почты!'
-            },
-            subject: {
-               required: 'Тема сообщения не указана!'
-            },
-            message: {
-               required: 'А где, собственно, текст Вашего сообщения?!'
-            }
-         },
-         submitHandler: function (form) {
-            ajaxFormSubmit();
-         }
-      })
+//Валидация формы обратной связи
+$('.contact-form').validate({
+   rules: {
+      userName: {
+         required: true
+      },
+      email: {
+         required: true,
+         email: true
+      },
+      subject: {
+         required: false
+      },
+      message: {
+         required: true
+      },
+      checkbox: {
+         required: true
+      }
+   },
+   messages: {
+      userName: {
+         required: 'А как к Вам обращаться?!'
+      },
+      email: {
+         required: 'Обязательно укажите Ваш email!',
+         email: 'Введен некорректный адрес электронной почты!'
+      },
+      subject: {
+         required: 'Тема сообщения не указана!'
+      },
+      message: {
+         required: 'А где, собственно, текст Вашего сообщения?!'
+      },
+      checkbox: {
+         required: 'Чтобы отправить сообщение, нужно принять политику конфиденциальности!'
+      }
+   },
+   submitHandler: function (form) {
+      ajaxFormSubmit();
+   }
+});
    //Отправка данных формы обратной связи
    	// Функция AJAX запрса на сервер
 
