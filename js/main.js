@@ -176,4 +176,8 @@ $(window).scroll(function() {
        $("html, body").animate({ scrollTop: 0 }, "slow");
        return false;
    });
+      //Защита номера телефона от спама (путем замены ссылки на изображение)
+      $('#nashphone1').click(function() {
+         $('#nashphone1').html('<a href="tel:+79787300414">+7(978) 730 04 14</a>');
+         });
 });

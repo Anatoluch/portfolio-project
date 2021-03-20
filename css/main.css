@@ -1692,6 +1692,26 @@ button {
     content: url("../img/main-page/portfolio/card-11.jpg");
   }
 }
+@media (min-width: 768px) {
+  .img-card-12 {
+    content: url("../img/main-page/portfolio/card-12-tab.jpg");
+  }
+}
+@media (min-width: 820px) {
+  .img-card-12 {
+    content: url("../img/main-page/portfolio/card-12.jpg");
+  }
+}
+@media (min-width: 768px) {
+  .img-card-13 {
+    content: url("../img/main-page/portfolio/card-13-tab.jpg");
+  }
+}
+@media (min-width: 820px) {
+  .img-card-13 {
+    content: url("../img/main-page/portfolio/card-13.jpg");
+  }
+}
 /*---/Замена изображений карточек портфолио по медиазапросу---*/
 .img-link {
   position: absolute;
@@ -3525,8 +3545,17 @@ label.error {
   }
 }
 .projects-adv-text a {
+  border-bottom: 1px solid var(--blue);
+  color: var(--blue);
+  line-height: 1.2;
+}
+.projects-adv-text a:hover {
   color: var(--blue);
   border-bottom: 1px solid var(--blue);
+}
+.projects-adv-text a:active {
+  color: var(--red);
+  border-bottom: 1px solid var(--red);
 }
 .adv-contact-icons .social-ic-row {
   position: relative;
@@ -3817,6 +3846,28 @@ label.error {
   font-weight: 700;
   text-align: center;
   background: #644299;
+}
+.gulp-icon {
+  height: 26px;
+  line-height: 26px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  background: #DB4446;
+}
+.pug-icon {
+  height: 26px;
+  line-height: 26px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  background: #A86454;
 }
 .project-content {
   display: -webkit-box;
@@ -4204,6 +4255,7 @@ label.error {
   .project-screen-col {
     margin-bottom: 0;
     width: 57.5%;
+    max-height: 828px;
   }
 }
 .project-info-row p {
