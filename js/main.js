@@ -38,6 +38,30 @@ $(document).ready(function () {
 		mobMenu.classList.remove("active");
 		bodyEl.classList.remove("noscroll");
 	});
+	//Плагин owlCarusel (Сертификаты)
+	$(".owl-carousel").owlCarousel({
+		responsiveClass: true,
+		nav: false,
+		navSpeed: 500,
+		dots: false,
+		navText: ["", ""],
+		loop: true,
+		autoplay: true,
+		autoplayTimeout: 2500,
+		margin: 5,
+		autoplayHoverPause: false,
+		responsive: {
+			0: {
+				items: 1,
+			},
+			768: {
+				items: 2,
+			},
+			1200: {
+				items: 3,
+			},
+		},
+	});
 	//-фильтрация проектов
 	let containerEl = document.querySelector("#portfolio-projects");
 	if (containerEl) {

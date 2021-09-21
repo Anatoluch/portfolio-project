@@ -1,575 +1,587 @@
 .portfolio-section {
-  margin: 0 auto;
-  // max-width: 1600px;
-  padding: 52px 0 96px;
-  background-color: #f4f8f9;
-  //Для планшета
-  @media (min-width: 768px) {
-    padding: 98px 0 78px;
-  }
-  //Для десктопа
-  @media (min-width: 1200px) {
-    padding: 106px 0 64px;
-  }
-  h2 {
-    margin-bottom: 46px;
-    position: relative;
-    z-index: 1;
-    //Для планшета
-    @media (min-width: 768px) {
-      margin-bottom: 52px;
-    }
-    //Для десктопа
-    @media (min-width: 1200px) {
-      margin-bottom: 61px;
-    }
-    &::after {
-      bottom: 4px;
-      left: -3px;
-      right: -3px;
-      height: 12px;
-      //Для планшета
-      @media (min-width: 768px) {
-        bottom: 6px;
-        left: -5px;
-        right: 0;
-      }
-      //Для десктопа
-      @media (min-width: 1200px) {
-        bottom: 8px;
-      }
-    }
-  }
+	margin: 0 auto;
+	// max-width: 1600px;
+	padding: 52px 0 96px;
+	background-color: #f4f8f9;
+	//Для планшета
+	@media (min-width: 768px) {
+		padding: 98px 0 78px;
+	}
+	//Для десктопа
+	@media (min-width: 1200px) {
+		padding: 106px 0 64px;
+	}
+	h2 {
+		margin-bottom: 46px;
+		position: relative;
+		z-index: 1;
+		//Для планшета
+		@media (min-width: 768px) {
+			margin-bottom: 52px;
+		}
+		//Для десктопа
+		@media (min-width: 1200px) {
+			margin-bottom: 61px;
+		}
+		&::after {
+			bottom: 4px;
+			left: -3px;
+			right: -3px;
+			height: 12px;
+			//Для планшета
+			@media (min-width: 768px) {
+				bottom: 6px;
+				left: -5px;
+				right: 0;
+			}
+			//Для десктопа
+			@media (min-width: 1200px) {
+				bottom: 8px;
+			}
+		}
+	}
+}
+.portfolio-section__title {
+	text-align: center;
+	//Для планшета
+	@media (min-width: 768px) {
+		text-align: unset;
+	}
 }
 .portfolio-filter {
-  display: none;
-  margin-bottom: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  //Для планшета
-  @media (min-width: 768px) {
-    padding: 0 26px;
-    max-width: 1140px;
-    display: flex;
-  }
-  //Для большого планшета
-  @media (min-width: 992px) {
-    padding: 0 30px;
-  }
-  //Для десктопа
-  @media (min-width: 1200px) {
-    padding: 0;
-    max-width: 1140px;
-  }
+	display: none;
+	margin-bottom: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	//Для планшета
+	@media (min-width: 768px) {
+		padding: 0 26px;
+		max-width: 1140px;
+		display: flex;
+	}
+	//Для большого планшета
+	@media (min-width: 992px) {
+		padding: 0 30px;
+	}
+	//Для десктопа
+	@media (min-width: 1200px) {
+		padding: 0;
+		max-width: 1140px;
+	}
 }
 .filter-link {
-  //Для планшета
-  @media (min-width: 768px) {
-    display: flex;
-    margin-right: 46px;
-    font-size: 22px;
-    font-weight: 800;
-    line-height: 1.2;
-    letter-spacing: -0.1px;
-    color: rgb(143, 165, 174);
-  }
-  //Для десктопа
-  @media (min-width: 1200px) {
-    margin-right: 64px;
-    font-size: 28px;
-  }
-  &:last-child {
-    margin-right: 0;
-  }
-  &:hover,
-  &:active {
-    color: var(--red);
-  }
+	//Для планшета
+	@media (min-width: 768px) {
+		display: flex;
+		margin-right: 46px;
+		font-size: 20px;
+		font-weight: 800;
+		line-height: 1.2;
+		letter-spacing: -0.2px;
+		color: rgb(143, 165, 174);
+	}
+	//Для планшета
+	@media (min-width: 960px) {
+		letter-spacing: -0.1px;
+		font-size: 22px;
+	}
+	//Для десктопа
+	@media (min-width: 1200px) {
+		margin-right: 64px;
+		font-size: 28px;
+	}
+	&:last-child {
+		margin-right: 0;
+	}
+	&:hover,
+	&:active {
+		color: var(--red);
+	}
 }
 .control-active {
-  color: var(--p);
-  &:hover {
-    color: var(--red);
-  }
+	color: var(--p);
+	&:hover {
+		color: var(--red);
+	}
 }
 .portfolio-content {
-  margin: 0 auto 15px;
-  padding: 0 15px;
-  max-width: 740px;
-  max-height: 1600px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  overflow: hidden;
-  transition: 0.38s;
-  //Для смарта от 360px
-  @media (min-width: 360px) {
-    max-height: 1720px;
-  }
-  //Для смарта от 375px
-  @media (min-width: 375px) {
-    max-height: 1770px;
-  }
-  //Для планшета
-  @media (min-width: 768px) {
-    margin: 0 auto 28px;
-    padding: 0 30px;
-    max-width: 768px;
-    height: auto;
-    max-height: 700px;
-    justify-content: space-between;
-  }
-  //Для большого планшета
-  @media (min-width: 820px) {
-    max-width: 840px;
-    justify-content: space-around;
-  }
-  //Для большого планшета
-  @media (min-width: 960px) {
-    max-width: 900px;
-  }
-  //Для большого планшета
-  @media (min-width: 992px) {
-    max-width: 940px;
-  }
-  //Для Ipad Pro
-  @media (min-width: 1024px) {
-    margin: 0 auto 24px;
-    max-width: 1060px;
-    max-height: 850px;
-  }
-  //Для десктопа
-  @media (min-width: 1200px) {
-    max-width: 1170px;
-    max-height: unset;
-    padding: 0;
-    margin: 0 auto;
-  }
+	margin: 0 auto 15px;
+	padding: 0 15px;
+	max-width: 740px;
+	max-height: 1600px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	overflow: hidden;
+	transition: 0.38s;
+	//Для смарта от 360px
+	@media (min-width: 360px) {
+		max-height: 1720px;
+	}
+	//Для смарта от 375px
+	@media (min-width: 375px) {
+		max-height: 1770px;
+	}
+	//Для планшета
+	@media (min-width: 768px) {
+		margin: 0 auto 28px;
+		padding: 0 30px;
+		max-width: 768px;
+		height: auto;
+		max-height: 700px;
+		justify-content: space-between;
+	}
+	//Для большого планшета
+	@media (min-width: 820px) {
+		max-width: 840px;
+		justify-content: space-around;
+	}
+	//Для большого планшета
+	@media (min-width: 960px) {
+		max-width: 900px;
+	}
+	//Для большого планшета
+	@media (min-width: 992px) {
+		max-width: 940px;
+	}
+	//Для Ipad Pro
+	@media (min-width: 1024px) {
+		margin: 0 auto 24px;
+		max-width: 1060px;
+		max-height: 850px;
+	}
+	//Для десктопа
+	@media (min-width: 1200px) {
+		max-width: 1170px;
+		max-height: unset;
+		padding: 0;
+		margin: 0 auto;
+	}
 }
 .show-all {
-  max-height: 100%;
-  //Для планшета
-  @media (min-width: 768px) {
-    margin: 0 auto 28px;
-  }
+	max-height: 100%;
+	//Для планшета
+	@media (min-width: 768px) {
+		margin: 0 auto 28px;
+	}
 }
 .link-1 {
-  display: inline-block;
+	display: inline-block;
 }
 .link-1-hide {
-  display: none !important;
+	display: none !important;
 }
 .link-2 {
-  display: none !important;
+	display: none !important;
 }
 .link-2-show {
-  display: inline-block !important;
+	display: inline-block !important;
 }
 .portfolio-card {
-  margin-bottom: 22px;
-  max-width: 290px;
-  //Для смарта от 360px
-  @media (min-width: 360px) {
-    max-width: 330px;
-  }
-  //Для смарта от 375px
-  @media (min-width: 375px) {
-    max-width: 345px;
-  }
-  //Для планшета
-  @media (min-width: 768px) {
-    margin-bottom: 19px;
-    max-width: 338px;
-  }
-  //Для большого планшета
-  @media (min-width: 820px) {
-    max-width: 370px;
-  }
-  //Для большого планшета
-  @media (min-width: 992px) {
-    max-width: 400px;
-  }
-  //Для Ipad Pro
-  @media (min-width: 1024px) {
-    margin-bottom: 25px;
-    max-width: 460px;
-  }
-  //Для десктопа
-  @media (min-width: 1200px) {
-    margin-bottom: 39px;
-    max-width: 360px;
-  }
-  //Это правило осталяет первые 5 карточек для мобильной версии (для планшета это правило не работает, так как для него ниже прописано отдельное правило), остальные скрывает
-  // &:nth-of-type(n + 6) {
-  //   display: none;
-  //   @media (min-width: 768px) {
-  //     display: block;
-  //   }
-  //   //Отображаем скрытые карточки на десктопе
-  //   //Для десктопа
-  //   @media (min-width: 1200px) {
-  //     display: block;
-  //   }
-  // }
-  // //Это правило осталяет первые 4 карточки для планшетной версии (мобильной версии не косается, для нее написано выше), остальные скрывает
-  // &:nth-of-type(n + 5) {
-  //   //Для планшета
-  //   @media (min-width: 768px) {
-  //     display: none;
-  //   }
-  //   //Отображаем скрытые карточки на десктопе
-  //   //Для десктопа
-  //   @media (min-width: 1200px) {
-  //     display: block;
-  //   }
-  // }
+	margin-bottom: 22px;
+	max-width: 290px;
+	//Для смарта от 360px
+	@media (min-width: 360px) {
+		max-width: 330px;
+	}
+	//Для смарта от 375px
+	@media (min-width: 375px) {
+		max-width: 345px;
+	}
+	//Для планшета
+	@media (min-width: 768px) {
+		margin-bottom: 19px;
+		max-width: 338px;
+	}
+	//Для большого планшета
+	@media (min-width: 820px) {
+		max-width: 370px;
+	}
+	//Для большого планшета
+	@media (min-width: 992px) {
+		max-width: 400px;
+	}
+	//Для Ipad Pro
+	@media (min-width: 1024px) {
+		margin-bottom: 25px;
+		max-width: 460px;
+	}
+	//Для десктопа
+	@media (min-width: 1200px) {
+		margin-bottom: 39px;
+		max-width: 360px;
+	}
+	//Это правило осталяет первые 5 карточек для мобильной версии (для планшета это правило не работает, так как для него ниже прописано отдельное правило), остальные скрывает
+	// &:nth-of-type(n + 6) {
+	//   display: none;
+	//   @media (min-width: 768px) {
+	//     display: block;
+	//   }
+	//   //Отображаем скрытые карточки на десктопе
+	//   //Для десктопа
+	//   @media (min-width: 1200px) {
+	//     display: block;
+	//   }
+	// }
+	// //Это правило осталяет первые 4 карточки для планшетной версии (мобильной версии не косается, для нее написано выше), остальные скрывает
+	// &:nth-of-type(n + 5) {
+	//   //Для планшета
+	//   @media (min-width: 768px) {
+	//     display: none;
+	//   }
+	//   //Отображаем скрытые карточки на десктопе
+	//   //Для десктопа
+	//   @media (min-width: 1200px) {
+	//     display: block;
+	//   }
+	// }
 }
 .portfolio-card--big {
-  max-width: 290px;
-  //Для смарта от 360px
-  @media (min-width: 360px) {
-    max-width: 330px;
-  }
-  //Для смарта от 375px
-  @media (min-width: 375px) {
-    max-width: 345px;
-  }
-  //Для планшета
-  @media (min-width: 768px) {
-    max-width: 338px;
-  }
-  //Для большого планшета
-  @media (min-width: 820px) {
-    max-width: 370px;
-  }
-  //Для большого планшета
-  @media (min-width: 992px) {
-    max-width: 400px;
-  }
-  //Для Ipad Pro
-  @media (min-width: 1024px) {
-    max-width: 460px;
-  }
-  //Для десктопа
-  @media (min-width: 1200px) {
-    max-width: 556px;
-  }
-  .card-title-link {
-    font-size: 22px;
-    //Для планшета
-    @media (min-width: 768px) {
-      font-size: 24px;
-    }
-    //Для планшета Ipad Pro
-    @media (min-width: 1024px) {
-      font-size: 28px;
-    }
-    //Для десктопа
-    @media (min-width: 1200px) {
-      font-size: 32px;
-    }
-  }
-  .card-desc {
-    padding-top: 21px;
-    //Для планшета
-    @media (min-width: 768px) {
-      padding-top: 20px;
-    }
-    //Для десктопа
-    @media (min-width: 1200px) {
-      padding-top: 26px;
-    }
-  }
-  .card-desc p {
-    font-size: 16px;
-    //Для планшета
-    @media (min-width: 768px) {
-      font-size: 18px;
-    }
-    //Для планшета Ipad Pro
-    @media (min-width: 1024px) {
-      font-size: 20px;
-    }
-    //Для десктопа
-    @media (min-width: 1200px) {
-      font-size: 22px;
-    }
-  }
+	max-width: 290px;
+	//Для смарта от 360px
+	@media (min-width: 360px) {
+		max-width: 330px;
+	}
+	//Для смарта от 375px
+	@media (min-width: 375px) {
+		max-width: 345px;
+	}
+	//Для планшета
+	@media (min-width: 768px) {
+		max-width: 338px;
+	}
+	//Для большого планшета
+	@media (min-width: 820px) {
+		max-width: 370px;
+	}
+	//Для большого планшета
+	@media (min-width: 992px) {
+		max-width: 400px;
+	}
+	//Для Ipad Pro
+	@media (min-width: 1024px) {
+		max-width: 460px;
+	}
+	//Для десктопа
+	@media (min-width: 1200px) {
+		max-width: 556px;
+	}
+	.card-title-link {
+		font-size: 22px;
+		//Для планшета
+		@media (min-width: 768px) {
+			font-size: 24px;
+		}
+		//Для планшета Ipad Pro
+		@media (min-width: 1024px) {
+			font-size: 28px;
+		}
+		//Для десктопа
+		@media (min-width: 1200px) {
+			font-size: 32px;
+		}
+	}
+	.card-desc {
+		padding-top: 21px;
+		//Для планшета
+		@media (min-width: 768px) {
+			padding-top: 20px;
+		}
+		//Для десктопа
+		@media (min-width: 1200px) {
+			padding-top: 26px;
+		}
+	}
+	.card-desc p {
+		font-size: 16px;
+		//Для планшета
+		@media (min-width: 768px) {
+			font-size: 18px;
+		}
+		//Для планшета Ipad Pro
+		@media (min-width: 1024px) {
+			font-size: 20px;
+		}
+		//Для десктопа
+		@media (min-width: 1200px) {
+			font-size: 22px;
+		}
+	}
 }
 .card-img {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  background-color: var(--yell);
-  img {
-    display: block;
-    transition: transform 0.5s ease-in;
-    &:hover {
-      transform: scale(1.5);
-    }
-  }
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	background-color: var(--yell);
+	img {
+		display: block;
+		transition: transform 0.5s ease-in;
+		&:hover {
+			transform: scale(1.5);
+		}
+	}
 }
 /*---Замена изображений карточек портфолио по медиазапросу---*/
 .img-card-1 {
-  //Для планшета
-  @media (min-width: 768px) {
-    content: url("../img/main-page/portfolio/card-1-tab.jpg");
-  }
-  //Для больших планшетов и дестопов
-  @media (min-width: 820px) {
-    content: url("../img/main-page/portfolio/card-1.jpg");
-  }
+	//Для планшета
+	@media (min-width: 768px) {
+		content: url("../img/main-page/portfolio/card-1-tab.jpg");
+	}
+	//Для больших планшетов и дестопов
+	@media (min-width: 820px) {
+		content: url("../img/main-page/portfolio/card-1.jpg");
+	}
 }
 .img-card-2 {
-  //Для планшета
-  @media (min-width: 768px) {
-    content: url("../img/main-page/portfolio/card-2-tab.jpg");
-  }
-  //Для больших планшетов и дестопов
-  @media (min-width: 820px) {
-    content: url("../img/main-page/portfolio/card-2.jpg");
-  }
+	//Для планшета
+	@media (min-width: 768px) {
+		content: url("../img/main-page/portfolio/card-2-tab.jpg");
+	}
+	//Для больших планшетов и дестопов
+	@media (min-width: 820px) {
+		content: url("../img/main-page/portfolio/card-2.jpg");
+	}
 }
 .img-card-3 {
-  //Для планшета
-  @media (min-width: 768px) {
-    content: url("../img/main-page/portfolio/card-4-tab.jpg");
-  }
-  //Для больших планшетов и дестопов
-  @media (min-width: 820px) {
-    content: url("../img/main-page/portfolio/card-4.jpg");
-  }
+	//Для планшета
+	@media (min-width: 768px) {
+		content: url("../img/main-page/portfolio/card-4-tab.jpg");
+	}
+	//Для больших планшетов и дестопов
+	@media (min-width: 820px) {
+		content: url("../img/main-page/portfolio/card-4.jpg");
+	}
 }
 .img-card-4 {
-  //Для планшета
-  @media (min-width: 768px) {
-    content: url("../img/main-page/portfolio/card-5-tab.jpg");
-  }
-  //Для больших планшетов и дестопов
-  @media (min-width: 820px) {
-    content: url("../img/main-page/portfolio/card-5.jpg");
-  }
+	//Для планшета
+	@media (min-width: 768px) {
+		content: url("../img/main-page/portfolio/card-5-tab.jpg");
+	}
+	//Для больших планшетов и дестопов
+	@media (min-width: 820px) {
+		content: url("../img/main-page/portfolio/card-5.jpg");
+	}
 }
 .img-card-5 {
-  //Для планшета
-  @media (min-width: 768px) {
-    content: url("../img/main-page/portfolio/card-3-tab.jpg");
-  }
-  //Для больших планшетов и дестопов
-  @media (min-width: 820px) {
-    content: url("../img/main-page/portfolio/card-3.jpg");
-  }
+	//Для планшета
+	@media (min-width: 768px) {
+		content: url("../img/main-page/portfolio/card-3-tab.jpg");
+	}
+	//Для больших планшетов и дестопов
+	@media (min-width: 820px) {
+		content: url("../img/main-page/portfolio/card-3.jpg");
+	}
 }
 .img-card-6 {
-  //Для планшета
-  @media (min-width: 768px) {
-    content: url("../img/main-page/portfolio/card-6-tab.jpg");
-  }
-  //Для больших планшетов и дестопов
-  @media (min-width: 820px) {
-    content: url("../img/main-page/portfolio/card-6.jpg");
-  }
+	//Для планшета
+	@media (min-width: 768px) {
+		content: url("../img/main-page/portfolio/card-6-tab.jpg");
+	}
+	//Для больших планшетов и дестопов
+	@media (min-width: 820px) {
+		content: url("../img/main-page/portfolio/card-6.jpg");
+	}
 }
 .img-card-7 {
-  //Для планшета
-  @media (min-width: 768px) {
-    content: url("../img/main-page/portfolio/card-7-tab.jpg");
-  }
-  //Для больших планшетов и дестопов
-  @media (min-width: 820px) {
-    content: url("../img/main-page/portfolio/card-7.jpg");
-  }
+	//Для планшета
+	@media (min-width: 768px) {
+		content: url("../img/main-page/portfolio/card-7-tab.jpg");
+	}
+	//Для больших планшетов и дестопов
+	@media (min-width: 820px) {
+		content: url("../img/main-page/portfolio/card-7.jpg");
+	}
 }
 .img-card-8 {
-  //Для планшета
-  @media (min-width: 768px) {
-    content: url("../img/main-page/portfolio/card-8-tab.jpg");
-  }
-  //Для больших планшетов и дестопов
-  @media (min-width: 820px) {
-    content: url("../img/main-page/portfolio/card-8.jpg");
-  }
+	//Для планшета
+	@media (min-width: 768px) {
+		content: url("../img/main-page/portfolio/card-8-tab.jpg");
+	}
+	//Для больших планшетов и дестопов
+	@media (min-width: 820px) {
+		content: url("../img/main-page/portfolio/card-8.jpg");
+	}
 }
 .img-card-9 {
-  //Для планшета
-  @media (min-width: 768px) {
-    content: url("../img/main-page/portfolio/card-9-tab.jpg");
-  }
-  //Для больших планшетов и дестопов
-  @media (min-width: 820px) {
-    content: url("../img/main-page/portfolio/card-9.jpg");
-  }
+	//Для планшета
+	@media (min-width: 768px) {
+		content: url("../img/main-page/portfolio/card-9-tab.jpg");
+	}
+	//Для больших планшетов и дестопов
+	@media (min-width: 820px) {
+		content: url("../img/main-page/portfolio/card-9.jpg");
+	}
 }
 .img-card-10 {
-  //Для планшета
-  @media (min-width: 768px) {
-    content: url("../img/main-page/portfolio/card-10-tab.jpg");
-  }
-  //Для больших планшетов и дестопов
-  @media (min-width: 820px) {
-    content: url("../img/main-page/portfolio/card-10.jpg");
-  }
+	//Для планшета
+	@media (min-width: 768px) {
+		content: url("../img/main-page/portfolio/card-10-tab.jpg");
+	}
+	//Для больших планшетов и дестопов
+	@media (min-width: 820px) {
+		content: url("../img/main-page/portfolio/card-10.jpg");
+	}
 }
 .img-card-11 {
-  //Для планшета
-  @media (min-width: 768px) {
-    content: url("../img/main-page/portfolio/card-11-tab.jpg");
-  }
-  //Для больших планшетов и дестопов
-  @media (min-width: 820px) {
-    content: url("../img/main-page/portfolio/card-11.jpg");
-  }
+	//Для планшета
+	@media (min-width: 768px) {
+		content: url("../img/main-page/portfolio/card-11-tab.jpg");
+	}
+	//Для больших планшетов и дестопов
+	@media (min-width: 820px) {
+		content: url("../img/main-page/portfolio/card-11.jpg");
+	}
 }
 .img-card-12 {
-  //Для планшета
-  @media (min-width: 768px) {
-    content: url("../img/main-page/portfolio/card-12-tab.jpg");
-  }
-  //Для больших планшетов и дестопов
-  @media (min-width: 820px) {
-    content: url("../img/main-page/portfolio/card-12.jpg");
-  }
+	//Для планшета
+	@media (min-width: 768px) {
+		content: url("../img/main-page/portfolio/card-12-tab.jpg");
+	}
+	//Для больших планшетов и дестопов
+	@media (min-width: 820px) {
+		content: url("../img/main-page/portfolio/card-12.jpg");
+	}
 }
 .img-card-13 {
-  //Для планшета
-  @media (min-width: 768px) {
-    content: url("../img/main-page/portfolio/card-13-tab.jpg");
-  }
-  //Для больших планшетов и дестопов
-  @media (min-width: 820px) {
-    content: url("../img/main-page/portfolio/card-13.jpg");
-  }
+	//Для планшета
+	@media (min-width: 768px) {
+		content: url("../img/main-page/portfolio/card-13-tab.jpg");
+	}
+	//Для больших планшетов и дестопов
+	@media (min-width: 820px) {
+		content: url("../img/main-page/portfolio/card-13.jpg");
+	}
 }
 /*---/Замена изображений карточек портфолио по медиазапросу---*/
 .img-link {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  background-color: rgba(251, 222, 76, 0.85);
-  transition: all 0.5s ease-in;
-  &:hover,
-  &:active {
-    display: flex;
-    opacity: 1;
-  }
-  .btn-overlay span {
-    display: inline-block;
-    padding: 12px 24px;
-    border-radius: 26px;
-    border: 3px solid #fff;
-    background-color: #fff;
-    color: #ea736d;
-    font-size: 22px;
-    line-height: 1;
-    font-weight: 800;
-    outline: none;
-    transition: all 0.2s ease-in-out;
-    &:hover {
-      transform: scale(1.15);
-      box-shadow: 0px 15px 7px rgba(0, 0, 0, 0.35);
-      border-color: #ea736d;
-      background-color: #ea736d;
-      color: #fff;
-    }
-    &:active {
-      transform: scale(1);
-      box-shadow: none;
-      border-color: #d4423b;
-      background-color: #d4423b;
-    }
-  }
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	background-color: rgba(251, 222, 76, 0.85);
+	transition: all 0.5s ease-in;
+	&:hover,
+	&:active {
+		display: flex;
+		opacity: 1;
+	}
+	.btn-overlay span {
+		display: inline-block;
+		padding: 12px 24px;
+		border-radius: 26px;
+		border: 3px solid #fff;
+		background-color: #fff;
+		color: #ea736d;
+		font-size: 22px;
+		line-height: 1;
+		font-weight: 800;
+		outline: none;
+		transition: all 0.2s ease-in-out;
+		&:hover {
+			transform: scale(1.15);
+			box-shadow: 0px 15px 7px rgba(0, 0, 0, 0.35);
+			border-color: #ea736d;
+			background-color: #ea736d;
+			color: #fff;
+		}
+		&:active {
+			transform: scale(1);
+			box-shadow: none;
+			border-color: #d4423b;
+			background-color: #d4423b;
+		}
+	}
 }
 .card-desc {
-  padding-top: 21px;
-  padding-bottom: 10px;
-  //Для планшета
-  @media (min-width: 768px) {
-    padding-top: 20px;
-  }
-  //Для десктопа
-  @media (min-width: 1200px) {
-    padding-top: 24px;
-  }
-  p {
-    margin-bottom: 15px;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 1.2;
-    //Для планшета
-    @media (min-width: 768px) {
-      font-size: 18px;
-    }
-    //Для планшета Ipad Pro
-    @media (min-width: 1024px) {
-      font-size: 20px;
-    }
-    //Для десктопа
-    @media (min-width: 1200px) {
-      margin-bottom: 15px;
-      font-weight: 400;
-      line-height: 1.2;
-    }
-  }
+	padding-top: 21px;
+	padding-bottom: 10px;
+	//Для планшета
+	@media (min-width: 768px) {
+		padding-top: 20px;
+	}
+	//Для десктопа
+	@media (min-width: 1200px) {
+		padding-top: 24px;
+	}
+	p {
+		margin-bottom: 15px;
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 1.2;
+		//Для планшета
+		@media (min-width: 768px) {
+			font-size: 18px;
+		}
+		//Для планшета Ipad Pro
+		@media (min-width: 1024px) {
+			font-size: 20px;
+		}
+		//Для десктопа
+		@media (min-width: 1200px) {
+			margin-bottom: 15px;
+			font-weight: 400;
+			line-height: 1.2;
+		}
+	}
 }
 .card-title {
-  display: inline-block;
-  margin-bottom: 10px;
-  //Для планшета
-  @media (min-width: 768px) {
-    margin-bottom: 12px;
-  }
-  //Для десктопа
-  @media (min-width: 1200px) {
-    margin-bottom: 10px;
-  }
-  &:hover {
-    margin-bottom: 9px;
-  }
+	display: inline-block;
+	margin-bottom: 10px;
+	//Для планшета
+	@media (min-width: 768px) {
+		margin-bottom: 12px;
+	}
+	//Для десктопа
+	@media (min-width: 1200px) {
+		margin-bottom: 10px;
+	}
+	&:hover {
+		margin-bottom: 9px;
+	}
 }
 .card-title-link {
-  color: var(--p);
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 1.2;
-  //Для планшета
-  @media (min-width: 768px) {
-    font-size: 24px;
-  }
-  //Для планшета Ipad Pro
-  @media (min-width: 1024px) {
-    font-size: 28px;
-  }
-  //Для десктопа
-  @media (min-width: 1200px) {
-    font-size: 26px;
-  }
-  &:hover {
-    color: var(--red);
-    border-bottom: 1px solid var(--red);
-  }
-  &:active {
-    color: var(--red);
-    border-bottom: 1px solid var(--red);
-  }
+	color: var(--p);
+	font-size: 22px;
+	font-weight: 700;
+	line-height: 1.2;
+	//Для планшета
+	@media (min-width: 768px) {
+		font-size: 24px;
+	}
+	//Для планшета Ipad Pro
+	@media (min-width: 1024px) {
+		font-size: 28px;
+	}
+	//Для десктопа
+	@media (min-width: 1200px) {
+		font-size: 26px;
+	}
+	&:hover {
+		color: var(--red);
+		border-bottom: 1px solid var(--red);
+	}
+	&:active {
+		color: var(--red);
+		border-bottom: 1px solid var(--red);
+	}
 }
 .portfolio-link {
-  //Для десктопа
-  @media (min-width: 1200px) {
-    display: none;
-  }
+	//Для десктопа
+	@media (min-width: 1200px) {
+		display: none;
+	}
 }
 .portfolio-link a {
-  font-size: 20px;
-  color: var(--blue);
-  //Для Ipad Pro и десктопа
-  @media (min-width: 1024px) {
-    font-size: 22px;
-  }
+	font-size: 20px;
+	color: var(--blue);
+	//Для Ipad Pro и десктопа
+	@media (min-width: 1024px) {
+		font-size: 22px;
+	}
 }

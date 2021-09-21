@@ -530,7 +530,7 @@ button {
   .header {
     max-width: 1600px;
     margin: 0 auto;
-    padding: 60px 0 238px;
+    padding: 60px 0 60px;
     background-image: url("../img/main-page/stripes.jpg");
     -moz-background-size: auto;
          background-size: auto;
@@ -1221,6 +1221,76 @@ button {
   }
 }
 /*--/Колонка "Контакты" для нижней части header'а--*/
+.skills-certificates {
+  padding: 30px 0;
+}
+.skills-certificates__title {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.skills-certificates__card {
+  margin: 0 auto;
+  max-width: 540px;
+}
+.skills-certificates__card-title {
+  text-align: center;
+  padding: 0 5px;
+}
+@media (min-width: 768px) {
+  .skills-certificates__card-title {
+    padding: 0;
+  }
+}
+.skills-certificates__card-title-4 {
+  margin-bottom: 18px;
+  color: #393f47;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.1px;
+}
+@media (min-width: 360px) {
+  .skills-certificates__card-title-4 {
+    letter-spacing: unset;
+  }
+}
+@media (min-width: 375px) {
+  .skills-certificates__card-title-4 {
+    font-size: 20px;
+  }
+}
+@media (min-width: 410px) {
+  .skills-certificates__card-title-4 {
+    font-size: 22px;
+  }
+}
+@media (min-width: 768px) {
+  .skills-certificates__card-title-4 {
+    font-size: 24px;
+  }
+}
+@media (min-width: 1200px) {
+  .skills-certificates__card-title-4 {
+    font-size: 22px;
+  }
+}
+@media (min-width: 1600px) {
+  .skills-certificates__card-title-4 {
+    font-size: 26px;
+  }
+}
+.skills-certificates__card-img {
+  margin-bottom: 10px;
+}
+.skills-certificates__card-img img {
+  -webkit-filter: drop-shadow(0 0 10px rgba(0, 112, 73, 0.35));
+          filter: drop-shadow(0 0 10px rgba(0, 112, 73, 0.35));
+}
+.skills-certificates__card-info {
+  text-align: center;
+  color: #393f47;
+  font-size: 20px;
+  font-weight: 500;
+}
 .portfolio-section {
   margin: 0 auto;
   padding: 52px 0 96px;
@@ -1269,6 +1339,14 @@ button {
     bottom: 8px;
   }
 }
+.portfolio-section__title {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .portfolio-section__title {
+    text-align: unset;
+  }
+}
 .portfolio-filter {
   display: none;
   margin-bottom: 50px;
@@ -1305,11 +1383,17 @@ button {
     display: -ms-flexbox;
     display: flex;
     margin-right: 46px;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 800;
     line-height: 1.2;
-    letter-spacing: -0.1px;
+    letter-spacing: -0.2px;
     color: #8fa5ae;
+  }
+}
+@media (min-width: 960px) {
+  .filter-link {
+    letter-spacing: -0.1px;
+    font-size: 22px;
   }
 }
 @media (min-width: 1200px) {
