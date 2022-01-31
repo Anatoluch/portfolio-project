@@ -38,30 +38,6 @@ $(document).ready(function () {
 		mobMenu.classList.remove("active");
 		bodyEl.classList.remove("noscroll");
 	});
-	//Плагин owlCarusel (Сертификаты)
-	$(".owl-carousel").owlCarousel({
-		responsiveClass: true,
-		nav: false,
-		navSpeed: 500,
-		dots: false,
-		navText: ["", ""],
-		loop: true,
-		autoplay: true,
-		autoplayTimeout: 2500,
-		margin: 5,
-		autoplayHoverPause: false,
-		responsive: {
-			0: {
-				items: 1,
-			},
-			768: {
-				items: 2,
-			},
-			1200: {
-				items: 3,
-			},
-		},
-	});
 	//-фильтрация проектов
 	let containerEl = document.querySelector("#portfolio-projects");
 	if (containerEl) {
@@ -201,5 +177,29 @@ $(document).ready(function () {
 	//Защита номера телефона от спама (путем замены ссылки на изображение)
 	$("#nashphone1").click(function () {
 		$("#nashphone1").html('<a href="tel:+79787300414">+7(978) 730 04 14</a>');
+	});
+	//Плагин owlCarusel (Сертификаты)
+	$(".owl-carousel").owlCarousel({
+		responsiveClass: true,
+		nav: false,
+		navSpeed: 500,
+		dots: false,
+		navText: ["", ""],
+		loop: true,
+		autoplay: true,
+		autoplayTimeout: 2500,
+		margin: 5,
+		autoplayHoverPause: false,
+		responsive: {
+			0: {
+				items: 1,
+			},
+			768: {
+				items: 2,
+			},
+			1200: {
+				items: 3,
+			},
+		},
 	});
 });
