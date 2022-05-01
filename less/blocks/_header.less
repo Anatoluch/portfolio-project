@@ -1,51 +1,49 @@
 .header {
 	max-width: 1600px;
 	margin: 0 auto;
-	padding: 21px 0 10px;
+	padding: 56px 0 10px;
 	//Для планшета
 	@media (min-width: 768px) {
-		padding: 21px 0 10px;
+		padding: 100px 0 10px;
 	}
 	//Для десктопа
 	@media (min-width: 1200px) {
-		max-width: 1600px;
 		margin: 0 auto;
-		padding: 60px 0 60px;
+		padding: 120px 0 60px;
 		background-image: url("../img/main-page/stripes.jpg");
 		background-size: auto;
 		background-position: center;
 		background-repeat: repeat-y;
 	}
 }
-.container.container--enlarge {
-	max-width: 100%;
-	padding-left: 18px;
-	padding-right: 18px;
+.header-nav-row {
+	margin: 0 auto;
+	padding: 0 15px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 56px;
+	z-index: 9;
+	background-color: #fff;
+	display: flex;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
 	//Для планшета
 	@media (min-width: 768px) {
-		padding-left: 32px;
-		padding-right: 32px;
+		padding: 0 30px;
 	}
 	//Для десктопа
 	@media (min-width: 1200px) {
-		padding-left: 15px;
-		padding-right: 15px;
-		max-width: 1430px;
+		padding: 0 15px;
 	}
 }
-.header-nav-row {
+.header-nav-row__container {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1600px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-bottom: 26px;
-	//Для планшета
-	@media (min-width: 768px) {
-		margin-bottom: 66px;
-	}
-	//Для десктопа
-	@media (min-width: 1200px) {
-		margin-bottom: 147px;
-	}
 }
 .logo {
 	margin-right: 15px;
@@ -226,7 +224,7 @@
 /*---Замена изображения в шапке по медиазапросу---*/
 .header-img {
 	@media (min-width: 1024px) {
-		content: url("../img/main-page/header-img.png");
+		content: url("../img/main-page/header-img.jpg");
 	}
 }
 /*---/Замена изображения в шапке по медиазапросу---*/
@@ -288,20 +286,7 @@
 		margin-bottom: 15px;
 	}
 }
-.header-desc-mob {
-	margin-bottom: 10px;
-	font-size: 18px;
-	font-weight: 500;
-	color: #393f47;
-	line-height: 1.667;
-	text-shadow: 0 3px 42px #fff;
-	//Для планшета
-	@media (min-width: 768px) {
-		display: none;
-	}
-}
 .header-desc {
-	display: none;
 	margin-bottom: 10px;
 	font-size: 18px;
 	font-weight: 500;
@@ -310,7 +295,6 @@
 	text-shadow: 0 3px 42px #fff;
 	//Для планшета
 	@media (min-width: 768px) {
-		display: block;
 		margin-bottom: 10px;
 		font-size: 18px;
 		font-weight: 700;
@@ -353,6 +337,7 @@
 /*--Фоновое изобранение--*/
 .header-bg-row {
 	max-width: 1600px;
+	position: relative;
 	z-index: -1;
 	margin-bottom: 75px;
 	transform: scale(1.78);
@@ -363,7 +348,19 @@
 	}
 	//Для десктопа
 	@media (min-width: 1200px) {
+		z-index: unset;
 		margin-bottom: -20px;
+	}
+}
+// Замена изображение для разных экранов
+.header-bg {
+	width: 100%;
+	display: inline-block;
+	@media (min-width: 640px) {
+		content: url("../img/main-page/header-bg-tab.jpg");
+	}
+	@media (min-width: 1200px) {
+		content: url("../img/main-page/header-bg.jpg");
 	}
 }
 /*--/Фоновое изобранение--*/
@@ -488,6 +485,11 @@
 /*--Колонка "Контакты" для нижней части header'а--*/
 .header-col-contacts {
 	width: 100%;
+	text-align: center;
+	//Для планшета
+	@media (min-width: 768px) {
+		text-align: unset;
+	}
 	h3 {
 		position: relative;
 		left: -2px;

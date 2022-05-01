@@ -6,7 +6,6 @@
    <title>Контакты</title>
    <link rel="stylesheet" href="./fonts/mplus1p/mplus1p.css">
    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-   <script src="https://www.google.com/recaptcha/api.js"></script>
    <link rel="stylesheet" href="./css/main.css">
    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon"/>
 </head>
@@ -14,9 +13,6 @@
    <!---Верхнее меню для мобилок--->
    <div id="overlay"></div>
    <div class="mobile-menu">
-      <div class="logo bottom-line">
-         <a href="index.html">ВЦ</a>
-      </div>
       <ul class="mob-nav">
          <li class="mob-nav-item">
             <a class="mob-nav-link" href="index.html#skills">Услуги</a>
@@ -60,15 +56,14 @@
    </div>
    <!---/Верхнее меню для мобилок--->
    <header class="page-header" id="header">
-      <!--Увеличенный контейнер Top nav menu-->
-      <div class="container container--enlarge">
-         <!-- __Top nav menu__ -->
-         <div class="header-nav-row header-nav-row--page">
-            <div class="logo bottom-line" data-aos="zoom-out-down" data-aos-delay="400">
+      <!-- __Top nav menu__ -->
+      <div class="header-nav-row">
+         <div class="header-nav-row__container">
+            <div class="logo bottom-line">
                <a href="index.html">ВЦ</a>
             </div>
             <!--Меню для десктопа-->
-            <ul class="nav-list" data-aos="zoom-in" data-aos-delay="600">
+            <ul class="nav-list">
                <li class="nav-item">
                   <a href="index.html" class="nav-link">Главная</a>
                </li>
@@ -79,7 +74,7 @@
                   <a href="contacts.html" class="nav-link nav-link--active">Контакты</a>
                </li>
             </ul>
-            <div class="nav-icons-row" data-aos="zoom-in-down" data-aos-delay="700">
+            <div class="nav-icons-row">
                <a href="https://github.com/Anatoluch" target="_blank" class="nav-icon git-h-a">
                   <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
                </a>
@@ -95,14 +90,14 @@
             <div class="toggle-menu"><span></span></div>
             <!--/Меню "Гамбургер" для планшета и мобилок-->
          </div>
-         <!--__/Top nav menu__-->
       </div>
+      <!--__/Top nav menu__-->
    </header>
    <main>
       <!--Раздел "Контакты"-->
       <section class="contacts footer-down">
          <!--Контейнер-->
-         <div class="container container--1600">
+         <div class="container container--enlarge">
             <!--Заголовок раздела "Контакты"-->
             <div class="contacts-header">
                <h2 id="contacts" class="section-title bottom-line">Контакты</h2>
@@ -165,7 +160,7 @@
                <!--/Левая колонка с контактами-->
                <!--Форма обратной связи (справа)-->
                <div class="contacts-form-col" data-aos="fade-left" data-aos-delay="300">
-                  <form class="contact-form" method="POST" action="./php/mail.php">
+                  <form class="contact-form" autocomplete="off">
                      <div class="form-item-row name-row">
                         <span class="fake-placeholder">Ваше имя<span class="required">*</span></span>
                         <input type="name" class="form-input" name="userName">
@@ -179,16 +174,31 @@
                         <input type="text" class="form-input" name="subject">
                      </div>
                      <div class="form-item-row textarea-row">
-                        <span class="fake-placeholder fp-msg">Сообщение<span class="required">*</span></span>
-                        <textarea class="form-input form-textarea" name="message"></textarea>
+								<div class="contacts-form__char-counter transp-count">Осталось&nbsp;символов:&nbsp;<span id="form-char-counter"></span></div>
+								<span class="fake-placeholder fp-msg">Сообщение<span class="required">*</span></span>
+								<textarea id="form-comment" class="form-input form-textarea" name="message" maxlength="480"></textarea>
                      </div>
-                     <div class="checkbox-row">
-                        <input type="checkbox" class="form-checkbox" name="checkbox">
-                        <label for="checkbox" class="agreement-text">Согласие с <a href="terms.html" target="_blank">политикой конфиденциальности</a></label>
-                     </div>
-                     <div class="form-submit-row">
-                        <div class="g-recaptcha" data-sitekey="6Lca_DUaAAAAAG5vdGnfhhInsfBK_aj-PSF-DJj8"></div>
-                        <input type="submit" class="btn" value="Отправить" >
+                     <div class="flex-row">
+                        <div class="checkbox-row">
+                           <input type="checkbox" class="form-checkbox" name="checkbox">
+                           <label for="checkbox" class="agreement-text">Согласие с <a href="terms.html" target="_blank">политикой конфиденциальности</a></label>
+                        </div>
+								<div id="form-bot-row" class="textarea-row hidden">
+									<div id="question-1-row" class="form-item-row question-row hidden">
+										<span id='form-bot-placeholder-1' class="fake-placeholder">Сколько будет <span id="question-inp-1"></span><span class="required">*</span></span>
+										<input type="text" id='form-bot-question-1' name="botQuestion1" class="form-input" maxlength="2" required>
+									</div>
+									<div id="question-2-row" class="form-item-row question-row hidden">
+										<span id='form-bot-placeholder-2' class="fake-placeholder">Столица <span id="question-inp-2"></span><span class="required">*</span></span>
+										<input type="text" id='form-bot-question-2' name="botQuestion2" class="form-input" maxlength="6" required>
+									</div>
+								</div>
+								<div class="form-submit-row">
+									<div class="form-btn-row">
+										<input type="submit" id="submit-btn" class="btn" value="Отправить">
+										<input type="reset" id="reset-btn" class="btn btn--form-reset" value="Очистить">
+									</div>
+								</div>
                      </div>
                   </form>
                   <div id="answer"></div>
@@ -203,9 +213,9 @@
    </main>
    <a id="back2Top" title="Наверх" href="#">&#10148;</a>
    <footer class="footer">
-      <div class="container container--1600">
+      <div class="container container--enlarge">
          <div class="footer-title">
-            <h3>&copy; 2021 &mdash; Валериан Цинцадзе</h3>
+            <h3>&copy; 2022 &mdash; Валериан Цинцадзе</h3>
          </div>
          <div class="footer-desc">
             <p>Веб-разработчик из Севастополя, занимаюсь версткой и созданием сайтов.</p>
@@ -214,15 +224,16 @@
       </div>
    </footer>
    <script src="libs/jquery/jquery-3.5.1.min.js"></script>
-   <script src="libs/jquery.validate/jquery.validate.js"></script>
-   <script src="libs/mixitup3/mixitup.min.js"></script>
-   <script src="libs/nav.js/nav.js"></script>
    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script defer src="libs/jquery.validate/jquery.validate.js"></script>
+   <script defer src="libs/mixitup3/mixitup.min.js"></script>
+   <script defer src="libs/nav.js/nav.js"></script>
    <script>
       AOS.init({
       once: true,
       });
    </script>
-   <script src="js/main.js"></script>
+   <script defer src="js/main.min.js"></script>
+   <script defer src="js/cookies.min.js"></script>
 </body>
 </html>

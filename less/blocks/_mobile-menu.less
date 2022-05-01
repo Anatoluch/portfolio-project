@@ -1,59 +1,86 @@
+/*--Затемняющий слой вокруг плашки мобильного меню--*/
+#overlay {
+	font-size: 0;
+	position: fixed;
+	margin: 0;
+	padding: 0;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	// height: 100%;
+	transform: translateX(100%);
+	background-color: rgba(44, 52, 73, 0.75);
+	// backdrop-filter: blur(3px);
+	z-index: 5;
+	opacity: 0;
+	transition: 0.5s ease-in-out;
+	//Для десктопа
+	@media (min-width: 1200px) {
+		display: none;
+	}
+}
+#overlay.active {
+	opacity: 1;
+	transform: translateX(0);
+}
+/*--/Затемняющий слой вокруг плашки мобильного меню--*/
 .mobile-menu {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  padding-top: 19px;
-  padding-left: 30px;
-  max-width: 320px;
-  background-color: #fff;
-  z-index: 8;
-  transform: translateX(100%);
-  transition: 0.5s;
-  @media (min-width: 1200px) {
-    display: none;
-  }
-  .logo {
-    margin-bottom: 29px;
-  }
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	padding-top: 75px;
+	padding-left: 30px;
+	max-width: 320px;
+	background-color: #fff;
+	z-index: 8;
+	transform: translateX(100%);
+	transition: 0.5s ease-in-out;
+	@media (min-width: 1200px) {
+		display: none;
+	}
+	.logo {
+		margin-bottom: 29px;
+	}
 }
 .mobile-menu.active {
-  display: block;
-  transform: translateX(0);
-  overflow-y:auto;
+	display: block;
+	transform: translateX(0);
+	overflow-y: auto;
 }
 .mob-nav {
-  margin-bottom: 45px;
+	margin-bottom: 45px;
 }
 .mob-nav-item {
-  margin-bottom: 29px;
-  font-size: 20px;
-  font-weight: 700;
-  text-decoration: underline;
-  line-height: 1.1;
+	margin-bottom: 29px;
+	font-size: 20px;
+	font-weight: 700;
+	text-decoration: underline;
+	line-height: 1.1;
 }
 .mob-nav-link {
-  color: var(--p);
-  border-bottom: 1px solid var(--p);
-  &:active {
-    color: var(--red);
-    border-color: rgba(0, 0, 0, 0);
-  }
+	color: var(--p);
+	border-bottom: 1px solid var(--p);
+	&:active {
+		color: var(--red);
+		border-color: rgba(0, 0, 0, 0);
+	}
 }
 .mob-menu-ic {
-  margin-right: 20px;
-  &:last-child {
-    margin-right: 0;
-  }
+	margin-right: 20px;
+	&:last-child {
+		margin-right: 0;
+	}
 }
 .social-ic-row.social-ic-row--mob {
-  margin-bottom: 30px;
+	margin-bottom: 30px;
 }
 .mob-contact-link a {
-  font-size: 18px;
-  color: var(--blue);
+	font-size: 18px;
+	color: var(--blue);
 }
 .text-link--mob {
-  border-color: var(--blue);
+	border-color: var(--blue);
 }

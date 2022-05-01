@@ -19,6 +19,9 @@ html {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
+html.noscroll {
+  overflow: hidden;
+}
 body {
   margin: 0;
   padding: 0;
@@ -27,9 +30,6 @@ body {
   font-size: 16px;
   background-color: #fff;
   overflow-x: hidden;
-}
-body.noscroll {
-  position: fixed;
 }
 /*---Стили для боковой навигации по разделам страницы*/
 /*--Планка навигации--*/
@@ -40,7 +40,7 @@ body.noscroll {
   #page-nav {
     display: block;
     position: fixed;
-    right: 15px;
+    right: 2px;
     top: 50%;
     z-index: 100;
   }
@@ -69,24 +69,6 @@ body.noscroll {
 }
 /*--/Ссылки (точки) на разделы--*/
 /*---/Стили для боковой навигации по разделам страницы*/
-/*--Затемняющий слой вокруг плашки мобильного меню--*/
-#overlay {
-  font-size: 0;
-  position: fixed;
-  margin: 0;
-  padding: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(44, 52, 73, 0.75);
-  z-index: 6;
-  display: none;
-}
-#overlay.active {
-  display: block;
-}
-/*--/Затемняющий слой вокруг плашки мобильного меню--*/
 a,
 a:hover {
   text-decoration: none;
@@ -253,6 +235,41 @@ button {
   border-color: var(--btn-bg-a);
   background-color: var(--btn-bg-a);
 }
+.btn.btn--form-reset {
+  margin-bottom: 20px;
+  border: 4px solid #979797;
+  background-color: #fff;
+  line-height: 52px;
+  height: 60px;
+  color: #979797;
+}
+@media (min-width: 768px) {
+  .btn.btn--form-reset {
+    margin-bottom: 15px;
+  }
+}
+@media (min-width: 1200px) {
+  .btn.btn--form-reset {
+    margin-bottom: 0;
+    padding-left: 38px;
+    padding-right: 38px;
+  }
+}
+.btn.btn--form-reset:hover,
+.btn.btn--form-reset:active {
+  -webkit-transform: scale(1.05);
+     -moz-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+       -o-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-filter: drop-shadow(0px 6px 1px rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(0px 6px 1px rgba(0, 0, 0, 0.5));
+}
+.btn.btn--form-reset:focus {
+  outline: none;
+  -webkit-filter: drop-shadow(0px 0px 6px rgba(59, 59, 59, 0.2)) drop-shadow(2px 2px 4px rgba(53, 53, 53, 0.6)) drop-shadow(-2px -2px 3px rgba(114, 114, 114, 0.6));
+          filter: drop-shadow(0px 0px 6px rgba(59, 59, 59, 0.2)) drop-shadow(2px 2px 4px rgba(53, 53, 53, 0.6)) drop-shadow(-2px -2px 3px rgba(114, 114, 114, 0.6));
+}
 .btn.btn--mob {
   display: none;
 }
@@ -314,9 +331,19 @@ button {
     padding: 0;
   }
 }
-@media (min-width: 1600px) {
-  .container.container--1600 {
-    max-width: 1430px;
+.container.container--enlarge {
+  max-width: 100%;
+  padding: 0 15px;
+}
+@media (min-width: 768px) {
+  .container.container--enlarge {
+    padding: 0 30px;
+  }
+}
+@media (min-width: 1200px) {
+  .container.container--enlarge {
+    padding: 0 15px;
+    max-width: 1600px;
   }
 }
 /*---Универсальная панель иконок контактов---*/
@@ -326,6 +353,20 @@ button {
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media (min-width: 768px) {
+  .social-ic-row {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+       -moz-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 .icon-item {
   margin-right: 30px;
@@ -494,7 +535,7 @@ button {
   width: 40px;
   line-height: 40px;
   overflow: hidden;
-  z-index: 999;
+  z-index: 7;
   display: none;
   cursor: pointer;
   -moz-transform: rotate(270deg);
@@ -510,27 +551,29 @@ button {
   font-size: 40px;
   text-decoration: none;
 }
-#back2Top:hover {
-  color: var(--blue);
+.anchor-margin {
+  position: absolute;
+  margin-top: -56px;
 }
-#back2Top:active {
-  color: var(--red);
+.hidden {
+  display: none !important;
+  position: fixed;
+  top: -100vh;
 }
 .header {
   max-width: 1600px;
   margin: 0 auto;
-  padding: 21px 0 10px;
+  padding: 56px 0 10px;
 }
 @media (min-width: 768px) {
   .header {
-    padding: 21px 0 10px;
+    padding: 100px 0 10px;
   }
 }
 @media (min-width: 1200px) {
   .header {
-    max-width: 1600px;
     margin: 0 auto;
-    padding: 60px 0 60px;
+    padding: 120px 0 60px;
     background-image: url("../img/main-page/stripes.jpg");
     -moz-background-size: auto;
          background-size: auto;
@@ -538,25 +581,39 @@ button {
     background-repeat: repeat-y;
   }
 }
-.container.container--enlarge {
-  max-width: 100%;
-  padding-left: 18px;
-  padding-right: 18px;
+.header-nav-row {
+  margin: 0 auto;
+  padding: 0 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 56px;
+  z-index: 9;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+     -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
 }
 @media (min-width: 768px) {
-  .container.container--enlarge {
-    padding-left: 32px;
-    padding-right: 32px;
+  .header-nav-row {
+    padding: 0 30px;
   }
 }
 @media (min-width: 1200px) {
-  .container.container--enlarge {
-    padding-left: 15px;
-    padding-right: 15px;
-    max-width: 1430px;
+  .header-nav-row {
+    padding: 0 15px;
   }
 }
-.header-nav-row {
+.header-nav-row__container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1600px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -572,17 +629,6 @@ button {
      -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 26px;
-}
-@media (min-width: 768px) {
-  .header-nav-row {
-    margin-bottom: 66px;
-  }
-}
-@media (min-width: 1200px) {
-  .header-nav-row {
-    margin-bottom: 147px;
-  }
 }
 .logo {
   margin-right: 15px;
@@ -831,7 +877,7 @@ button {
 /*---Замена изображения в шапке по медиазапросу---*/
 @media (min-width: 1024px) {
   .header-img {
-    content: url("../img/main-page/header-img.png");
+    content: url("../img/main-page/header-img.jpg");
   }
 }
 /*---/Замена изображения в шапке по медиазапросу---*/
@@ -900,21 +946,7 @@ button {
     margin-bottom: 15px;
   }
 }
-.header-desc-mob {
-  margin-bottom: 10px;
-  font-size: 18px;
-  font-weight: 500;
-  color: #393f47;
-  line-height: 1.667;
-  text-shadow: 0 3px 42px #fff;
-}
-@media (min-width: 768px) {
-  .header-desc-mob {
-    display: none;
-  }
-}
 .header-desc {
-  display: none;
   margin-bottom: 10px;
   font-size: 18px;
   font-weight: 500;
@@ -924,7 +956,6 @@ button {
 }
 @media (min-width: 768px) {
   .header-desc {
-    display: block;
     margin-bottom: 10px;
     font-size: 18px;
     font-weight: 700;
@@ -970,6 +1001,7 @@ button {
 /*--Фоновое изобранение--*/
 .header-bg-row {
   max-width: 1600px;
+  position: relative;
   z-index: -1;
   margin-bottom: 75px;
   -webkit-transform: scale(1.78);
@@ -990,7 +1022,22 @@ button {
 }
 @media (min-width: 1200px) {
   .header-bg-row {
+    z-index: unset;
     margin-bottom: -20px;
+  }
+}
+.header-bg {
+  width: 100%;
+  display: inline-block;
+}
+@media (min-width: 640px) {
+  .header-bg {
+    content: url("../img/main-page/header-bg-tab.jpg");
+  }
+}
+@media (min-width: 1200px) {
+  .header-bg {
+    content: url("../img/main-page/header-bg.jpg");
   }
 }
 /*--/Фоновое изобранение--*/
@@ -1162,6 +1209,12 @@ button {
 /*--Колонка "Контакты" для нижней части header'а--*/
 .header-col-contacts {
   width: 100%;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .header-col-contacts {
+    text-align: unset;
+  }
 }
 .header-col-contacts h3 {
   position: relative;
@@ -1982,8 +2035,6 @@ button {
   }
 }
 .toggle-menu {
-  margin-right: 16px;
-  margin-top: 4px;
   width: 40px;
   height: 40px;
   display: -webkit-box;
@@ -2027,24 +2078,20 @@ button {
 .toggle-menu span::after {
   bottom: -10px;
 }
-@media (min-width: 768px) {
-  .toggle-menu {
-    margin-right: 16px;
-    margin-top: 4px;
-  }
-}
 @media (min-width: 1200px) {
   .toggle-menu {
     display: none;
   }
 }
 .toggle-menu.active {
-  margin-right: 10px;
-  margin-top: 0;
   position: fixed;
   right: 15px;
-  top: 25px;
   z-index: 9;
+}
+@media (min-width: 768px) {
+  .toggle-menu.active {
+    right: 30px;
+  }
 }
 .toggle-menu.active span {
   background-color: transparent;
@@ -2065,13 +2112,50 @@ button {
        -o-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
+/*--Затемняющий слой вокруг плашки мобильного меню--*/
+#overlay {
+  font-size: 0;
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  -webkit-transform: translateX(100%);
+     -moz-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+       -o-transform: translateX(100%);
+          transform: translateX(100%);
+  background-color: rgba(44, 52, 73, 0.75);
+  z-index: 5;
+  opacity: 0;
+  -webkit-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+@media (min-width: 1200px) {
+  #overlay {
+    display: none;
+  }
+}
+#overlay.active {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+     -moz-transform: translateX(0);
+      -ms-transform: translateX(0);
+       -o-transform: translateX(0);
+          transform: translateX(0);
+}
+/*--/Затемняющий слой вокруг плашки мобильного меню--*/
 .mobile-menu {
   position: fixed;
   top: 0;
   bottom: 0;
   right: 0;
   width: 100%;
-  padding-top: 19px;
+  padding-top: 75px;
   padding-left: 30px;
   max-width: 320px;
   background-color: #fff;
@@ -2081,10 +2165,10 @@ button {
       -ms-transform: translateX(100%);
        -o-transform: translateX(100%);
           transform: translateX(100%);
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  -moz-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 @media (min-width: 1200px) {
   .mobile-menu {
@@ -2756,7 +2840,7 @@ button {
 }
 @media (min-width: 1200px) {
   .contacts {
-    padding: 136px 0 148px;
+    padding: 80px 0 148px;
     background-image: url("../img/main-page/stripes-contacts.jpg");
     -moz-background-size: auto;
          background-size: auto;
@@ -3009,30 +3093,63 @@ button {
   .contacts-form-col {
     width: 47%;
     padding-top: 0;
-    padding-right: 20px;
+    padding-right: 10px;
   }
 }
 .contact-form {
   width: 100%;
   height: 100%;
-  padding: 40px 10px 40px;
+  padding: 40px 10px 20px;
   -webkit-box-shadow: 0 28px 100px #c2dbeb;
      -moz-box-shadow: 0 28px 100px #c2dbeb;
           box-shadow: 0 28px 100px #c2dbeb;
   background-color: #fff;
   z-index: 1;
 }
+@media (min-width: 480px) {
+  .contact-form {
+    padding: 40px 30px 20px;
+  }
+}
 @media (min-width: 768px) {
   .contact-form {
-    padding: 60px 25px 40px;
+    margin-bottom: 30px;
+    padding: 30px 25px 30px;
     height: unset;
   }
 }
 @media (min-width: 1200px) {
   .contact-form {
-    padding: 80px 50px 41px;
+    margin-bottom: 0;
+    padding: 45px 40px 30px;
     height: 100%;
   }
+}
+@media (min-width: 1600px) {
+  .contact-form {
+    padding: 45px 58px 30px;
+  }
+}
+.contact-form input[type="submit"]:disabled {
+  cursor: not-allowed;
+  background-color: #979797;
+  color: #8f8f8f;
+  text-shadow: 0 0px 3px black;
+}
+.contact-form input[type="submit"]:disabled:hover,
+.contact-form input[type="submit"]:disabled:focus {
+  -webkit-transform: unset;
+     -moz-transform: unset;
+      -ms-transform: unset;
+       -o-transform: unset;
+          transform: unset;
+  -webkit-filter: unset;
+          filter: unset;
+  -webkit-box-shadow: unset;
+     -moz-box-shadow: unset;
+          box-shadow: unset;
+  background-color: #979797;
+  color: #8f8f8f;
 }
 .form-item-row {
   position: relative;
@@ -3140,8 +3257,59 @@ span.required {
     margin-bottom: 34px;
   }
 }
+.contacts-form__char-counter {
+  position: absolute;
+  bottom: -12px;
+  right: 0;
+  font-family: sans-serif;
+  font-size: 13px;
+  color: gray;
+  font-weight: 500;
+  letter-spacing: 1px;
+  pointer-events: none;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.contacts-form__char-counter.transp-count {
+  opacity: 0;
+  font-size: 32px;
+  letter-spacing: 1px;
+  right: 0;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.flex-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: unset;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media (min-width: 1200px) {
+  .flex-row {
+    height: 205px;
+  }
+}
 .checkbox-row {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -3165,6 +3333,16 @@ span.required {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+}
+@media (min-width: 1024px) {
+  .checkbox-row {
+    margin-bottom: 35px;
+  }
+}
+@media (min-width: 1600px) {
+  .checkbox-row {
+    margin-bottom: 25px;
+  }
 }
 .form-input {
   width: 100%;
@@ -3190,29 +3368,54 @@ span.required {
   border-color: #ea736d;
 }
 .form-textarea {
-  height: 117px;
+  height: 150px;
+  font-size: 18px;
+  font-weight: 500;
   resize: none;
+}
+@media (min-width: 1024px) {
+  .form-textarea {
+    height: 160px;
+  }
+}
+@media (min-width: 1200px) {
+  .form-textarea {
+    height: 180px;
+  }
+}
+@media (min-width: 1280px) {
+  .form-textarea {
+    height: 190px;
+  }
+}
+@media (min-width: 1600px) {
+  .form-textarea {
+    height: 200px;
+  }
 }
 .form-textarea:focus {
   border-color: #ea736d;
 }
 .form-checkbox {
   margin-right: 8px;
-  width: 15px;
-  height: 15px;
+  width: 18px;
+  height: 18px;
+  -webkit-filter: drop-shadow(0 0 3px #ffbc00);
+          filter: drop-shadow(0 0 3px #ffbc00);
 }
 @media (min-width: 360px) {
   .form-checkbox {
-    margin-right: 12px;
+    margin-right: 10px;
   }
 }
 @media (min-width: 768px) {
   .form-checkbox {
-    margin-right: 15px;
+    margin-right: 8px;
   }
 }
 @media (min-width: 1200px) {
   .form-checkbox {
+    margin-right: 15px;
     width: 18px;
     height: 18px;
   }
@@ -3224,15 +3427,19 @@ span.required {
   }
 }
 .agreement-text {
-  font-family: sans-serif;
+  font-family: "M PLUS 1p", sans-serif;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 400;
   color: gray;
   letter-spacing: -0.6px;
 }
 .agreement-text a {
   color: gray;
   text-decoration: underline;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
 }
 @media (min-width: 360px) {
   .agreement-text {
@@ -3243,11 +3450,13 @@ span.required {
 @media (min-width: 400px) {
   .agreement-text {
     font-size: 15px;
+    font-weight: 500;
   }
 }
 @media (min-width: 768px) {
   .agreement-text {
     font-size: 12px;
+    font-weight: 700;
   }
 }
 @media (min-width: 1024px) {
@@ -3265,40 +3474,93 @@ span.required {
     font-size: 20px;
   }
 }
-input[type="submit"] {
+.form-btn-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
-  height: 54px;
-  font-size: 20px;
-  line-height: 1;
+  max-width: 480px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: column-reverse;
+     -moz-box-orient: vertical;
+     -moz-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (min-width: 1200px) {
+  .form-btn-row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+       -moz-box-orient: horizontal;
+       -moz-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+@media (min-width: 1920px) {
+  .form-btn-row {
+    max-width: 520px;
+  }
+}
+input[type="submit"],
+input[type="reset"] {
+  width: 100%;
+  max-width: 280px;
+  height: 60px;
+  border: none;
+  -webkit-border-radius: 30px;
+     -moz-border-radius: 30px;
+          border-radius: 30px;
+  line-height: 60px;
   -moz-appearance: none;
        appearance: none;
+  font-size: 28px;
   -moz-apperance: none;
   -webkit-appearance: none;
 }
+@media (min-width: 768px) {
+  input[type="submit"],
+  input[type="reset"] {
+    width: 100%;
+    max-width: 300px;
+  }
+}
 @media (min-width: 1024px) {
-  input[type="submit"] {
-    max-width: 280px;
+  input[type="submit"],
+  input[type="reset"] {
     margin: 0 auto;
   }
 }
 @media (min-width: 1200px) {
-  input[type="submit"] {
-    margin: 0;
+  input[type="submit"],
+  input[type="reset"] {
     width: unset;
     max-width: unset;
-    height: 64px;
-    font-size: 22px;
-    padding-left: 37px;
-    padding-right: 37px;
-    line-height: 56px;
+    padding-left: 35px;
+    padding-right: 35px;
+    line-height: 60px;
   }
 }
 label.error {
-  font-size: 12px;
+  font-size: 13px;
   color: #ff0000;
+  font-family: sans-serif;
   font-weight: 500;
   position: relative;
-  top: 5px;
   letter-spacing: -0.4px;
 }
 @media (min-width: 360px) {
@@ -3320,6 +3582,16 @@ label.error {
 @media (min-width: 1024px) {
   label.error {
     font-size: 16px;
+  }
+}
+@media (min-width: 1200px) {
+  label.error {
+    font-size: 17px;
+  }
+}
+@media (min-width: 1600px) {
+  label.error {
+    font-size: 20px;
   }
 }
 #checkbox-error {
@@ -3351,24 +3623,32 @@ label.error {
 @media (min-width: 1024px) {
   #checkbox-error {
     font-size: 16px;
-    text-align: unset;
   }
 }
 @media (min-width: 1200px) {
   #checkbox-error {
+    top: 23px;
     font-size: 17px;
   }
 }
 @media (min-width: 1600px) {
   #checkbox-error {
     font-size: 20px;
+    top: 24px;
   }
 }
 .contact-form__success {
+  position: relative;
+  margin-top: 25vh;
   font-size: 16px;
   color: #ff0000;
   text-align: center;
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+@media (min-width: 768px) {
+  .contact-form__success {
+    top: 25vh;
+  }
 }
 .contacts-col .social-ic-row {
   -webkit-box-pack: start;
@@ -3389,15 +3669,6 @@ label.error {
 @media (min-width: 400px) {
   .contacts-col .social-ic-row {
     font-size: 14px;
-  }
-}
-@media (min-width: 768px) {
-  .contacts-col .social-ic-row {
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-       -moz-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
   }
 }
 .contacts-col .social-ic-row .icon-item {
@@ -3476,7 +3747,7 @@ label.error {
 }
 @media (min-width: 1200px) {
   .projects-portfolio-section {
-    padding-top: 69px;
+    padding-top: 80px;
   }
 }
 .projects-portfolio-section h2 {
@@ -3727,8 +3998,6 @@ label.error {
   }
 }
 .page-header {
-  max-width: 1600px;
-  margin: 0 auto;
   padding: 21px 0;
 }
 .header-nav-row.header-nav-row--page {

@@ -1,109 +1,91 @@
 :root {
-  --p: #000;
-  --red: #ea736d;
-  --blue: #039be5;
-  --yell: #fbdc4d;
-  --btn-bg: #fbdc4d;
-  --btn-bg-h: #ffd200;
-  --btn-bg-a: #e1bc10;
-  --btn-transp: #464646;
-  --btn-transp-h: #797979;
-  --btn-transp-a: #181818;
+	--p: #000;
+	--red: #ea736d;
+	--blue: #039be5;
+	--yell: #fbdc4d;
+	--btn-bg: #fbdc4d;
+	--btn-bg-h: #ffd200;
+	--btn-bg-a: #e1bc10;
+	--btn-transp: #464646;
+	--btn-transp-h: #797979;
+	--btn-transp-a: #181818;
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 html {
-  scroll-behavior: smooth;
-  overflow-x: hidden;
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
+html.noscroll {
+	overflow: hidden;
 }
 body {
-  margin: 0;
-  padding: 0;
-  font-family: "M PLUS 1p", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  background-color: #fff;
-  overflow-x: hidden;
-}
-body.noscroll {
-  position: fixed;
+	margin: 0;
+	padding: 0;
+	font-family: "M PLUS 1p", sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	background-color: #fff;
+	overflow-x: hidden;
 }
 /*---Стили для боковой навигации по разделам страницы*/
 /*--Планка навигации--*/
 #page-nav {
-  display: none;
-  //Для десктопа
-  @media (min-width: 1200px) {
-    display: block;
-    position: fixed;
-    right: 15px;
-    top: 50%;
-    z-index: 100;
-  }
+	display: none;
+	//Для десктопа
+	@media (min-width: 1200px) {
+		display: block;
+		position: fixed;
+		right: 2px;
+		top: 50%;
+		z-index: 100;
+	}
 }
 /*--/Планка навигации--*/
 /*--Ссылки (точки) на разделы--*/
 #page-nav li {
-  width: 15px;
-  height: 15px;
-  background-color: var(--blue);
-  border-radius: 50%;
-  margin-bottom: 15px;
-  transition: 0.3s;
+	width: 15px;
+	height: 15px;
+	background-color: var(--blue);
+	border-radius: 50%;
+	margin-bottom: 15px;
+	transition: 0.3s;
 }
 #page-nav li a {
-  display: block;
-  height: 100%;
+	display: block;
+	height: 100%;
 }
 #page-nav li.active-nav {
-  background-color: var(--red);
+	background-color: var(--red);
 }
 /*--/Ссылки (точки) на разделы--*/
 /*---/Стили для боковой навигации по разделам страницы*/
-/*--Затемняющий слой вокруг плашки мобильного меню--*/
-#overlay {
-  font-size: 0;
-  position: fixed;
-  margin: 0;
-  padding: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(44, 52, 73, 0.75);
-  z-index: 6;
-  display: none;
-}
-#overlay.active {
-  display: block;
-}
-/*--/Затемняющий слой вокруг плашки мобильного меню--*/
 a,
 a:hover {
-  text-decoration: none;
-  display: inline-block;
+	text-decoration: none;
+	display: inline-block;
 }
 .text-link {
-  border-bottom: 1px solid var(--p);
-  line-height: 1.2;
-  &:hover {
-    color: var(--blue);
-    border-bottom: 1px solid var(--blue);
-  }
-  &:active {
-    color: var(--red);
-    border-bottom: 1px solid var(--red);
-  }
+	border-bottom: 1px solid var(--p);
+	line-height: 1.2;
+	&:hover {
+		color: var(--blue);
+		border-bottom: 1px solid var(--blue);
+	}
+	&:active {
+		color: var(--red);
+		border-bottom: 1px solid var(--red);
+	}
 }
 .none {
-  display: none;
+	display: none;
 }
 ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
 }
 h1,
 h2,
@@ -112,7 +94,7 @@ h4,
 h5,
 h6,
 p {
-  margin: 0;
+	margin: 0;
 }
 p::selection,
 li::selection,
@@ -120,288 +102,332 @@ h1::selection,
 h2::selection,
 h3::selection,
 span::selection {
-  background: var(--yell);
+	background: var(--yell);
 }
 /*--Иконка меню"Гамбургер"--*/
 
 /*--/Иконка меню"Гамбургер"--*/
 /*--Заголовок для секции--*/
 .section-title {
-  display: inline-block;
-  position: relative;
-  left: -3px;
-  font-size: 42px;
-  font-weight: 800;
-  line-height: 1.2;
-  //Для планшета
-  @media (min-width: 768px) {
-    font-size: 52px;
-    left: -4px;
-  }
-  //Для десктопа
-  @media (min-width: 1200px) {
-    font-size: 64px;
-    position: static;
-  }
+	display: inline-block;
+	position: relative;
+	left: -3px;
+	font-size: 42px;
+	font-weight: 800;
+	line-height: 1.2;
+	//Для планшета
+	@media (min-width: 768px) {
+		font-size: 52px;
+		left: -4px;
+	}
+	//Для десктопа
+	@media (min-width: 1200px) {
+		font-size: 64px;
+		position: static;
+	}
 }
 /*--/Заголовок для секции--*/
 /*--Заголовоки для блока--*/
 .title-3 {
-  font-size: 30px;
-  font-weight: 800;
-  text-shadow: 0px 3px 42px #fff;
-  //Для планшета
-  @media (min-width: 768px) {
-    font-size: 32px;
-  }
-  //Для десктопа
-  @media (min-width: 1200px) {
-    font-size: 40px;
-  }
+	font-size: 30px;
+	font-weight: 800;
+	text-shadow: 0px 3px 42px #fff;
+	//Для планшета
+	@media (min-width: 768px) {
+		font-size: 32px;
+	}
+	//Для десктопа
+	@media (min-width: 1200px) {
+		font-size: 40px;
+	}
 }
 /*--/Заголовоки для блока--*/
 img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+	max-width: 100%;
+	height: auto;
+	display: block;
 }
 svg {
-  max-width: 100%;
+	max-width: 100%;
 }
 button,
 input,
 textarea {
-  outline: none;
+	outline: none;
 }
 input[type="radio"] {
-  appearance: none;
-  -moz-apperance: none;
-  -webkit-appearance: none;
+	appearance: none;
+	-moz-apperance: none;
+	-webkit-appearance: none;
 }
 button {
-  display: inline-block;
-  border: 0;
-  padding: 0;
-  cursor: pointer;
-  background-color: transparent;
+	display: inline-block;
+	border: 0;
+	padding: 0;
+	cursor: pointer;
+	background-color: transparent;
 }
 .bottom-line {
-  position: relative;
-  z-index: 1;
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: 10px;
-    left: -5px;
-    right: -5px;
-    height: 10px;
-    background-color: #fbdc4d;
-    z-index: -1;
-    transition: 0.3s;
-  }
+	position: relative;
+	z-index: 1;
+	&::after {
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: 10px;
+		left: -5px;
+		right: -5px;
+		height: 10px;
+		background-color: #fbdc4d;
+		z-index: -1;
+		transition: 0.3s;
+	}
 }
 .btn {
-  display: inline-block;
-  height: 64px;
-  padding-left: 38px;
-  padding-right: 38px;
-  background-color: var(--yell);
-  border-radius: 32px;
-  border: 4px solid var(--yell);
-  color: #000;
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 56px;
-  text-align: center;
-  z-index: 1;
-  cursor: pointer;
-  transition: all 0.3s ease-in;
-  &:hover {
-    border-color: var(--btn-bg-h);
-    background-color: var(--btn-bg-h);
-  }
-  &:active {
-    border-color: var(--btn-bg-a);
-    background-color: var(--btn-bg-a);
-  }
+	display: inline-block;
+	height: 64px;
+	padding-left: 38px;
+	padding-right: 38px;
+	background-color: var(--yell);
+	border-radius: 32px;
+	border: 4px solid var(--yell);
+	color: #000;
+	font-size: 22px;
+	font-weight: 700;
+	line-height: 56px;
+	text-align: center;
+	z-index: 1;
+	cursor: pointer;
+	transition: all 0.3s ease-in;
+	&:hover {
+		border-color: var(--btn-bg-h);
+		background-color: var(--btn-bg-h);
+	}
+	&:active {
+		border-color: var(--btn-bg-a);
+		background-color: var(--btn-bg-a);
+	}
+}
+.btn.btn--form-reset {
+	margin-bottom: 20px;
+	border: 4px solid #979797;
+	background-color: #fff;
+	line-height: 52px;
+	height: 60px;
+	color: #979797;
+	//Для планшета
+	@media (min-width: 768px) {
+		margin-bottom: 15px;
+	}
+	//Для десктопа
+	@media (min-width: 1200px) {
+		margin-bottom: 0;
+		padding-left: 38px;
+		padding-right: 38px;
+	}
+	&:hover,
+	&:active {
+		transform: scale(1.05);
+		filter: drop-shadow(0px 6px 1px rgba(0, 0, 0, 0.5));
+	}
+	&:focus {
+		outline: none;
+		filter: drop-shadow(0px 0px 6px rgba(59, 59, 59, 0.2))
+			drop-shadow(2px 2px 4px rgba(53, 53, 53, 0.6))
+			drop-shadow(-2px -2px 3px rgba(114, 114, 114, 0.6));
+	}
 }
 .btn.btn--mob {
-  display: none;
-  //Для десктопа
-  @media (min-width: 1200px) {
-    display: inline-block;
-  }
+	display: none;
+	//Для десктопа
+	@media (min-width: 1200px) {
+		display: inline-block;
+	}
 }
 .btn.btn--white {
-  border-color: var(--btn-transp);
-  color: var(--btn-transp);
-  background-color: transparent;
-  &:hover {
-    border-color: var(--btn-transp-h);
-    color: var(--btn-transp-h);
-  }
-  &:active {
-    border-color: var(--btn-transp-a);
-    color: var(--btn-transp-a);
-  }
+	border-color: var(--btn-transp);
+	color: var(--btn-transp);
+	background-color: transparent;
+	&:hover {
+		border-color: var(--btn-transp-h);
+		color: var(--btn-transp-h);
+	}
+	&:active {
+		border-color: var(--btn-transp-a);
+		color: var(--btn-transp-a);
+	}
 }
 /*--Контейнер--*/
 .container {
-  width: 100%;
-  max-width: 320px;
-  padding: 0 15px;
-  margin: 0 auto;
-  //Для большого смартфона
-  @media (min-width: 360px) {
-    max-width: 360px;
-  }
-  //Для большого смартфона
-  @media (min-width: 400px) {
-    max-width: 400px;
-  }
-  //Для большого смартфона
-  @media (min-width: 420px) {
-    padding: 0 20px;
-    max-width: 420px;
-  }
-  //Для планшета
-  @media (min-width: 768px) {
-    max-width: 768px;
-    padding: 0 30px;
-  }
-  //Для планшета
-  @media (min-width: 769px) {
-    max-width: 1140px;
-    padding: 0 30px;
-  }
-  //Для десктопа
-  @media (min-width: 1200px) {
-    padding: 0;
-  }
+	width: 100%;
+	max-width: 320px;
+	padding: 0 15px;
+	margin: 0 auto;
+	//Для большого смартфона
+	@media (min-width: 360px) {
+		max-width: 360px;
+	}
+	//Для большого смартфона
+	@media (min-width: 400px) {
+		max-width: 400px;
+	}
+	//Для большого смартфона
+	@media (min-width: 420px) {
+		padding: 0 20px;
+		max-width: 420px;
+	}
+	//Для планшета
+	@media (min-width: 768px) {
+		max-width: 768px;
+		padding: 0 30px;
+	}
+	//Для планшета
+	@media (min-width: 769px) {
+		max-width: 1140px;
+		padding: 0 30px;
+	}
+	//Для десктопа
+	@media (min-width: 1200px) {
+		padding: 0;
+	}
 }
-.container.container--1600 {
-  //Для десктопа
-  @media (min-width: 1600px) {
-    max-width: 1430px;
-  }
+.container.container--enlarge {
+	max-width: 100%;
+	padding: 0 15px;
+	//Для планшета
+	@media (min-width: 768px) {
+		padding: 0 30px;
+	}
+	//Для десктопа
+	@media (min-width: 1200px) {
+		padding: 0 15px;
+		max-width: 1600px;
+	}
 }
 /*---Универсальная панель иконок контактов---*/
 .social-ic-row {
-  display: flex;
+	display: flex;
+	justify-content: center;
+	//Для планшета
+	@media (min-width: 768px) {
+		justify-content: flex-start;
+	}
 }
 .icon-item {
-  margin-right: 30px;
-  &:last-child {
-    margin-right: 0;
-  }
-  //Для планшета
-  @media (min-width: 768px) {
-    margin-right: 31px;
-  }
+	margin-right: 30px;
+	&:last-child {
+		margin-right: 0;
+	}
+	//Для планшета
+	@media (min-width: 768px) {
+		margin-right: 31px;
+	}
 }
 .icon-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  transition: all 0.3s ease-in;
-  &:hover {
-    display: flex;
-    transform: scale(1.25) rotate(15deg) translatey(-10%);
-    border-radius: 50%;
-    box-shadow: 0px 15px 7px rgba(0, 0, 0, 0.7);
-  }
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	transition: all 0.3s ease-in;
+	&:hover {
+		display: flex;
+		transform: scale(1.25) rotate(15deg) translatey(-10%);
+		border-radius: 50%;
+		box-shadow: 0px 15px 7px rgba(0, 0, 0, 0.7);
+	}
 }
 .icon-link > svg {
-  color: #fff;
-  width: 30px;
-  height: 30px;
+	color: #fff;
+	width: 30px;
+	height: 30px;
 }
 /*--Универсальные круглые иконки контактов--*/
 .icon-git {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  line-height: 1;
-  color: var(--p);
-  // overflow: hidden;
-  transition: all 0.3s ease-in;
-  &:hover {
-    transform: scale(1.25) translatey(-10%);
-    border-radius: 50%;
-    box-shadow: 0px 15px 7px rgba(0, 0, 0, 0.7);
-  }
-  .git {
-    transition: all 0.5s ease-in-out 0.1s;
-    &:hover {
-      transform: scale(1.25) translatey(-3%) rotate(360deg);
-      filter: drop-shadow(0 2px 2px #3a3a3a);
-      z-index: 2;
-    }
-  }
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	line-height: 1;
+	color: var(--p);
+	// overflow: hidden;
+	transition: all 0.3s ease-in;
+	&:hover {
+		transform: scale(1.25) translatey(-10%);
+		border-radius: 50%;
+		box-shadow: 0px 15px 7px rgba(0, 0, 0, 0.7);
+	}
+	.git {
+		transition: all 0.5s ease-in-out 0.1s;
+		&:hover {
+			transform: scale(1.25) translatey(-3%) rotate(360deg);
+			filter: drop-shadow(0 2px 2px #3a3a3a);
+			z-index: 2;
+		}
+	}
 }
 .icon-tele {
-  background-color: #039be5;
-  .fly {
-    transition: all 0.1s linear 0.2s;
-    &:hover {
-      transform: scale(1.25) translate(27%, -40%);
-      filter: drop-shadow(0 2px 2px #1c2c3f);
-      z-index: 2;
-    }
-  }
+	background-color: #039be5;
+	.fly {
+		transition: all 0.1s linear 0.2s;
+		&:hover {
+			transform: scale(1.25) translate(27%, -40%);
+			filter: drop-shadow(0 2px 2px #1c2c3f);
+			z-index: 2;
+		}
+	}
 }
 .icon-vk {
-  background-color: #4d76a1;
-  .vk {
-    transition: all 0.3s ease-out 0.15s;
-    &:hover {
-      transform: scale(1.45) translatey(-5%) rotate(-15deg);
-      filter: drop-shadow(0 4px 1px #1c2c3f);
-      z-index: 2;
-    }
-  }
+	background-color: #4d76a1;
+	.vk {
+		transition: all 0.3s ease-out 0.15s;
+		&:hover {
+			transform: scale(1.45) translatey(-5%) rotate(-15deg);
+			filter: drop-shadow(0 4px 1px #1c2c3f);
+			z-index: 2;
+		}
+	}
 }
 .icon-fb {
-  background-color: #3b5998;
-  .fb {
-    transition: all 0.3s ease-out 0.15s;
-    &:hover {
-      transform: scale(1.45) translatey(-1%) rotate(-15deg);
-      filter: drop-shadow(0 3px 1px #162230);
-      z-index: 2;
-    }
-  }
+	background-color: #3b5998;
+	.fb {
+		transition: all 0.3s ease-out 0.15s;
+		&:hover {
+			transform: scale(1.45) translatey(-1%) rotate(-15deg);
+			filter: drop-shadow(0 3px 1px #162230);
+			z-index: 2;
+		}
+	}
 }
 /*--/Универсальные круглые иконки контактов--*/
 /*---/Универсальная панель иконок контактов---*/
 /*Кнопка наверх*/
 #back2Top {
-  width: 40px;
-  line-height: 40px;
-  overflow: hidden;
-  z-index: 999;
-  display: none;
-  cursor: pointer;
-  -moz-transform: rotate(270deg);
-  -webkit-transform: rotate(270deg);
-  -o-transform: rotate(270deg);
-  -ms-transform: rotate(270deg);
-  transform: rotate(270deg);
-  position: fixed;
-  bottom: 30px;
-  right: 15px;
-  color: var(--red);
-  text-align: center;
-  font-size: 40px;
-  text-decoration: none;
-  &:hover {
-    color: var(--blue);
-  }
-  &:active {
-    color: var(--red);
-  }
+	width: 40px;
+	line-height: 40px;
+	overflow: hidden;
+	z-index: 7;
+	display: none;
+	cursor: pointer;
+	-moz-transform: rotate(270deg);
+	-webkit-transform: rotate(270deg);
+	-o-transform: rotate(270deg);
+	-ms-transform: rotate(270deg);
+	transform: rotate(270deg);
+	position: fixed;
+	bottom: 30px;
+	right: 15px;
+	color: var(--red);
+	text-align: center;
+	font-size: 40px;
+	text-decoration: none;
+}
+.anchor-margin {
+	position: absolute;
+	margin-top: -56px;
+}
+.hidden {
+	display: none !important;
+	position: fixed;
+	top: -100vh;
 }

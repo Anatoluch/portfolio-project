@@ -13,9 +13,6 @@
    <!---Верхнее меню для мобилок--->
    <div id="overlay"></div>
    <div class="mobile-menu">
-      <div class="logo bottom-line">
-         <a href="index.html">ВЦ</a>
-      </div>
       <ul class="mob-nav">
          <li class="mob-nav-item">
             <a class="mob-nav-link" href="index.html#skills">Услуги</a>
@@ -59,10 +56,9 @@
    </div>
    <!---/Верхнее меню для мобилок--->
    <header class="page-header">
-      <!--Увеличенный контейнер Top nav menu-->
-      <div class="container container--enlarge">
-         <!-- __Top nav menu__ -->
-         <div class="header-nav-row header-nav-row--page">
+      <!-- __Top nav menu__ -->
+      <div class="header-nav-row">
+         <div class="header-nav-row__container">
             <div class="logo bottom-line" data-aos="zoom-out-down" data-aos-delay="400">
                <a href="index.html">ВЦ</a>
             </div>
@@ -94,8 +90,8 @@
             <div class="toggle-menu"><span></span></div>
             <!--/Меню "Гамбургер" для планшета и мобилок-->
          </div>
-         <!--__/Top nav menu__-->
       </div>
+      <!--__/Top nav menu__-->
    </header>
    <main>
       <!--Раздел "Проект"-->
@@ -214,15 +210,16 @@
       <a id="back2Top" title="Наверх" href="#">&#10148;</a>
    </main>
    <script src="libs/jquery/jquery-3.5.1.min.js"></script>
-   <script src="libs/jquery.validate/jquery.validate.js"></script>
-   <script src="libs/mixitup3/mixitup.min.js"></script>
-   <script src="libs/nav.js/nav.js"></script>
    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script defer src="libs/jquery.validate/jquery.validate.js"></script>
+   <script defer src="libs/mixitup3/mixitup.min.js"></script>
+   <script defer src="libs/nav.js/nav.js"></script>
    <script>
       AOS.init({
       once: true,
       });
    </script>
-   <script src="js/main.js"></script>
+   <script defer src="js/main.min.js"></script>
+   <script defer src="js/cookies.min.js"></script>
 </body>
 </html>
