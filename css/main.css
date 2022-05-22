@@ -560,6 +560,14 @@ button {
   position: fixed;
   top: -100vh;
 }
+.yandex-informer {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .yandex-informer {
+    text-align: unset;
+  }
+}
 .header {
   max-width: 1600px;
   margin: 0 auto;
@@ -3685,12 +3693,12 @@ label.error {
 /*---/Форма обратной связи---*/
 .footer {
   margin: 0 auto;
-  padding: 32px 0 42px;
+  padding: 32px 0 10px;
   background-color: #333;
 }
 @media (min-width: 1200px) {
   .footer {
-    padding: 20px 0 36px;
+    padding: 20px 0 10px;
   }
 }
 .footer-title {
@@ -3705,6 +3713,7 @@ label.error {
   }
 }
 .footer-desc {
+  margin-bottom: 10px;
   font-size: 16px;
   color: #b0b0b0;
   line-height: 1.625;
